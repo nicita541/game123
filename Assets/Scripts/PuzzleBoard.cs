@@ -168,6 +168,13 @@ namespace Erudition
                 var code = char.IsLetter(item.character) ? cipher[item.character] : 0;
                 cell.Bind(item.character, code, code == 0 || revealed.Contains(code) || filledSlots.Contains(item.slot));
             }
+            foreach (var cell in cells)
+            {
+                if (cell.gameObject.activeSelf && !cell.IsHiddenLetter)
+                {
+                    HideCodeIfSolved(cell.Code);
+                }
+            }
             RefreshKeyboard();
             if (owlGuide != null) owlGuide.text = "";
             UpdateHearts();
@@ -297,11 +304,38 @@ namespace Erudition
 
         private void RevealSelected()
         {
-            // Initial/legacy reveals apply to a cipher; player answers apply to one authored cell only.
             filledSlots.Add(selectedSlot);
+
+            int openedCode = cells[selectedSlot].Code;
+
             cells[selectedSlot].Reveal();
+
+            HideCodeIfSolved(openedCode);
+
             RefreshKeyboard();
             UpdateProgress();
+        }
+
+        private void HideCodeIfSolved(int code)
+        {
+            bool stillHidden = cells.Any(cell =>
+                cell.gameObject.activeSelf &&
+                cell.Code == code &&
+                cell.IsHiddenLetter
+            );
+
+            // Есть ещё закрытые буквы с этим номером — оставляем цифру
+            if (stillHidden)
+                return;
+
+            // Все буквы этого номера открыты — убираем цифры везде
+            foreach (var cell in cells)
+            {
+                if (cell.gameObject.activeSelf && cell.Code == code)
+                {
+                    cell.HideCode();
+                }
+            }
         }
 
         private bool AllSolved() => cells.All(cell => !cell.gameObject.activeSelf || !cell.IsHiddenLetter);

@@ -83,5 +83,14 @@ namespace Erudition
         {
             if (board != null && IsHiddenLetter) board.SelectCell(index);
         }
+
+        public void HideCode()
+        {
+            if (codeText != null)
+            {
+                codeText.text = "";
+                codeText.gameObject.SetActive(false);
+            }
+        }
     }
 }
