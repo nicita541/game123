@@ -35,6 +35,10 @@ namespace Erudition
         private int selectedSlot = -1;
         private int remainingHearts;
         private int mistakesInLevel;
+        private PuzzleProgress scoring;
+
+        public void TickPlayTime(float seconds)
+        { if (scoring != null) scoring.activeSeconds += Mathf.Max(0, seconds); }
 
         public PuzzleMode Mode => mode;
         public int PuzzleIndex => puzzleIndex;
@@ -80,6 +84,12 @@ namespace Erudition
             selectedSlot = saved.selectedSlot;
             remainingHearts = saved.remainingHearts > 0 ? saved.remainingHearts : 5;
             mistakesInLevel = saved.mistakesInLevel;
+            scoring = new PuzzleProgress {
+                scoringRevision = saved.scoringRevision,
+                playerTierAtStart = saved.scoringRevision > 0 ? saved.playerTierAtStart : PuzzleGenerator.Tier(erudition),
+                initialHiddenLetters = saved.initialHiddenLetters, hintsUsed = saved.hintsUsed,
+                activeSeconds = saved.activeSeconds
+            };
 
             var phrase = puzzle.text.Trim().ToUpperInvariant().Replace('\n', ' ');
             var layout = Layout(phrase);
@@ -112,7 +122,7 @@ namespace Erudition
             if (saved.helpRevision == 0 && revealed.Count == 0 && filledSlots.Count == 0)
             {
                 var letterCells = layout.Where(item => char.IsLetter(item.character)).ToArray();
-                var budget = PuzzleGenerator.StartingClues(letterCells.Length, erudition);
+                var budget = PuzzleGenerator.StartingClues(letterCells.Length, puzzle.minimumErudition);
                 // Divide the text into bands so the clues are spread across the
                 // whole phrase. Prefer different letters, rather than filling
                 // all occurrences of one cipher. Never give away a whole word.
@@ -176,6 +186,8 @@ namespace Erudition
                 }
             }
             RefreshKeyboard();
+            if (scoring.initialHiddenLetters == 0)
+                scoring.initialHiddenLetters = cells.Count(cell => cell.gameObject.activeSelf && cell.IsHiddenLetter);
             if (owlGuide != null) owlGuide.text = "";
             UpdateHearts();
             SetHintCount(hints);
@@ -242,6 +254,7 @@ namespace Erudition
                 return;
             }
             var answer = answers[selectedCode];
+            scoring.hintsUsed++;
             var code = selectedCode;
             RevealSelected();
             SetHintCount(game.Hints);
@@ -279,6 +292,11 @@ namespace Erudition
                 selectedSlot = selectedSlot,
                 helpRevision = 5,
                 mistakesInLevel = mistakesInLevel,
+                scoringRevision = scoring.scoringRevision,
+                playerTierAtStart = scoring.playerTierAtStart,
+                initialHiddenLetters = scoring.initialHiddenLetters,
+                hintsUsed = scoring.hintsUsed,
+                activeSeconds = scoring.activeSeconds,
                 attemptedPairs = string.Join(";", attempted.OrderBy(pair => pair))
             };
         }
@@ -385,7 +403,8 @@ namespace Erudition
             }
             var words = PuzzleGenerator.WordCount(entry.text);
             var noun = words % 100 >= 11 && words % 100 <= 14 ? "слов" : words % 10 == 1 ? "слово" : words % 10 >= 2 && words % 10 <= 4 ? "слова" : "слов";
-            if (instructionText != null) instructionText.text = "Заполни клетки: " + (total - opened) + " · " + words + " " + noun;
+            if (instructionText != null) instructionText.text = PuzzleGenerator.DifficultyName(entry.minimumErudition)
+                + " · " + PuzzleGenerator.KindName(entry.kind) + "\nОсталось " + (total - opened) + " букв · " + words + " " + noun;
         }
 
         private void EnsureVisible(int index)

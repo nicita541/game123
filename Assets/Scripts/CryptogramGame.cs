@@ -35,6 +35,7 @@ namespace Erudition
         public Text victorySource;
         public Text victoryEruditionReward;
         public Text victoryCollectionReward;
+        public Text victoryRewardDetails;
         public Button noFeathersAdButton;
 
         public Text defeatQuote;
@@ -55,6 +56,7 @@ namespace Erudition
         public CollectionCardView[] authorCards;
         public CollectionCardView[] themeCards;
         public CollectionCardView[] bookCards;
+        public CollectionCardView[] kindCards;
         public Button[] achievementTabs;
         public AchievementCardView[] achievementCards;
         public Text[] settingValues;
@@ -76,6 +78,8 @@ namespace Erudition
         private string lastCompletedPuzzleId;
         private PuzzleEntry[] puzzles;
         private bool pendingStart;
+        private bool applicationPaused;
+        private float nextProgressSave;
         private int pendingIndex = -1;
         private Vector2[] achievementPositions;
         public static CryptogramGame Current { get; private set; }
@@ -90,6 +94,13 @@ namespace Erudition
             baseFontSizes = FindObjectsByType<Text>(FindObjectsInactive.Include, FindObjectsSortMode.None)
                 .ToDictionary(label => label, label => label.fontSize);
             save = SaveStore.Load();
+            if (!save.kindProgressInitialized)
+            {
+                var solvedIds = new HashSet<string>(save.solvedPuzzleIds.Split('|'));
+                foreach (var entry in Entries.Where(entry => solvedIds.Contains(entry.id))) save.kindProgress[(int)entry.kind]++;
+                save.kindProgressInitialized = true;
+                SaveStore.Save(save);
+            }
             if (save.winsUntilInterstitial == 0) save.winsUntilInterstitial = UnityEngine.Random.Range(2, 5);
             RollDailyWindow();
             if (save.activityHistory.Count == 0)
@@ -136,6 +147,12 @@ namespace Erudition
 
         private void Update()
         {
+            if (!applicationPaused && Application.isFocused && currentScreen == 2 && HasActivePuzzle())
+            {
+                classicBoard?.TickPlayTime(Time.unscaledDeltaTime);
+                if (Time.unscaledTime >= nextProgressSave)
+                { nextProgressSave = Time.unscaledTime + 10; StorePuzzleProgress(classicBoard); }
+            }
             if (Time.unscaledTime < nextTimerUpdate) return;
             nextTimerUpdate = Time.unscaledTime + 1f;
             if (RestoreEnergy()) UpdateAllUi();
@@ -145,13 +162,21 @@ namespace Erudition
 
         private void OnApplicationPause(bool paused)
         {
+            applicationPaused = paused;
+            if (paused) StoreActiveProgress();
             if (paused && save != null) SaveStore.Save(save);
             else if (!paused && save != null) { if (RestoreEnergy()) UpdateAllUi(); }
         }
 
         private void OnApplicationQuit()
         {
+            StoreActiveProgress();
             if (save != null) SaveStore.Save(save);
+        }
+
+        private void OnApplicationFocus(bool focused)
+        {
+            if (!focused) StoreActiveProgress();
         }
 
         public void Execute(UiActionKind action, int parameter)
@@ -209,6 +234,7 @@ namespace Erudition
                         for (var i = 0; i < save.authorProgress.Length; i++) save.authorProgress[i] = authorCards[i].target;
                         for (var i = 0; i < save.themeProgress.Length; i++) save.themeProgress[i] = themeCards[i].target;
                         for (var i = 0; i < save.bookProgress.Length; i++) save.bookProgress[i] = bookCards[i].target;
+                        for (var i = 0; kindCards != null && i < kindCards.Length; i++) save.kindProgress[i] = kindCards[i].target;
                         Persist();
                     }
                     break;
@@ -225,6 +251,13 @@ namespace Erudition
             if (save == null || board == null || board.PuzzleIndex < 0) return;
             save.activePuzzle = board.ExportProgress();
             SaveStore.Save(save);
+        }
+
+        private void StoreActiveProgress()
+        {
+            if (save != null && classicBoard != null && save.activePuzzle.puzzleIndex >= 0
+                && save.activePuzzle.puzzleIndex == classicBoard.PuzzleIndex)
+                StorePuzzleProgress(classicBoard);
         }
 
         public void RecordGuess(bool wrong)
@@ -250,7 +283,8 @@ namespace Erudition
         {
             if (board == null || board.PuzzleIndex < 0 || save.activePuzzle.puzzleIndex != board.PuzzleIndex) return;
             var entry = board.Entry;
-            const int eruditionReward = 20;
+            var reward = PuzzleReward.Calculate(entry.minimumErudition, board.ExportProgress());
+            var eruditionReward = reward.points;
             const int coinReward = 30;
             save.erudition += eruditionReward;
             save.coins += coinReward;
@@ -258,6 +292,7 @@ namespace Erudition
             save.streak++;
             save.bestStreak = Mathf.Max(save.bestStreak, save.streak);
             save.classicSolved++;
+            save.kindProgress[(int)entry.kind]++;
             if (board.MistakesInLevel == 0) save.perfectWins++;
             if (entry.authorIndex >= 0 && entry.authorIndex < save.authorProgress.Length) save.authorProgress[entry.authorIndex]++;
             if (entry.themeIndex >= 0 && entry.themeIndex < save.themeProgress.Length) save.themeProgress[entry.themeIndex]++;
@@ -275,7 +310,8 @@ namespace Erudition
             save.activePuzzle = new PuzzleProgress();
             soundPlayer?.Win();
             victoryQuote.text = "«" + entry.text + "»";
-            victorySource.text = "— " + entry.source;
+            victorySource.text = "— " + entry.source + (string.IsNullOrEmpty(entry.answer) ? "" : "\nОтвет: " + entry.answer);
+            if (victoryRewardDetails != null) victoryRewardDetails.text = PuzzleGenerator.DifficultyName(entry.minimumErudition) + " · " + reward.Explanation;
             victoryEruditionReward.text = "<size=64>+" + eruditionReward + "</size>\nк эрудиции";
             victoryCollectionReward.text = "<size=64>+1</size>\nв коллекцию";
             presentation?.SetCoinsReward(coinReward);
@@ -337,6 +373,8 @@ namespace Erudition
             save.activePuzzle = new PuzzleProgress
             {
                 puzzleIndex = index,
+                scoringRevision = 1,
+                playerTierAtStart = PuzzleGenerator.Tier(save.erudition),
                 remainingHearts = 5
             };
             save.lastClassicIndex = index;
@@ -347,32 +385,8 @@ namespace Erudition
 
         private int ChoosePuzzle(PuzzleMode mode, PuzzleBoard board)
         {
-            var eligible = Enumerable.Range(0, Entries.Length)
-                .Where(index => Entries[index].mode == mode
-                    && Entries[index].minimumErudition <= save.erudition
-                    && !save.recentTexts.Contains(PuzzleGenerator.TextKey(Entries[index].text)))
-                .GroupBy(index => PuzzleGenerator.TextKey(Entries[index].text)).Select(group => group.Last()).ToList();
-            if (eligible.Count == 0) return -1;
-            // Periodic author reviews keep every collection attainable after harder tiers unlock.
-            if (mode == PuzzleMode.Classic && save.classicSolved > 0 && save.classicSolved % 3 == 0)
-            {
-                var review = eligible.Where(index => Entries[index].authorIndex >= 0)
-                    .OrderBy(index => (float)save.authorProgress[Entries[index].authorIndex]
-                        / authorCards[Entries[index].authorIndex].target)
-                    .ThenBy(index => index == save.lastClassicIndex ? 1 : 0).ToList();
-                if (review.Count > 0) return review[0];
-            }
-            var generated = eligible.Where(index => Entries[index].id.StartsWith("generated_")).ToList();
-            if (generated.Count == 0) return eligible[UnityEngine.Random.Range(0, eligible.Count)];
-            var highestTier = generated.Max(index => Entries[index].minimumErudition);
-            var tier = generated.Where(index => Entries[index].minimumErudition == highestTier).ToList();
-            while (tier.Count > 0)
-            {
-                var candidate = tier[UnityEngine.Random.Range(0, tier.Count)];
-                if (board.CanFit(Entries[candidate].text)) return candidate;
-                tier.Remove(candidate);
-            }
-            return -1;
+            return PuzzleSelection.Choose(Entries, mode, save.erudition, save.recentTexts,
+                board.CanFit, count => UnityEngine.Random.Range(0, count));
         }
 
         private void RetryFailedPuzzle()
@@ -540,6 +554,7 @@ namespace Erudition
         private void ShowScreen(int index)
         {
             if (screens == null || index < 0 || index >= screens.Length) return;
+            if (currentScreen == 2 && index != 2) StoreActiveProgress();
             currentScreen = index;
             presentation?.ClosePopup();
             for (var i = 0; i < screens.Length; i++) if (screens[i] != null) screens[i].SetActive(i == index);
@@ -599,6 +614,7 @@ namespace Erudition
 
         private void UpdateCollections()
         {
+            for (var i = 0; kindCards != null && i < Math.Min(kindCards.Length, save.kindProgress.Length); i++) kindCards[i].SetProgress(save.kindProgress[i]);
             for (var i = 0; authorCards != null && i < Math.Min(authorCards.Length, save.authorProgress.Length); i++) authorCards[i].SetProgress(save.authorProgress[i]);
             for (var i = 0; themeCards != null && i < Math.Min(themeCards.Length, save.themeProgress.Length); i++) themeCards[i].SetProgress(save.themeProgress[i]);
             for (var i = 0; bookCards != null && i < Math.Min(bookCards.Length, save.bookProgress.Length); i++) bookCards[i].SetProgress(save.bookProgress[i]);
@@ -606,7 +622,7 @@ namespace Erudition
 
         private void ShowCollectionTab(int tab)
         {
-            collectionTab = Mathf.Clamp(tab, 0, 2);
+            collectionTab = Mathf.Clamp(tab, 0, collectionGroups.Length - 1);
             for (var i = 0; collectionGroups != null && i < collectionGroups.Length; i++) collectionGroups[i].SetActive(i == collectionTab);
             for (var i = 0; collectionTabs != null && i < collectionTabs.Length; i++)
             {
@@ -696,7 +712,8 @@ namespace Erudition
             if (board != null && board.Entry != null) { CompletePuzzle(board); return; }
             victoryQuote.text = "«Книга — лучший друг.»";
             victorySource.text = "— народная мудрость";
-            victoryEruditionReward.text = "+20 к эрудиции";
+            victoryEruditionReward.text = "+10 к эрудиции";
+            if (victoryRewardDetails != null) victoryRewardDetails.text = "Пример награды за лёгкое задание";
             victoryCollectionReward.text = "+1 в коллекцию";
             ShowScreen(4);
         }

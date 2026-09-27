@@ -61,7 +61,7 @@ namespace Erudition
                             if (tier == 4 && mode == 0) text += " Никогда не знаешь, какая встреча станет началом следующей главы.";
                             yield return new PuzzleEntry { id = "generated_v2_" + mode + "_" + tier + "_" + theme + "_" + variant,
                                 mode = (PuzzleMode)mode, text = text, source = "Истории Совушки · " + new[] { "Природа", "Тепло рядом", "Мир открытий" }[theme],
-                                minimumErudition = PuzzleGenerator.Thresholds[tier], authorIndex = -1, themeIndex = theme, bookIndex = theme };
+                                minimumErudition = PuzzleGenerator.Thresholds[tier], kind = PuzzleKind.Stories, authorIndex = -1, themeIndex = theme, bookIndex = theme };
                         }
         }
     }

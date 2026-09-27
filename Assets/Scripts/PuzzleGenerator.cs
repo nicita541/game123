@@ -9,6 +9,8 @@ namespace Erudition
     {
         public static readonly int[] Thresholds = { 0, 60, 160, 320, 560 };
         public static int Tier(int erudition) => Math.Max(0, Array.FindLastIndex(Thresholds, value => value <= erudition));
+        public static string DifficultyName(int erudition) => new[] { "Лёгкий", "Средний", "Сложный", "Эксперт", "Мастер" }[Tier(erudition)];
+        public static string KindName(PuzzleKind kind) => new[] { "Цитаты и мысли", "Истории", "Пословицы", "Загадки" }[(int)kind];
         public static int HiddenLetters(int erudition, PuzzleMode mode)
             => (mode == PuzzleMode.Classic ? new[] { 2, 4, 6, 9, 12 } : new[] { 2, 3, 4, 5, 7 })[Tier(erudition)];
         public static int WordCount(string text) => text.Split(new[] { ' ', '\n' }, StringSplitOptions.RemoveEmptyEntries).Length;
@@ -76,7 +78,7 @@ namespace Erudition
             {
                 id = "generated_v1_" + (int)mode + "_" + tier + "_" + variant,
                 mode = mode, text = string.Join(". ", lines) + ".", source = "Истории Совушки · " + new[] { "Природа", "Тепло рядом", "Мир открытий" }[theme],
-                minimumErudition = Thresholds[tier], authorIndex = -1, themeIndex = theme, bookIndex = theme
+                minimumErudition = Thresholds[tier], kind = PuzzleKind.Stories, authorIndex = -1, themeIndex = theme, bookIndex = theme
             };
         }
 
@@ -88,6 +90,7 @@ namespace Erudition
                 for (var tier = 0; tier < Thresholds.Length; tier++)
                     for (var variant = 0; variant < 96; variant++) entries.Add(Generate((PuzzleMode)mode, tier, variant));
             entries.AddRange(StoryCatalog.Build());
+            entries.AddRange(VarietyCatalog.Build());
             return entries.ToArray();
         }
     }

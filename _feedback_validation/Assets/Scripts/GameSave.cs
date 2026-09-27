@@ -23,6 +23,11 @@ namespace Erudition
         public int selectedSlot = -1;
         public int helpRevision;
         public int mistakesInLevel;
+        public int scoringRevision;
+        public int playerTierAtStart;
+        public int initialHiddenLetters;
+        public int hintsUsed;
+        public float activeSeconds;
         public string attemptedPairs = "";
     }
 
@@ -58,6 +63,8 @@ namespace Erudition
         public int[] authorProgress = new int[6];
         public int[] themeProgress = new int[3];
         public int[] bookProgress = new int[3];
+        public int[] kindProgress = new int[4];
+        public bool kindProgressInitialized;
         public int[] dailySolved = new int[7];
         public long lastDailyUpdateUtcTicks;
         public bool music = true;
@@ -88,6 +95,8 @@ namespace Erudition
             if (authorProgress == null || authorProgress.Length != 6) authorProgress = new int[6];
             if (themeProgress == null || themeProgress.Length != 3) themeProgress = new int[3];
             if (bookProgress == null || bookProgress.Length != 3) bookProgress = new int[3];
+            if (kindProgress == null) kindProgress = new int[4];
+            else if (kindProgress.Length != 4) Array.Resize(ref kindProgress, 4);
             if (dailySolved == null || dailySolved.Length != 7) dailySolved = new int[7];
             if (activePuzzle == null) activePuzzle = new PuzzleProgress();
             if (activePuzzle.revealedCodes == null) activePuzzle.revealedCodes = "";

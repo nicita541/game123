@@ -98,14 +98,15 @@ namespace Erudition
         {
             index = Mathf.Clamp(index, 0, collections.Length - 1);
             var card = collections[index];
-            var count = index < 6 ? save.authorProgress[index] : index < 9 ? save.themeProgress[index - 6] : save.bookProgress[index - 9];
+            var count = index < 6 ? save.authorProgress[index] : index < 9 ? save.themeProgress[index - 6] : index < 12 ? save.bookProgress[index - 9] : save.kindProgress[index - 12];
             detailTitle.text = card.title.text;
             detailPicture.sprite = collectionPictures[index];
             detailProgress.text = Mathf.Min(count, card.target) + " / " + card.target + " в коллекции";
             if (detailTrack != null) detailFill.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, detailTrack.rect.width * Mathf.Clamp01((float)count / card.target));
-            var related = entries.Where(entry => index < 6 ? entry.authorIndex == index : index < 9 ? entry.themeIndex == index - 6 : entry.bookIndex == index - 9);
-            var unlocked = related.Where(entry => save.solvedPuzzleIds.Split('|').Contains(entry.id)).Take(4).ToArray();
-            detailBody.text = unlocked.Length == 0 ? "Пока нет собранных историй" : string.Join("\n\n", unlocked.Select(entry => "«" + entry.text + "»\n<size=27>" + entry.source + "</size>"));
+            var related = entries.Where(entry => index < 6 ? entry.authorIndex == index : index < 9 ? entry.themeIndex == index - 6 : index < 12 ? entry.bookIndex == index - 9 : (int)entry.kind == index - 12);
+            var solved = new System.Collections.Generic.HashSet<string>(save.solvedPuzzleIds.Split('|'));
+            var unlocked = related.Where(entry => solved.Contains(entry.id)).GroupBy(entry => PuzzleGenerator.TextKey(entry.text)).Select(group => group.First()).ToArray();
+            detailBody.text = unlocked.Length == 0 ? "Здесь появятся разгаданные тексты.\nИграй в Классику и пополняй коллекцию!" : string.Join("\n\n", unlocked.Select(entry => "«" + entry.text + "»\n<size=27>" + entry.source + (string.IsNullOrEmpty(entry.answer) ? "" : " · Ответ: " + entry.answer) + "</size>"));
             if (detailScroll != null)
             {
                 LayoutRebuilder.ForceRebuildLayoutImmediate(detailBody.rectTransform);
