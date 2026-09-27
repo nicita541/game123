@@ -16,13 +16,18 @@ namespace Erudition
         public static int StartingClues(int letters, int erudition)
         {
             if (letters <= 1) return 0;
-            // Scattered individual letters, like a printed cryptogram. Most of
-            // the phrase (including repeated occurrences) remains to be solved.
+
             var tier = Tier(erudition);
-            var fraction = new[] { .20, .18, .16, .14, .12 }[tier];
-            var limit = new[] { 5, 5, 4, 4, 3 }[tier];
-            return Math.Min(limit, Math.Min(letters - 1, Math.Max(1, (int)Math.Round(letters * fraction))));
+
+            // Количество стартовых открытых букв: 4-6
+            var amount = new[] { 6, 6, 5, 5, 6 }[tier];
+
+            return Math.Min(
+                letters - 1,
+                amount
+            );
         }
+
 
         private static readonly string[][] Openings =
         {
