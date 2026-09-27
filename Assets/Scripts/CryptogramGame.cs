@@ -120,7 +120,11 @@ namespace Erudition
             screens[2] = link.classicScreen;
             classicErudition = link.classicErudition;
             classicBoard.SetGame(this);
-            foreach (var action in link.actions) action.SetGame(this);
+            foreach (var action in link.actions)
+            {
+                if (action != null)
+                    action.SetGame(this);
+            }
             if (baseFontSizes != null)
                 foreach (var label in link.GetComponentsInChildren<Text>(true))
                     if (!baseFontSizes.ContainsKey(label)) baseFontSizes[label] = label.fontSize;
