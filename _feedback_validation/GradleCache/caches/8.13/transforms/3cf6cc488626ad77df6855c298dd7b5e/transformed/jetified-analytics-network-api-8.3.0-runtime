@@ -1,0 +1,13 @@
+io.appmetrica.analytics.networkapi.BuildConfig
+io.appmetrica.analytics.networkapi.Call
+io.appmetrica.analytics.networkapi.NetworkCallMetrics
+io.appmetrica.analytics.networkapi.NetworkCallMetrics$Builder
+io.appmetrica.analytics.networkapi.NetworkClient
+io.appmetrica.analytics.networkapi.NetworkClient$Builder
+io.appmetrica.analytics.networkapi.NetworkClientSettings
+io.appmetrica.analytics.networkapi.NetworkClientSettings$Builder
+io.appmetrica.analytics.networkapi.Request
+io.appmetrica.analytics.networkapi.Request$Builder
+io.appmetrica.analytics.networkapi.Request$Method
+io.appmetrica.analytics.networkapi.Response
+io.appmetrica.analytics.networkapi.Response$Builder

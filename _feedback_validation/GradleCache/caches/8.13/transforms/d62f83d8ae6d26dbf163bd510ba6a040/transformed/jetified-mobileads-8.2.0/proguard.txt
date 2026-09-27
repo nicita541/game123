@@ -1,0 +1,36 @@
+-keepnames class yads.** { *; }
+-dontwarn yads.**
+
+-keepnames class com.yandex.mobile.ads.** { *; }
+-dontwarn com.yandex.mobile.ads.**
+
+-keepnames class com.monetization.ads.** { *; }
+-dontwarn com.monetization.ads.**
+
+-dontwarn com.yandex.metrica.*
+-dontwarn io.appmetrica.analytics.*
+
+-keep class * extends com.monetization.ads.mediation.appopenad.MediatedAppOpenAdAdapter { *; }
+-keep class * extends com.monetization.ads.mediation.banner.MediatedBannerAdapter { *; }
+-keep class * extends com.monetization.ads.mediation.interstitial.MediatedInterstitialAdapter { *; }
+-keep class * extends com.monetization.ads.mediation.rewarded.MediatedRewardedAdapter { *; }
+-keep class * extends com.monetization.ads.mediation.nativeads.MediatedNativeAdapter { *; }
+
+-keepattributes *Annotation*
+
+-dontwarn org.xmlpull.v1.**
+-dontwarn org.kxml2.io.**
+-dontwarn android.content.res.**
+-dontwarn org.slf4j.impl.StaticLoggerBinder
+
+-keep class org.xmlpull.** { *; }
+-keepclassmembers class org.xmlpull.** { *; }
+
+-dontnote com.monetization.ads.exo.source.dash.DashMediaSource$Factory
+-keepclasseswithmembers class com.monetization.ads.exo.source.dash.DashMediaSource$Factory {
+  <init>(*);
+}
+-dontnote com.monetization.ads.exo.source.dash.offline.DashDownloader
+-keepclassmembers class com.monetization.ads.exo.source.dash.offline.DashDownloader {
+  <init>(...);
+}

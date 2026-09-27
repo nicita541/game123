@@ -1,0 +1,11 @@
+io.appmetrica.analytics.ndkcrashesapi.BuildConfig
+io.appmetrica.analytics.ndkcrashesapi.internal.NativeCrash
+io.appmetrica.analytics.ndkcrashesapi.internal.NativeCrash$Builder
+io.appmetrica.analytics.ndkcrashesapi.internal.NativeCrashClientConfig
+io.appmetrica.analytics.ndkcrashesapi.internal.NativeCrashClientModule
+io.appmetrica.analytics.ndkcrashesapi.internal.NativeCrashClientModuleDummy
+io.appmetrica.analytics.ndkcrashesapi.internal.NativeCrashHandler
+io.appmetrica.analytics.ndkcrashesapi.internal.NativeCrashServiceConfig
+io.appmetrica.analytics.ndkcrashesapi.internal.NativeCrashServiceModule
+io.appmetrica.analytics.ndkcrashesapi.internal.NativeCrashServiceModuleDummy
+io.appmetrica.analytics.ndkcrashesapi.internal.NativeCrashSource

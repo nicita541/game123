@@ -1,0 +1,14 @@
+io.appmetrica.analytics.locationapi.BuildConfig
+io.appmetrica.analytics.locationapi.internal.CacheArguments
+io.appmetrica.analytics.locationapi.internal.ILastKnownUpdater
+io.appmetrica.analytics.locationapi.internal.Identifiable
+io.appmetrica.analytics.locationapi.internal.LastKnownLocationExtractor
+io.appmetrica.analytics.locationapi.internal.LastKnownLocationExtractorProvider
+io.appmetrica.analytics.locationapi.internal.LastKnownLocationExtractorProviderFactory
+io.appmetrica.analytics.locationapi.internal.LocationClient
+io.appmetrica.analytics.locationapi.internal.LocationControllerObserver
+io.appmetrica.analytics.locationapi.internal.LocationFilter
+io.appmetrica.analytics.locationapi.internal.LocationProvider
+io.appmetrica.analytics.locationapi.internal.LocationReceiver
+io.appmetrica.analytics.locationapi.internal.LocationReceiverProvider
+io.appmetrica.analytics.locationapi.internal.LocationReceiverProviderFactory

@@ -1,0 +1,1147 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/staging' branch; Version is '6000.3.8f1 (1c7db571dde0) revision 1867189'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 32478 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Никита" at "2026-09-26T17:49:59.5842401Z"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-09-26T17:49:59Z
+
+COMMAND LINE ARGUMENTS:
+D:\uni\uniti\6000.3.8f1\Editor\Unity.exe
+-batchmode
+-projectPath
+F:\game\_layout_validation
+-executeMethod
+HeaderSettingsPolish.Run
+-logFile
+F:\game\_layout_validation\integrated-third.log
+Successfully changed project path to: F:\game\_layout_validation
+F:/game/_layout_validation
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Failed to start primary listening socket at (0.0.0.0:55504-55512).
+Player connection [24724]  Target information:
+
+Player connection [24724]  * "[IP] 172.23.16.1 [Port] 55511 [Flags] 2 [Guid] 3513592908 [EditorId] 3513592908 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24724]  * "[IP] 192.168.0.30 [Port] 55511 [Flags] 2 [Guid] 3513592908 [EditorId] 3513592908 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24724]  * "[IP] 26.192.55.79 [Port] 55511 [Flags] 2 [Guid] 3513592908 [EditorId] 3513592908 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24724]  * "[IP] 172.29.112.1 [Port] 55511 [Flags] 2 [Guid] 3513592908 [EditorId] 3513592908 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24724]  * "[IP] 172.23.0.1 [Port] 55511 [Flags] 2 [Guid] 3513592908 [EditorId] 3513592908 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24724]  * "[IP] 172.30.48.1 [Port] 55511 [Flags] 2 [Guid] 3513592908 [EditorId] 3513592908 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24724]  * "[IP] 172.26.144.1 [Port] 55511 [Flags] 2 [Guid] 3513592908 [EditorId] 3513592908 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24724]  * "[IP] 172.18.0.1 [Port] 55511 [Flags] 2 [Guid] 3513592908 [EditorId] 3513592908 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24724] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [24724] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-6852" after 0.2 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.4+4293ba1
+  Session Id:              bc62c28b5e53470791e1bdf6904f8559
+  Correlation Id:          bd9cd2d724ac9f418bd16b11533a7297
+  External correlation Id: 8235722786386238036
+  Machine Id:              jzHodTWF6+Fi1Wy/9uv33iXnNe4=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Никита" (connect: 0.00s, validation: 0.00s, handshake: 0.83s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Никита-notifications" at "2026-09-26T17:50:00.4144676Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 10171185444303-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.84s
+[Licensing::Module] Licensing is initialized (took 0.48s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Artifact Garbage Collection - Removed 5 unused hashed content files
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.8f1 (1c7db571dde0)
+[Subsystems] Discovering subsystems at path D:/uni/uniti/6000.3.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/game/_layout_validation/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 5060 Ti (ID=0x2d04)
+    Vendor:   NVIDIA
+    VRAM:     7891 MB
+    Driver:   32.0.16.1088
+Initialize mono
+Mono path[0] = 'D:/uni/uniti/6000.3.8f1/Editor/Data/Managed'
+Mono path[1] = 'D:/uni/uniti/6000.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/uni/uniti/6000.3.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56852
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/uni/uniti/6000.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: D:/uni/uniti/6000.3.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.002934 seconds.
+- Loaded All Assemblies, in  0.313 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 2157 ms
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.514 seconds
+Domain Reload Profiling: 2826ms
+	BeginReloadAssembly (102ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (3ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (135ms)
+		LoadAssemblies (99ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (132ms)
+			TypeCache.Refresh (131ms)
+				TypeCache.ScanAssembly (120ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (2515ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2486ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2229ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (71ms)
+			ProcessInitializeOnLoadAttributes (123ms)
+			ProcessInitializeOnLoadMethodAttributes (59ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+Package Manager log level set to [2]
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 5 packages:
+  Built-in packages:
+    com.unity.ugui@2.0.0 (location: F:\game\_layout_validation\Library\PackageCache\com.unity.ugui@bb329a87fcdc)
+    com.unity.modules.audio@1.0.0 (location: F:\game\_layout_validation\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imageconversion@1.0.0 (location: F:\game\_layout_validation\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.ui@1.0.0 (location: F:\game\_layout_validation\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.imgui@1.0.0 (location: F:\game\_layout_validation\Library\PackageCache\com.unity.modules.imgui)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.00 seconds
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+Starting: D:\uni\uniti\6000.3.8f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: F:/game/_layout_validation
+DisplayProgressbar: Compiling Scripts
+Starting: D:\uni\uniti\6000.3.8f1\Editor\Data\netcorerun\netcorerun.exe "D:\uni\uniti\6000.3.8f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: F:/game/_layout_validation
+ExitCode: 4 Duration: 0s996ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+[207/213    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+*** Tundra requires additional run (0.96 seconds), 1 items updated, 206 evaluated
+ExitCode: 0 Duration: 0s195ms
+Starting: D:\uni\uniti\6000.3.8f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: F:/game/_layout_validation
+ExitCode: 0 Duration: 0s312ms
+Finished compiling graph: 216 nodes, 1583 flattened edges (1489 ToBuild, 16 ToUse), maximum node priority 108
+[170/213    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.rsp
+[208/213    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[209/213    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[210/213    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+Assets\Editor\HeaderSettingsPolish.cs(137,65): warning CS0618: 'TextureImporter.spritesheet' is obsolete: 'Support for accessing sprite meta data through spritesheet has been removed. Please use the UnityEditor.U2D.Sprites.ISpriteEditorDataProvider interface instead.'
+[211/213    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[212/213    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (0.29 seconds), 6 items updated, 213 evaluated
+Assets\Editor\HeaderSettingsPolish.cs(137,65): warning CS0618: 'TextureImporter.spritesheet' is obsolete: 'Support for accessing sprite meta data through spritesheet has been removed. Please use the UnityEditor.U2D.Sprites.ISpriteEditorDataProvider interface instead.'
+AssetDatabase: script compilation time: 1.939483s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.490 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.367 seconds
+Domain Reload Profiling: 856ms
+	BeginReloadAssembly (245ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (135ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (194ms)
+		LoadAssemblies (248ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (18ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (7ms)
+			BuildScriptInfoCaches (2ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (367ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (265ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (29ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (101ms)
+			ProcessInitializeOnLoadAttributes (98ms)
+			ProcessInitializeOnLoadMethodAttributes (30ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Start importing Assets/Scenes/MainScene.unity using Guid(cc34227e10fd4af588e1a5d5bea973fa) (DefaultImporter) -> (artifact id: 'd81c520145c7dbff8159680ca056c28a') in 0.0077516 seconds
+Start importing Assets/Scenes/GameplayScene.unity using Guid(7eb3ba88550a3a44b99d87413deaa104) (DefaultImporter) -> (artifact id: '34c6351a400e8754b532b001a3d5f3a2') in 0.0010108 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=9888bf4661b1303438f62394f240255d): Total: 2.982 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=2 (actual=2, local cache=0, cache server=0)
+		Asset DB Process Time: managed=1 ms, native=488 ms
+		Asset DB Callback time: managed=45 ms, native=6 ms
+		Scripting: domain reloads=1, domain reload time=490 ms, compile time=1941 ms, other=7 ms
+		Project Asset Count: scripts=123, non-scripts=112
+		Asset File Changes: new=1, changed=7, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.001ms
+	InvokePackagesCallback: 5.397ms
+	ApplyChangesToAssetFolders: 0.302ms
+	Scan: 53.468ms
+	OnSourceAssetsModified: 0.800ms
+	CategorizeAssetsWithTransientArtifact: 1.008ms
+	ProcessAssetsWithTransientArtifactChanges: 4.333ms
+	CategorizeAssets: 1.363ms
+	ImportOutOfDateAssets: 378.385ms (-1572.818ms without children)
+		ImportManagerImport: 9.921ms (0.679ms without children)
+			ImportInProcess: 9.222ms
+			UpdateCategorizedAssets: 0.021ms
+		CompileScripts: 1940.963ms
+		ReloadNativeAssets: 0.000ms
+		UnloadImportedAssets: 0.098ms
+		ReloadImportedAssets: 0.000ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.029ms
+		InitializingProgressBar: 0.004ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.187ms
+	PostProcessAllAssets: 46.233ms
+	Hotreload: 0.874ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.001ms
+	UnloadStreamsBegin: 1.056ms
+	PersistCurrentRevisions: 0.041ms
+	UnloadStreamsEnd: 0.001ms
+	GenerateScriptTypeHashes: 0.435ms
+	Untracked: 2488.553ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Scanning for USB devices : 2.711ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Эрудиция — Криптограмма
+GetVirtualKey: Could not map char: z (122) to any virtual key
+GetVirtualKey: Could not map char: y (121) to any virtual key
+GetVirtualKey: Could not map char: x (120) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: v (118) to any virtual key
+GetVirtualKey: Could not map char: V (86) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: i (105) to any virtual key
+GetVirtualKey: Could not map char: l (108) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: k (107) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: P (80) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: g (103) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: o (111) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: u (117) to any virtual key
+Depth and stencil buffers are disabled in Player settings. Depending on the platform and Graphics API in use, UI elements might not render correctly.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 389 unused Assets / (1.1 MB). Loaded Objects now: 992.
+Memory consumption went from 93.3 MB to 92.2 MB.
+Total: 4.259500 ms (FindLiveObjects: 0.052200 ms CreateObjectMapping: 0.014100 ms MarkObjects: 3.735000 ms  DeleteObjects: 0.457100 ms)
+
+GetVirtualKey: Could not map char: z (122) to any virtual key
+GetVirtualKey: Could not map char: y (121) to any virtual key
+GetVirtualKey: Could not map char: x (120) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: v (118) to any virtual key
+GetVirtualKey: Could not map char: V (86) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: i (105) to any virtual key
+GetVirtualKey: Could not map char: l (108) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: k (107) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: P (80) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: g (103) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: o (111) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: u (117) to any virtual key
+Start importing Assets/Art/SpriteSheets/settings_icons_v1.png using Guid(db115a7c0298c2b44b7fa2d420447054) (TextureImporter) -> (artifact id: '8f65a791f982574909920ae69d5e872c') in 0.0884229 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=9a8d2a46a99628c4b98a76acc6268ec9): Total: 0.113 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/SpriteSheets/settings_icons_v1.png using Guid(db115a7c0298c2b44b7fa2d420447054) (TextureImporter) -> (artifact id: '7e2794949993378ddd47335350f060c9') in 0.0861983 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=84c6f497871b6cc41bc097313d6df6e9): Total: 0.103 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/SpriteSheets/settings_icons_v1.png using Guid(db115a7c0298c2b44b7fa2d420447054) (TextureImporter) -> (artifact id: '8f65a791f982574909920ae69d5e872c') in 0.0861585 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=002d593a636b17a40887c54e26cbf4e2): Total: 0.097 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Opening scene 'Assets/Scenes/MainScene.unity'
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/MainScene.unity'
+	Deserialize:            47.988 ms
+	Integration:            85.350 ms
+	Integration of assets:  1.205 ms
+	Thread Wait Time:       -0.008 ms
+	Total Operation Time:   134.535 ms
+Unloading 10 unused Assets / (0.6 MB). Loaded Objects now: 4106.
+Memory consumption went from 149.2 MB to 148.6 MB.
+Total: 4.760900 ms (FindLiveObjects: 0.271700 ms CreateObjectMapping: 0.043100 ms MarkObjects: 4.102200 ms  DeleteObjects: 0.342600 ms)
+
+Start importing Assets/Art/Backgrounds/home_reference_v1.png using Guid(586c48ad3d7b7dd4d87162d4c58e2971) (TextureImporter) -> (artifact id: 'd8503e49dd4317ead8992645563fdafe') in 0.0834408 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=2dda190636adf534bac2e6715bcc0793): Total: 0.094 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/home_reference_v1.png using Guid(586c48ad3d7b7dd4d87162d4c58e2971) (TextureImporter) -> (artifact id: 'fa0c95407a0a7f54d7c6da213e8c8e55') in 0.0778208 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=2bee2c25112632a41a267acac5a98fcb): Total: 0.094 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/gameplay_reference_v1.png using Guid(295e135223bc5f14eabafbec5d0b0e52) (TextureImporter) -> (artifact id: '69eba7035699a9c417c88ce6170d52e8') in 0.0789884 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=ad18843b08b1f89449ff6348d0a4577d): Total: 0.084 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/gameplay_reference_v1.png using Guid(295e135223bc5f14eabafbec5d0b0e52) (TextureImporter) -> (artifact id: '83c42503e9877de9410cbc5b89ddaf71') in 0.0755755 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=4267d03ee32e29646b74aeada7554820): Total: 0.091 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/victory_reference_v1.png using Guid(125514493000d5f43bff6575421df92d) (TextureImporter) -> (artifact id: '796d576a0ab2452c0dfb93109b039bf1') in 0.0761558 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=619245e9547c5374aae7a1588be2e662): Total: 0.081 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/victory_reference_v1.png using Guid(125514493000d5f43bff6575421df92d) (TextureImporter) -> (artifact id: '22b4a447984115b0fc6cbd19be35e784') in 0.0762694 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=35a67ebc0edff3544a51a2be6b4073cb): Total: 0.092 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/energy_reference_v1.png using Guid(e7dd0923c777fb8488ba99753cc12f0c) (TextureImporter) -> (artifact id: '8242a8c3fd1e6bee08316cfeef929c90') in 0.0793124 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=9fd2256d7022a0043a3deff58cd2f18c): Total: 0.084 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/energy_reference_v1.png using Guid(e7dd0923c777fb8488ba99753cc12f0c) (TextureImporter) -> (artifact id: '096abb2a43f35e8aa1dbc8ac4c433aa3') in 0.0757649 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=ac46e675d5b20104ea34bcbb9fc68ef1): Total: 0.091 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/stats_reference_v1.png using Guid(09138db005b590e48a479987e4ea8f3b) (TextureImporter) -> (artifact id: '1317e243141cd46b6aeceaef7023033f') in 0.075882 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=e34262727eea6af43aad874d0fdafeb4): Total: 0.082 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/stats_reference_v1.png using Guid(09138db005b590e48a479987e4ea8f3b) (TextureImporter) -> (artifact id: '3acd29068c2e4ed4c2b46825a10a477d') in 0.0762703 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=8d95cf740fa7cc54f9ab3a30f0c051dd): Total: 0.092 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/collections_reference_v1.png using Guid(f83e633e12f0dc14b806fb864919b8a4) (TextureImporter) -> (artifact id: '7f036c9cf5a9f94bc80c3e3bd2b5476f') in 0.0752897 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=7b1b33cc6d683c542a34d260a7058939): Total: 0.080 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/collections_reference_v1.png using Guid(f83e633e12f0dc14b806fb864919b8a4) (TextureImporter) -> (artifact id: '9fb7bfcefdb3d2c33f842f454709b8a5') in 0.0769397 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=4980c7800fb736540840b955cb244010): Total: 0.094 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/achievements_reference_v1.png using Guid(279f82af8b829a34daba3329c8991b7d) (TextureImporter) -> (artifact id: '2f45f4d0e618183c0d13681247bee684') in 0.075883 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=0a75e46eedeab6440a28c575c5bd5894): Total: 0.082 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/achievements_reference_v1.png using Guid(279f82af8b829a34daba3329c8991b7d) (TextureImporter) -> (artifact id: '1b6add4ab220d29659cc2fb7803ad3d0') in 0.0753091 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=fcabcdce0e3a9e448bea0f1529752857): Total: 0.092 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/shop_reference_v1.png using Guid(658cc4dc5746ccf418f453a0ab7e75a7) (TextureImporter) -> (artifact id: '3d419d34130c9a55152898342d5314d3') in 0.0791429 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=6214fdd1ebfc5d841a321ca3689fb4f0): Total: 0.086 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/shop_reference_v1.png using Guid(658cc4dc5746ccf418f453a0ab7e75a7) (TextureImporter) -> (artifact id: 'c3ffd6983f265bf664f02ca45d46f79f') in 0.0754297 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=2fc8b4db60dcb6148b114dc3c689ced7): Total: 0.091 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/settings_reference_v1.png using Guid(2f3df4534998cb44da29e26ff0e00896) (TextureImporter) -> (artifact id: '5c81b9c41513bbeb42535caa8214bc44') in 0.0799084 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=79affb3c010661740aa028218c8adacc): Total: 0.085 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Art/Backgrounds/settings_reference_v1.png using Guid(2f3df4534998cb44da29e26ff0e00896) (TextureImporter) -> (artifact id: '1561fe8ee8e28e78644e44f291da8f25') in 0.0755447 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=9376dbe377fd1b54989fb47c4814645e): Total: 0.093 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=ccd10527c818ca442948efec28e419ab): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Asset Pipeline Refresh (id=1e07ffbf3bdfa1742804e4bdc7fac90d): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Prefabs/BottomNavigation.prefab using Guid(db8306ce3ca536e4abd4966ab2aa4f6e) (PrefabImporter) -> (artifact id: '2147465b1ec22b8f2152f3537f1dd9d6') in 0.0049699 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=ab4dddb2689f8094faec141812145419): Total: 0.019 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Opening scene 'Assets/Scenes/GameplayScene.unity additively'
+Loaded scene 'Assets/Scenes/GameplayScene.unity'
+	Deserialize:            183.445 ms
+	Integration:            17.360 ms
+	Integration of assets:  0.182 ms
+	Thread Wait Time:       -0.145 ms
+	Total Operation Time:   200.842 ms
+Start importing Assets/Scenes/GameplayScene.unity using Guid(7eb3ba88550a3a44b99d87413deaa104) (DefaultImporter) -> (artifact id: '8f26f159e934afd62e9337c22f933699') in 0.000706 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=a55e17e19d4624842aa17d8a007b88c4): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+INTEGRATED_BACKGROUNDS_AUTHORED screens=11 uniqueArt=9 detachedOwls=0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+IntegratedReferenceBackgrounds:Apply (Erudition.CryptogramGame) (at Assets/Editor/IntegratedReferenceBackgrounds.cs:67)
+HeaderSettingsPolish:Run () (at Assets/Editor/HeaderSettingsPolish.cs:45)
+
+(Filename: Assets/Editor/IntegratedReferenceBackgrounds.cs Line: 67)
+
+Start importing Assets/Prefabs/SettingsScreen.prefab using Guid(2af224fa8cc3c3141aec1be4d42f09bd) (PrefabImporter) -> (artifact id: '63847b3af59047ae195ef3c00a945699') in 0.0106849 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=ed3d63426d3c24d44bb31660cb386454): Total: 0.028 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Scenes/MainScene.unity using Guid(cc34227e10fd4af588e1a5d5bea973fa) (DefaultImporter) -> (artifact id: '3210f11abe64f1273f23956edfa7e64f') in 0.0006081 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=f704a413261394849a0533329e685b99): Total: 0.009 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+HEADER_SETTINGS_LAYOUT_SAVED
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HeaderSettingsPolish:Run () (at Assets/Editor/HeaderSettingsPolish.cs:48)
+
+(Filename: Assets/Editor/HeaderSettingsPolish.cs Line: 48)
+
+Opening scene 'Assets/Scenes/MainScene.unity'
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/MainScene.unity'
+	Deserialize:            27.443 ms
+	Integration:            7.141 ms
+	Integration of assets:  0.025 ms
+	Thread Wait Time:       -0.000 ms
+	Total Operation Time:   34.610 ms
+Unloading 414 unused Assets / (0.7 MB). Loaded Objects now: 4042.
+Memory consumption went from 206.0 MB to 205.2 MB.
+Total: 5.991700 ms (FindLiveObjects: 0.152400 ms CreateObjectMapping: 0.079900 ms MarkObjects: 4.988600 ms  DeleteObjects: 0.769200 ms)
+
+Opening scene 'Assets/Scenes/GameplayScene.unity additively'
+Loaded scene 'Assets/Scenes/GameplayScene.unity'
+	Deserialize:            176.883 ms
+	Integration:            16.579 ms
+	Integration of assets:  1.370 ms
+	Thread Wait Time:       -0.152 ms
+	Total Operation Time:   194.680 ms
+USABILITY_VERIFY_PASS scenes=2 cells=672 keys=66 catalogue=984 longestWords=36 missing=0 unfonted=0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityTests:Verify () (at Assets/Editor/UsabilityTests.cs:66)
+UsabilityTests:Run () (at Assets/Editor/UsabilityTests.cs:18)
+HeaderSettingsPolish:Run () (at Assets/Editor/HeaderSettingsPolish.cs:49)
+
+(Filename: Assets/Editor/UsabilityTests.cs Line: 66)
+
+Opening scene 'Assets/Scenes/MainScene.unity'
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/MainScene.unity'
+	Deserialize:            26.953 ms
+	Integration:            9.409 ms
+	Integration of assets:  0.030 ms
+	Thread Wait Time:       -0.019 ms
+	Total Operation Time:   36.372 ms
+Unloading 7 unused Assets / (48.8 KB). Loaded Objects now: 4042.
+Memory consumption went from 197.0 MB to 197.0 MB.
+Total: 4.112700 ms (FindLiveObjects: 0.135300 ms CreateObjectMapping: 0.021100 ms MarkObjects: 3.877200 ms  DeleteObjects: 0.078700 ms)
+
+[Project] Loading completed in 10.625 seconds
+	Project init time: 				7.109 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		0.691 seconds
+		Asset Database init time: 		0.127 seconds
+		Global illumination init time: 	0.002 seconds
+		Assemblies load time: 			2.841 seconds
+		Unity extensions init time: 	0.001 seconds
+		Asset Database refresh time: 	2.982 seconds
+	Scene opening time: 			3.408 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1790445010199,"processId":6852,"projectLoad":10.624899699999999,"projectInit":7.1093728,"templateInit":0.0,"packageManagerInit":0.6909848,"assetDatabaseInit":0.1272948,"globalIlluminationInit":0.0022726,"assembliesLoad":2.8411745,"unityExtensionsInit":0.0006856,"assetDatabaseRefresh":2.9819842,"sceneOpening":3.4084398}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1790445010199,"processId":6852,"editorVersion":"6000.3.8f1 (1c7db571dde0)","branch":"6000.3/staging","buildType":"Release","platform":"Windows"}
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            13.914 ms
+	Integration:            32.561 ms
+	Integration of assets:  0.045 ms
+	Thread Wait Time:       0.011 ms
+	Total Operation Time:   46.531 ms
+Asset Pipeline Refresh (id=7438a30ca9b1a3447a282f27adfcfda2): Total: 0.010 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Start Indexing on Editor startup
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <1eb9db207454431c84a47bcd81e79c37>:0 
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__80.MoveNext () [0x00106] in <63714a6838894918831f297634c4de84>:0 
+  at System.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) [0x00045] in <6faa6124236442759eb396cfbfdad508>:0 
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <6faa6124236442759eb396cfbfdad508>:0 
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00006] in <63714a6838894918831f297634c4de84>:0 
+  at UnityEditor.Search.SearchInit.IndexationOnStartup () [0x0000c] in <63714a6838894918831f297634c4de84>:0 
+  at UnityEditor.EditorApplication.Internal_CallDelayFunctions () [0x0002c] in <6dd00658fb454e6fb4c06a416ab8eaa1>:0 
+
+Created GICache directory at C:/Users/Никита/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.010s, timestamps: [10.919 - 10.928]
+Loaded scene 'Assets/Scenes/GameplayScene.unity'
+	Deserialize:            195.967 ms
+	Integration:            19.222 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       232.913 ms
+	Total Operation Time:   448.105 ms
+USABILITY_RUNTIME_PASS: additive scenes, zero erudition, migration, selection, used keys, hearts, hints, resume, rewards, long generated paragraphs, auto-scroll, persistence, no runtime UI creation
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityTests:Tick () (at Assets/Editor/UsabilityTests.cs:41)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/UsabilityTests.cs Line: 41)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            12.578 ms
+	Integration:            7.766 ms
+	Integration of assets:  0.016 ms
+	Thread Wait Time:       0.008 ms
+	Total Operation Time:   20.367 ms
+Unloading 7 unused Assets / (0.6 MB). Loaded Objects now: 4085.
+Memory consumption went from 235.2 MB to 234.6 MB.
+Total: 4.951000 ms (FindLiveObjects: 0.166500 ms CreateObjectMapping: 0.024100 ms MarkObjects: 4.663200 ms  DeleteObjects: 0.096500 ms)
+
+Opening scene 'Assets/Scenes/MainScene.unity'
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/MainScene.unity'
+	Deserialize:            29.090 ms
+	Integration:            6.737 ms
+	Integration of assets:  0.018 ms
+	Thread Wait Time:       0.014 ms
+	Total Operation Time:   35.860 ms
+Unloading 1 unused Assets / (0.5 KB). Loaded Objects now: 4086.
+Memory consumption went from 224.7 MB to 224.7 MB.
+Total: 4.599800 ms (FindLiveObjects: 0.141800 ms CreateObjectMapping: 0.022200 ms MarkObjects: 4.419700 ms  DeleteObjects: 0.015300 ms)
+
+Opening scene 'Assets/Scenes/GameplayScene.unity additively'
+Loaded scene 'Assets/Scenes/GameplayScene.unity'
+	Deserialize:            173.664 ms
+	Integration:            17.351 ms
+	Integration of assets:  1.493 ms
+	Thread Wait Time:       -0.162 ms
+	Total Operation Time:   192.347 ms
+USABILITY_SHOT Home 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:28)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Classic_Beginner 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:28)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Turbo_Beginner 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:29)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Collections 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:32)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Collections_16x9 1080x1920
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:34)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Collections_Notch 1080x2400
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:34)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Achievements 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:32)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Shop 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:32)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Settings 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:32)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Settings_16x9 1080x1920
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:34)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Settings_Notch 1080x2400
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:34)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Statistics 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:32)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Statistics_16x9 1080x1920
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:34)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Statistics_Notch 1080x2400
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:34)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Classic_Long 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:37)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Classic_Long_Scrolled 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:39)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Victory_Long 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:40)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Victory_16x9 1080x1920
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:40)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Victory_Notch 1080x2400
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:40)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Collection_Story 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:41)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Defeat_Long 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:42)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT NoFeathers 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:43)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT NoFeathers_16x9 1080x1920
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:43)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT NoFeathers_Notch 1080x2400
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:43)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Home_16x9 1080x1920
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:44)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Home_Notch 1080x2400
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:44)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Classic_16x9 1080x1920
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:45)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Classic_Notch 1080x2400
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:45)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Classic_LargeText 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:46)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Settings_LargeText 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:47)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Statistics_LargeText 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:48)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT Collections_LargeText 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:49)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_SHOT NoFeathers_LargeText 1080x2340
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Shot (string,int,int,bool) (at Assets/Editor/UsabilityReview.cs:77)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:50)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 77)
+
+USABILITY_CAPTURE_COMPLETE F:\game\_layout_validation\Review\Usability
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+UsabilityReview:Capture () (at Assets/Editor/UsabilityReview.cs:52)
+UsabilityTests:State (UnityEditor.PlayModeStateChange) (at Assets/Editor/UsabilityTests.cs:31)
+UnityEditor.EditorApplication:Internal_PlayModeStateChanged (UnityEditor.PlayModeStateChange)
+
+(Filename: Assets/Editor/UsabilityReview.cs Line: 52)
+
+Killing ADB server in 0,0424309 seconds.
+Start importing ProjectSettings/EditorSettings.asset using Guid(0000000000000000c000000000000000) (LibraryAssetImporter) -> (artifact id: 'fdcca38f5f1944c9bec0b9f00395ab39') in 0.0018875 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=bd0d81057e87c094d8c41d71042734e8): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-Никита-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-Никита channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1790445017939,"processId":6852,"allocatedMemory":10287204,"memoryLabels":[{"Default":29313},{"Permanent":15236},{"NewDelete":67707},{"Thread":4230344},{"Manager":33853},{"VertexData":296},{"Geometry":816},{"Texture":296},{"Shader":79337},{"Material":24},{"GfxDevice":55473},{"Animation":392},{"Audio":2664},{"FreeType":8},{"FontEngine":736},{"Physics":2090},{"Physics2D":16},{"Serialization":656},{"Input":14984},{"JobScheduler":33024},{"TextLib":216},{"Mono":32},{"ScriptingNativeRuntime":155060},{"BaseObject":1634192},{"Resource":1336},{"Renderer":3000},{"Transform":4685},{"File":6870},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":43751},{"DynamicArray":82898},{"HashMap":50164},{"Utility":2660678},{"Curl":2478},{"PoolAlloc":2056},{"AI":80},{"TypeTree":5341},{"ScriptManager":512},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":112},{"GI":7792},{"Director":8240},{"CloudService":15264},{"WebRequest":808},{"VR":47994},{"SceneManager":504},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2113},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":384},{"Hierarchy":608},{"CoreStats":13032},{"Identifiers":12960},{"Gui":96},{"EditorUtility":93347},{"VersionControl":4},{"Undo":947},{"AssetDatabase":456336},{"EditorGi":328},{"UnityConnect":29232},{"Upm":1896},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":218},{"ProfilerEditor":9778},{"CoreBusinessMetrics":2762},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

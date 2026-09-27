@@ -1,0 +1,5 @@
+io.appmetrica.analytics.logger.appmetrica.BuildConfig
+io.appmetrica.analytics.logger.appmetrica.internal.DebugLogger
+io.appmetrica.analytics.logger.appmetrica.internal.ImportantLogger
+io.appmetrica.analytics.logger.appmetrica.internal.PublicLogger
+io.appmetrica.analytics.logger.appmetrica.internal.PublicLogger$Companion

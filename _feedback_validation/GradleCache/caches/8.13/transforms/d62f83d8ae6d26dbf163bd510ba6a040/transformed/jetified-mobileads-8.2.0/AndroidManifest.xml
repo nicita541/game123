@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yandex.mobile.ads" >
+
+    <uses-sdk android:minSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <application>
+        <activity
+            android:name="com.yandex.mobile.ads.common.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:enableOnBackInvokedCallback="false"
+            android:theme="@style/MonetizationAdsInternal.AdActivity"
+            tools:ignore="UnusedAttribute" />
+
+        <provider
+            android:name="com.yandex.mobile.ads.core.initializer.YandexAdsInitializeProvider"
+            android:authorities="${applicationId}.YandexAdsInitializeProvider"
+            android:exported="false" />
+
+        <activity
+            android:name="com.yandex.mobile.ads.features.debugpanel.ui.IntegrationInspectorActivity"
+            android:enableOnBackInvokedCallback="false"
+            android:exported="false"
+            android:theme="@style/DebugPanelTheme"
+            tools:ignore="UnusedAttribute" />
+
+        <provider
+            android:name="com.yandex.mobile.ads.features.debugpanel.data.local.DebugPanelFileProvider"
+            android:authorities="${applicationId}.monetization.ads.inspector.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/debug_panel_file_paths" />
+        </provider>
+    </application>
+
+</manifest>

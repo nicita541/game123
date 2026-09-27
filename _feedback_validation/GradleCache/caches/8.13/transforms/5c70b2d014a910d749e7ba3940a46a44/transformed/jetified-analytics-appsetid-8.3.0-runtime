@@ -1,0 +1,5 @@
+io.appmetrica.analytics.appsetid.BuildConfig
+io.appmetrica.analytics.appsetid.internal.AppSetIdListener
+io.appmetrica.analytics.appsetid.internal.AppSetIdRetriever
+io.appmetrica.analytics.appsetid.internal.AppSetIdRetriever$retrieveAppSetId$onCompleteListener$1
+io.appmetrica.analytics.appsetid.internal.IAppSetIdRetriever

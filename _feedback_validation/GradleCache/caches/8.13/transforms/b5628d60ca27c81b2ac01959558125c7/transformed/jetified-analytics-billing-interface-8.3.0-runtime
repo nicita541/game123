@@ -1,0 +1,16 @@
+io.appmetrica.analytics.billinginterface.BuildConfig
+io.appmetrica.analytics.billinginterface.internal.BillingInfo
+io.appmetrica.analytics.billinginterface.internal.BillingType
+io.appmetrica.analytics.billinginterface.internal.Period
+io.appmetrica.analytics.billinginterface.internal.Period$TimeUnit
+io.appmetrica.analytics.billinginterface.internal.ProductInfo
+io.appmetrica.analytics.billinginterface.internal.ProductType
+io.appmetrica.analytics.billinginterface.internal.config.BillingConfig
+io.appmetrica.analytics.billinginterface.internal.config.BillingConfigChangedListener
+io.appmetrica.analytics.billinginterface.internal.library.UtilsProvider
+io.appmetrica.analytics.billinginterface.internal.monitor.BillingMonitor
+io.appmetrica.analytics.billinginterface.internal.monitor.DummyBillingMonitor
+io.appmetrica.analytics.billinginterface.internal.storage.BillingInfoManager
+io.appmetrica.analytics.billinginterface.internal.storage.BillingInfoSender
+io.appmetrica.analytics.billinginterface.internal.storage.BillingInfoStorage
+io.appmetrica.analytics.billinginterface.internal.update.UpdatePolicy

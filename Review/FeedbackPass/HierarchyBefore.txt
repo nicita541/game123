@@ -1,0 +1,379 @@
+Screen_Shop/Button_Back pos=(-440.00, 1010.00) size=(105.00, 105.00) text=
+Card_Solved/Text_Caption pos=(60.00, -76.00) size=(320.00, 44.00) text=Всего заданий
+DebugControls/Button_OneHeart pos=(-230.00, -400.00) size=(420.00, 115.00) text=
+Button_OneHeart/Text_Label pos=(0.00, 0.00) size=(400.00, 113.00) text=Оставить 1 сердце
+Screen_Victory/Button_LikeQuote pos=(0.00, -668.00) size=(430.00, 65.00) text=
+ShopItem_Special_1/Text_Name pos=(-38.00, 23.00) size=(440.00, 56.00) text=Убрать рекламу
+Button_Home/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Главная
+ShopItem_Feathers_1/Text_Name pos=(0.00, -66.00) size=(420.00, 61.00) text=Пачка перьев
+Button_OpenDetails/Text_Label pos=(0.00, 0.00) size=(50.00, 64.00) text=›
+ActivityGraph/Day_0 pos=(-381.43, -180.00) size=(85.00, 45.00) text=Вс
+SettingRow_1/Setting_Description pos=(-65.00, -44.00) size=(440.00, 98.00) text=Отклик клавиш и маленьких побед
+Screen_Settings/Text_Autosave pos=(0.00, -516.00) size=(910.00, 52.00) text=Изменения сохраняются автоматически
+Info/Title pos=(-65.00, 0.00) size=(290.00, 64.00) text=Любовь
+BookCard_3/Text_Name pos=(-14.00, -90.00) size=(428.00, 52.00) text=Сказки
+Button_OpenDetails/Text_Label pos=(0.00, 0.00) size=(50.00, 64.00) text=›
+Card_Solved/Text_Value pos=(65.00, -5.00) size=(280.00, 92.00) text=48
+Screen_Victory/Button_Continue pos=(0.00, -1044.00) size=(940.00, 146.00) text=
+Button_OpenDebug/Text_Label pos=(0.00, 0.00) size=(710.00, 60.00) text=Инструменты разработчика
+Button_Settings/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=⚙
+Screen_NoFeathers/FeatherCounter_Restored pos=(0.00, 1000.00) size=(380.00, 110.00) text=1/5
+BottomNavigation/Button_Home pos=(-384.00, 0.00) size=(184.00, 148.00) text=
+DebugControls/Button_Defeat pos=(-230.00, 470.00) size=(420.00, 115.00) text=
+SettingRow_1/Text_State pos=(326.00, -65.00) size=(220.00, 45.00) text=Включено
+Button_AddEnergy/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=+
+Tab_Все/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Все
+Section_Hints/Subtitle pos=(10.00, 29.00) size=(775.00, 52.00) text=Используйте, когда нужна помощь
+Reward_CoinsCard/Reward_Coins pos=(0.00, -51.00) size=(270.00, 116.00) text=+30 монет
+Button_OpenShop/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Перейти в магазин
+ActivityGraph/Count_5 pos=(254.29, -125.00) size=(85.00, 45.00) text=0
+PopupCard/Text_Title pos=(0.00, 40.00) size=(785.00, 106.00) text=Достижение
+Tabs/Tab_Особые pos=(322.00, 0.00) size=(311.00, 88.00) text=
+Button_Turbo/Icon_Arrow pos=(414.00, 0.00) size=(70.00, 100.00) text=›
+ThemeCard_1/Text_Name pos=(-14.00, -90.00) size=(428.00, 52.00) text=Природа
+Button_Open/Text_Label pos=(0.00, 0.00) size=(45.00, 59.00) text=›
+Screen_Settings/Button_SettingsHome pos=(0.00, -872.00) size=(940.00, 135.00) text=
+DebugControls/Button_Shop pos=(-230.00, 180.00) size=(420.00, 115.00) text=
+Button_Turbo/Text_Subtitle pos=(78.00, -58.00) size=(590.00, 137.00) text=Короткая разминка
+на пару минут
+ThemeCard_3/Text_Progress pos=(-138.00, -130.00) size=(160.00, 39.00) text=8/20
+CollectionCard_2/Text_Name pos=(-14.00, -90.00) size=(428.00, 52.00) text=Л. Н. Толстой
+Button_Home/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Главная
+BottomNavigation/Button_Shop pos=(384.00, 0.00) size=(184.00, 148.00) text=
+Button_Achievements/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Открыть достижения
+ActivityGraph/Period_1 pos=(240.00, 190.00) size=(144.00, 60.00) text=
+Button_EnergyInfo/Text_Label pos=(0.00, 0.00) size=(70.00, 84.00) text=+
+Button_RewardedAd/Text_Label pos=(95.00, 0.00) size=(570.00, 248.00) text=<size=65>+1 перо</size>
+Посмотреть
+рекламу
+AchievementCard_5/Text_Description pos=(37.00, -3.00) size=(580.00, 57.00) text=Полюби 20 разных цитат
+Button_Open/Text_Label pos=(0.00, 0.00) size=(45.00, 59.00) text=›
+SettingRow_1/Toggle_Звуки pos=(326.00, 16.00) size=(182.00, 88.00) text=
+DebugControls/Button_Collections pos=(-230.00, 325.00) size=(420.00, 115.00) text=
+Button_Home/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Главная
+AchievementCard_2/Button_Details pos=(409.00, 10.00) size=(77.00, 77.00) text=
+RestoreCard/Text_Timer pos=(50.00, -112.00) size=(335.00, 105.00) text=24:36
+CollectionDetailCard/Text_Progress pos=(0.00, 207.00) size=(810.00, 80.00) text=0 / 20 в коллекции
+BookCard_1/Text_Progress pos=(-138.00, -130.00) size=(160.00, 39.00) text=8/20
+Button_UnlockAchievements/Text_Label pos=(0.00, 0.00) size=(400.00, 113.00) text=Все достижения
+AchievementCard_4/Text_Title pos=(25.00, 48.00) size=(550.00, 60.00) text=Ценитель классики
+Button_Collections/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Коллекции
+Screen_MainMenu/Button_Settings pos=(-419.00, 990.00) size=(133.00, 133.00) text=
+BottomNavigation/Button_Achievements pos=(192.00, 0.00) size=(184.00, 148.00) text=
+Tab_Темы/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Темы
+Button_RewardedAd/Text_Label pos=(15.00, 0.00) size=(700.00, 150.00) text=Посмотреть рекламу
+и получить бонус
+ActivityGraph/Count_0 pos=(-381.43, -125.00) size=(85.00, 45.00) text=0
+AchievementCard_2/Text_Title pos=(25.00, 48.00) size=(550.00, 60.00) text=Любознательный
+Button_Home/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Главная
+Button_FeatherInfo/Text_Label pos=(0.00, 0.00) size=(46.00, 46.00) text=+
+SettingRow_0/Setting_Title pos=(-65.00, 40.00) size=(440.00, 62.00) text=Музыка
+AchievementCard_1/Text_Title pos=(25.00, 48.00) size=(550.00, 60.00) text=Первые шаги
+Button_Statistics/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Статистика
+CollectionCard_3/Button_OpenDetails pos=(184.00, -123.00) size=(70.00, 70.00) text=
+CollectionCard_6/Button_OpenDetails pos=(184.00, -123.00) size=(70.00, 70.00) text=
+CollectionCard_1/Text_Progress pos=(-138.00, -130.00) size=(160.00, 39.00) text=8/20
+BottomNavigation/Button_Statistics pos=(-192.00, 0.00) size=(184.00, 148.00) text=
+BalanceBar/Button_FeatherInfo pos=(-54.00, 0.00) size=(72.00, 72.00) text=
+Button_Collections/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Коллекции
+BookCard_3/Text_Progress pos=(-138.00, -130.00) size=(160.00, 39.00) text=8/20
+ActivityGraph/Day_1 pos=(-254.29, -180.00) size=(85.00, 45.00) text=Пн
+Screen_NoFeathers/Text_Title pos=(0.00, 750.00) size=(740.00, 246.00) text=Перья
+закончились
+ShopItem_Special_2/Text_Detail pos=(-40.00, -30.00) size=(440.00, 47.00) text=Новая тема
+ActivityGraph/Count_2 pos=(-127.14, -125.00) size=(85.00, 45.00) text=0
+DebugControls/Button_AddHint pos=(230.00, -110.00) size=(420.00, 115.00) text=
+ActivityGraph/Day_2 pos=(-127.14, -180.00) size=(85.00, 45.00) text=Вт
+Button_Buy/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Скоро
+DebugControls/Button_MainMenu pos=(-230.00, 760.00) size=(420.00, 115.00) text=
+Button_OpenDetails/Text_Label pos=(0.00, 0.00) size=(50.00, 64.00) text=›
+DebugControls/Button_Victory pos=(230.00, 615.00) size=(420.00, 115.00) text=
+Screen_Achievements/Text_Title pos=(0.00, 712.00) size=(720.00, 145.00) text=Достижения
+SettingRow_2/Setting_Title pos=(-65.00, 40.00) size=(440.00, 62.00) text=Вибрация
+ActivityGraph/Day_7 pos=(0.00, -180.00) size=(85.00, 45.00) text=Пн
+Button_Retry/Text_Label pos=(0.00, 0.00) size=(770.00, 128.00) text=Повторить за 1 перо
+CollectionCard_3/Text_Progress pos=(-138.00, -130.00) size=(160.00, 39.00) text=4/18
+Button_Back/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=‹
+Button_Back/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=‹
+Screen_NoFeathers/Button_OpenShop pos=(0.00, -875.00) size=(960.00, 165.00) text=
+Button_Classic/Text_Subtitle pos=(78.00, -58.00) size=(590.00, 137.00) text=Истории и цитаты
+от простого к сложному
+CollectionDetailCard/Text_QuotesScrollHint pos=(0.00, -731.00) size=(820.00, 50.00) text=Собранные истории можно листать
+BottomNavigation/Button_Collections pos=(0.00, 0.00) size=(184.00, 148.00) text=
+ActivityGraph/Count_11 pos=(0.00, -120.00) size=(85.00, 45.00) text=0
+AchievementCard_6/Button_Details pos=(409.00, 10.00) size=(77.00, 77.00) text=
+BottomNavigation/Button_Statistics pos=(-192.00, 0.00) size=(184.00, 148.00) text=
+ActivityGraph/Day_9 pos=(0.00, -180.00) size=(85.00, 45.00) text=Пн
+AchievementCard_7/Button_Details pos=(409.00, 10.00) size=(77.00, 77.00) text=
+Button_Shop/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Магазин
+DebugControls/Button_RemoveFeather pos=(-230.00, 35.00) size=(420.00, 115.00) text=
+AchievementCard_5/Text_Progress pos=(286.00, -56.00) size=(136.00, 46.00) text=0/20
+Button_Achievements/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Достижения
+AchievementCard_3/Button_Details pos=(409.00, 10.00) size=(77.00, 77.00) text=
+BottomNavigation/Button_Home pos=(-384.00, 0.00) size=(184.00, 148.00) text=
+Screen_NoFeathers/Button_EnergyInfo pos=(169.00, 1040.00) size=(90.00, 90.00) text=
+Button_ZeroFeathers/Text_Label pos=(0.00, 0.00) size=(400.00, 113.00) text=0/5 перьев
+Button_Buy/Text_Label pos=(26.00, 0.00) size=(200.00, 83.00) text=150
+BottomNavigation/Button_Shop pos=(384.00, 0.00) size=(184.00, 148.00) text=
+Button_Collections/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Коллекции
+Tab_Прогресс/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Прогресс
+AchievementCard_1/Button_Details pos=(409.00, 10.00) size=(77.00, 77.00) text=
+ActivityGraph/Period_2 pos=(385.00, 190.00) size=(144.00, 60.00) text=
+ShopItem_Feathers_2/Text_Name pos=(0.00, -66.00) size=(420.00, 61.00) text=Большая пачка
+Button_Classic/Text_Label pos=(78.00, 67.00) size=(590.00, 125.00) text=Классика
+ActivityGraph/Text_Title pos=(-260.00, 184.00) size=(430.00, 76.00) text=Активность
+AchievementCard_6/Text_Progress pos=(286.00, -56.00) size=(136.00, 46.00) text=0/30
+QuoteCard/QuoteMark pos=(0.00, 205.00) size=(110.00, 88.00) text=“
+PopupCard/Text_Body pos=(0.00, -110.00) size=(770.00, 150.00) text=Прогресс
+CollectionCard_5/Text_Name pos=(-14.00, -90.00) size=(428.00, 52.00) text=Н. В. Гоголь
+Button_OpenDetails/Text_Label pos=(0.00, 0.00) size=(50.00, 64.00) text=›
+AchievementCard_4/Button_Details pos=(409.00, 10.00) size=(77.00, 77.00) text=
+EruditionBlock/Text_Value pos=(0.00, -130.00) size=(245.00, 105.00) text=0
+Section_Hints/Text_Detail pos=(-50.00, -63.00) size=(560.00, 65.00) text=5 подсказок
+ActivityGraph/Count_4 pos=(127.14, -125.00) size=(85.00, 45.00) text=0
+Button_OpenDetails/Text_Label pos=(0.00, 0.00) size=(50.00, 64.00) text=›
+BookCard_2/Button_OpenDetails pos=(184.00, -123.00) size=(70.00, 70.00) text=
+AchievementCard_5/Text_Title pos=(25.00, 48.00) size=(550.00, 60.00) text=Доброе сердце
+BottomNavigation/Button_Statistics pos=(-192.00, 0.00) size=(184.00, 148.00) text=
+Card_Accuracy/Text_Label pos=(65.00, 64.00) size=(320.00, 58.00) text=Верных ответов
+Card_Streak/Text_Value pos=(65.00, -5.00) size=(280.00, 92.00) text=7
+EruditionCard/Text_Heading pos=(-165.00, 122.00) size=(560.00, 78.00) text=Уровень эрудиции
+DebugControls/Button_Statistics pos=(230.00, 470.00) size=(420.00, 115.00) text=
+Card_Streak/Text_Label pos=(65.00, 64.00) size=(320.00, 58.00) text=Серия побед
+Screen_CollectionDetails/Text_Title pos=(0.00, 984.00) size=(800.00, 115.00) text=А. С. Пушкин
+Reward_CollectionCard/Reward_Collection pos=(0.00, -53.00) size=(270.00, 125.00) text=+1 в коллекцию
+ActivityGraph/Count_3 pos=(0.00, -125.00) size=(85.00, 45.00) text=0
+Button_Back/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=‹
+Button_OpenDetails/Text_Label pos=(0.00, 0.00) size=(50.00, 64.00) text=›
+Screen_DebugPanel/Text_Title pos=(0.00, 990.00) size=(760.00, 110.00) text=DEBUG PANEL
+DebugControls/Button_Classic pos=(230.00, 760.00) size=(420.00, 115.00) text=
+DefeatCard/Text_Source pos=(0.00, -244.00) size=(820.00, 70.00) text=
+Screen_NoFeathers/Button_RewardedAd pos=(0.00, -632.00) size=(970.00, 275.00) text=
+DebugControls/Button_AddErudition pos=(230.00, 180.00) size=(420.00, 115.00) text=
+Button_RemoveFeather/Text_Label pos=(0.00, 0.00) size=(400.00, 113.00) text=−1 перо
+CollectionCard_1/Button_OpenDetails pos=(184.00, -123.00) size=(70.00, 70.00) text=
+ActivityGraph/Period_0 pos=(95.00, 190.00) size=(144.00, 60.00) text=
+Button_Turbo/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Открыть Турбо
+BottomNavigation/Button_Collections pos=(0.00, 0.00) size=(184.00, 148.00) text=
+ActivityGraph/Day_6 pos=(381.43, -180.00) size=(85.00, 45.00) text=Сб
+Screen_DebugPanel/Text_Note pos=(0.00, 895.00) size=(920.00, 70.00) text=Проверка ресурсов, экранов и игровых состояний
+CollectionCard_2/Text_Progress pos=(-138.00, -130.00) size=(160.00, 39.00) text=6/30
+Button_Details/Text_Label pos=(0.00, 0.00) size=(57.00, 71.00) text=›
+Button_Collections/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Коллекции
+BottomNavigation/Button_Achievements pos=(192.00, 0.00) size=(184.00, 148.00) text=
+CollectionCard_1/Text_Name pos=(-14.00, -90.00) size=(428.00, 52.00) text=А. С. Пушкин
+ActivityGraph/Count_6 pos=(381.43, -125.00) size=(85.00, 45.00) text=0
+DebugControls/Button_UnlockCollections pos=(230.00, -400.00) size=(420.00, 115.00) text=
+Screen_Victory/Text_AdBonusGranted pos=(0.00, -724.00) size=(900.00, 42.00) text=Бонус получен: +10 к эрудиции
+DefeatCard/Text_Quote pos=(0.00, -5.00) size=(825.00, 330.00) text=
+Screen_CollectionDetails/Button_Back pos=(-441.00, 1090.00) size=(92.00, 92.00) text=
+BottomNavigation/Button_Shop pos=(384.00, 0.00) size=(184.00, 148.00) text=
+ShopItem_Feathers_2/Text_Detail pos=(0.00, -114.00) size=(370.00, 50.00) text=15 перьев
+Card_Accuracy/Text_Caption pos=(60.00, -76.00) size=(320.00, 44.00) text=Точность
+Button_Shop/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Магазин
+Screen_Settings/Button_OpenDebug pos=(0.00, -1070.00) size=(720.00, 65.00) text=
+Screen_NoFeathers/Text_AdFeatherGranted pos=(0.00, -469.00) size=(900.00, 50.00) text=Перо восстановлено!
+Button_Achievements/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Достижения
+DebugControls/Button_ForceDefeat pos=(230.00, -255.00) size=(420.00, 115.00) text=
+Button_OpenDetails/Text_Label pos=(0.00, 0.00) size=(50.00, 64.00) text=›
+QuotesViewport/Text_UnlockedQuotes pos=(0.00, 0.00) size=(-24.00, 718.00) text=Решайте криптограммы, чтобы собирать коллекцию.
+CollectionCard_4/Text_Name pos=(-14.00, -90.00) size=(428.00, 52.00) text=А. П. Чехов
+BookCard_1/Button_OpenDetails pos=(184.00, -123.00) size=(70.00, 70.00) text=
+Button_Details/Text_Label pos=(0.00, 0.00) size=(57.00, 71.00) text=›
+Section_Feathers/Text_Subtitle pos=(20.00, 171.00) size=(775.00, 56.00) text=Пополняйте запас, чтобы играть дальше
+ThemeCard_3/Text_Name pos=(-14.00, -90.00) size=(428.00, 52.00) text=Мудрость
+Button_AddErudition/Text_Label pos=(0.00, 0.00) size=(400.00, 113.00) text=+10 эрудиции
+CollectionCard_2/Button_OpenDetails pos=(184.00, -123.00) size=(70.00, 70.00) text=
+AchievementCard_1/Text_Description pos=(37.00, -3.00) size=(580.00, 57.00) text=Реши 10 задач
+Button_ReturnMenu/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Вернуться в меню
+Screen_MainMenu/Button_Turbo pos=(0.00, -720.00) size=(960.00, 305.00) text=
+ActivityGraph/Count_9 pos=(0.00, -120.00) size=(85.00, 45.00) text=0
+ActivityGraph/Day_5 pos=(254.29, -180.00) size=(85.00, 45.00) text=Пт
+Screen_Defeat/Button_Retry pos=(0.00, -766.00) size=(840.00, 140.00) text=
+EruditionCard/Text_Level pos=(-230.00, -20.00) size=(325.00, 150.00) text=101
+CollectionCard_4/Text_Progress pos=(-138.00, -130.00) size=(160.00, 39.00) text=5/25
+AchievementCard_7/Text_Progress pos=(286.00, -56.00) size=(136.00, 46.00) text=0/5
+AchievementCard_1/Text_Progress pos=(286.00, -56.00) size=(136.00, 46.00) text=0/10
+AchievementCard_7/Text_Description pos=(37.00, -3.00) size=(580.00, 57.00) text=Реши 5 задач подряд вечером
+Button_Shop/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Магазин
+Screen_Defeat/Text_Title pos=(0.00, 750.00) size=(770.00, 200.00) text=Попробуем ещё?
+BottomNavigation/Button_Achievements pos=(192.00, 0.00) size=(184.00, 148.00) text=
+BottomNavigation/Button_Home pos=(-384.00, 0.00) size=(184.00, 148.00) text=
+Button_OpenDetails/Text_Label pos=(0.00, 0.00) size=(50.00, 64.00) text=›
+Button_Buy/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Скоро
+AchievementCard_4/Text_Description pos=(37.00, -3.00) size=(580.00, 57.00) text=Прочитай 10 произведений
+AchievementCard_2/Text_Progress pos=(286.00, -56.00) size=(136.00, 46.00) text=0/50
+Button_Statistics/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Статистика
+Button_Statistics/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Открыть статистику
+Button_Turbo/Text_Label pos=(78.00, 67.00) size=(590.00, 125.00) text=Турбо
+RestoreCard/Text_TimerCaption pos=(0.00, -15.00) size=(700.00, 56.00) text=Следующее перо через:
+BalanceBar/Coins pos=(240.00, 0.00) size=(190.00, 80.00) text=1200
+SettingRow_1/Setting_Title pos=(-65.00, 40.00) size=(440.00, 62.00) text=Звуки
+Screen_CollectionDetails/Button_Classic pos=(0.00, -969.00) size=(840.00, 135.00) text=
+ShopItem_Special_2/Button_Buy pos=(321.00, 0.00) size=(236.00, 83.00) text=
+SettingRow_2/Text_State pos=(326.00, -65.00) size=(220.00, 45.00) text=Включено
+CollectionCard_5/Button_OpenDetails pos=(184.00, -123.00) size=(70.00, 70.00) text=
+DebugControls/Button_ZeroFeathers pos=(230.00, 35.00) size=(420.00, 115.00) text=
+Button_Shop/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Магазин
+DebugControls/DebugValues pos=(0.00, -830.00) size=(850.00, 70.00) text=Эрудиция: 101    Перья: 5/5    Подсказки: 2    Ошибки: 0
+Card_Streak/Text_Caption pos=(60.00, -76.00) size=(320.00, 44.00) text=Лучший результат: 0
+Button_OpenDetails/Text_Label pos=(0.00, 0.00) size=(50.00, 64.00) text=›
+Screen_NoFeathers/Button_ReturnMenu pos=(0.00, -1060.00) size=(650.00, 100.00) text=
+Screen_Shop/Text_Title pos=(0.00, 1000.00) size=(490.00, 110.00) text=Магазин
+SettingRow_0/Toggle_Музыка pos=(326.00, 16.00) size=(182.00, 88.00) text=
+Card_Best/Text_Value pos=(65.00, -5.00) size=(280.00, 92.00) text=0
+ShopItem_Feathers_1/Button_Buy pos=(0.00, -167.00) size=(390.00, 87.00) text=
+Screen_Settings/Settings_Subtitle pos=(0.00, 836.00) size=(875.00, 55.00) text=Пусть в библиотеке будет уютно
+BottomNavigation/Button_Achievements pos=(192.00, 0.00) size=(184.00, 148.00) text=
+SettingRow_0/Text_State pos=(326.00, -65.00) size=(220.00, 45.00) text=Включено
+FeatherEnergy/Text_Energy pos=(5.00, 0.00) size=(210.00, 105.00) text=5/5
+ActivityGraph/Day_3 pos=(0.00, -180.00) size=(85.00, 45.00) text=Ср
+Button_Back/Text_Label pos=(0.00, 0.00) size=(72.00, 86.00) text=‹
+ShopItem_Feathers_1/Text_Detail pos=(0.00, -114.00) size=(370.00, 50.00) text=5 перьев
+BottomNavigation/Button_Collections pos=(0.00, 0.00) size=(184.00, 148.00) text=
+Card_Accuracy/Text_Value pos=(65.00, -5.00) size=(280.00, 92.00) text=92%
+CollectionCard_4/Button_OpenDetails pos=(184.00, -123.00) size=(70.00, 70.00) text=
+BottomNavigation/Button_Statistics pos=(-192.00, 0.00) size=(184.00, 148.00) text=
+Button_LikeQuote/Text_Label pos=(0.00, 0.00) size=(330.00, 58.00) text=Мне нравится
+ActivityGraph/Count_7 pos=(0.00, -120.00) size=(85.00, 45.00) text=0
+Screen_Shop/Text_ShopMessage pos=(0.00, 397.00) size=(940.00, 45.00) text=
+Button_CoinInfo/Text_Label pos=(0.00, 0.00) size=(46.00, 46.00) text=+
+SettingRow_2/Toggle_Вибрация pos=(326.00, 16.00) size=(182.00, 88.00) text=
+Screen_Statistics/Text_Title pos=(0.00, 1015.00) size=(590.00, 125.00) text=Статистика
+AchievementCard_3/Text_Progress pos=(286.00, -56.00) size=(136.00, 46.00) text=0/5
+ShopItem_Feathers_2/Button_Buy pos=(0.00, -167.00) size=(390.00, 87.00) text=
+AchievementCard_2/Text_Description pos=(37.00, -3.00) size=(580.00, 57.00) text=Реши 50 задач
+Screen_DebugPanel/Button_Back pos=(-430.00, 1015.00) size=(110.00, 110.00) text=
+BottomNavigation/Button_Achievements pos=(192.00, 0.00) size=(184.00, 148.00) text=
+Button_Defeat/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Показать 0 перьев
+Button_Details/Text_Label pos=(0.00, 0.00) size=(57.00, 71.00) text=›
+AchievementCard_5/Button_Details pos=(409.00, 10.00) size=(77.00, 77.00) text=
+ShopItem_Special_1/Text_Detail pos=(-40.00, -30.00) size=(440.00, 47.00) text=Навсегда
+Button_ReturnMenu/Text_Label pos=(0.00, 0.00) size=(630.00, 108.00) text=Вернуться в меню
+AchievementCard_6/Text_Title pos=(25.00, 48.00) size=(550.00, 60.00) text=Мастер точности
+ActivityGraph/Count_1 pos=(-254.29, -125.00) size=(85.00, 45.00) text=0
+Button_UnlockCollections/Text_Label pos=(0.00, 0.00) size=(400.00, 113.00) text=Все коллекции
+Section_Hints/Button_Buy pos=(300.00, -69.00) size=(300.00, 93.00) text=
+FeatherEnergy/Button_AddEnergy pos=(170.00, 0.00) size=(94.00, 94.00) text=
+EruditionBlock/Text_Title pos=(0.00, 0.00) size=(720.00, 140.00) text=Эрудиция
+Button_OpenDetails/Text_Label pos=(0.00, 0.00) size=(50.00, 64.00) text=›
+Period_2/Text_Label pos=(0.00, 0.00) size=(124.00, 61.00) text=Год
+Button_RefillFeathers/Text_Label pos=(0.00, 0.00) size=(400.00, 113.00) text=Восстановить перья
+DefeatCard/Text_Message pos=(0.00, 230.00) size=(840.00, 100.00) text=Сердечки закончились, но всё получится.
+Теперь история открыта — попробуем ещё?
+Button_Continue/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Продолжить
+Screen_Victory/Button_RewardedAd pos=(0.00, -819.00) size=(940.00, 190.00) text=
+Tabs/Tab_Книги pos=(323.00, 0.00) size=(321.00, 104.00) text=
+Button_Details/Text_Label pos=(0.00, 0.00) size=(57.00, 71.00) text=›
+ActivityGraph/Count_8 pos=(0.00, -120.00) size=(85.00, 45.00) text=0
+Button_Achievements/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Достижения
+Button_Collections/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Открыть коллекции
+SettingRow_3/Setting_Description pos=(-65.00, -44.00) size=(440.00, 98.00) text=Чуть больше букв — легче читать
+ShopItem_Special_2/Text_Name pos=(-38.00, 23.00) size=(440.00, 56.00) text=Ночной стиль
+AchievementCard_3/Text_Description pos=(37.00, -3.00) size=(580.00, 57.00) text=Достигни 5 уровня
+Button_Collections/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Коллекции
+Button_Victory/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Принудительная победа
+Button_Details/Text_Label pos=(0.00, 0.00) size=(57.00, 71.00) text=›
+BottomNavigation/Button_Shop pos=(384.00, 0.00) size=(184.00, 148.00) text=
+Screen_Defeat/Button_ReturnMenu pos=(0.00, -949.00) size=(790.00, 130.00) text=
+ActivityGraph/Day_11 pos=(0.00, -180.00) size=(85.00, 45.00) text=Пн
+ActivityGraph/Day_10 pos=(0.00, -180.00) size=(85.00, 45.00) text=Пн
+Screen_Settings/Text_Title pos=(0.00, 957.00) size=(660.00, 115.00) text=Настройки
+ThemeCard_3/Button_OpenDetails pos=(184.00, -123.00) size=(70.00, 70.00) text=
+Screen_Collections/Text_Title pos=(89.00, 912.00) size=(555.00, 138.00) text=Коллекции
+PopupCard/Button_Close pos=(0.00, -277.00) size=(580.00, 105.00) text=
+BottomNavigation/Button_Collections pos=(0.00, 0.00) size=(184.00, 148.00) text=
+Card_Best/Text_Label pos=(65.00, 64.00) size=(320.00, 58.00) text=Решено сегодня
+ThemeCard_1/Text_Progress pos=(-138.00, -130.00) size=(160.00, 39.00) text=8/20
+BottomNavigation/Button_Home pos=(-384.00, 0.00) size=(184.00, 148.00) text=
+BookCard_2/Text_Progress pos=(-138.00, -130.00) size=(160.00, 39.00) text=8/20
+Card_Solved/Text_Label pos=(65.00, 64.00) size=(320.00, 58.00) text=Решено задач
+Tabs/Tab_Прогресс pos=(0.00, 0.00) size=(311.00, 88.00) text=
+SettingRow_3/Toggle_Крупный текст pos=(326.00, 16.00) size=(182.00, 88.00) text=
+Screen_NoFeathers/FeatherCounter_Empty pos=(5.00, 1040.00) size=(300.00, 100.00) text=0/5
+BalanceBar/Feathers pos=(-202.00, 0.00) size=(235.00, 80.00) text=5/5
+ThemeCard_1/Button_OpenDetails pos=(184.00, -123.00) size=(70.00, 70.00) text=
+Button_Buy/Text_Label pos=(26.00, 0.00) size=(290.00, 77.00) text=250
+ActivityGraph/Day_8 pos=(0.00, -180.00) size=(85.00, 45.00) text=Пн
+CollectionCard_6/Text_Progress pos=(-138.00, -130.00) size=(160.00, 39.00) text=7/24
+ActivityGraph/Day_4 pos=(127.14, -180.00) size=(85.00, 45.00) text=Чт
+Tabs/Tab_Темы pos=(0.00, 0.00) size=(321.00, 104.00) text=
+Tabs/Tab_Все pos=(-322.00, 0.00) size=(311.00, 88.00) text=
+SettingRow_2/Setting_Description pos=(-65.00, -44.00) size=(440.00, 98.00) text=Мягкий отклик на ошибку
+Button_Achievements/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Достижения
+Screen_Victory/Text_Title pos=(0.00, 885.00) size=(790.00, 170.00) text=Отлично!
+Button_Statistics/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Статистика
+Period_1/Text_Label pos=(0.00, 0.00) size=(124.00, 61.00) text=Месяц
+SettingRow_3/Setting_Title pos=(-65.00, 40.00) size=(440.00, 62.00) text=Крупный текст
+CollectionCard_6/Text_Name pos=(-14.00, -90.00) size=(428.00, 52.00) text=И. С. Тургенев
+Button_MainMenu/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Открыть главное меню
+ThemeCard_2/Button_OpenDetails pos=(184.00, -123.00) size=(70.00, 70.00) text=
+ShopItem_Special_1/Button_Buy pos=(321.00, 0.00) size=(236.00, 83.00) text=
+ActivityGraph/Text_Subtitle pos=(-198.00, 122.00) size=(565.00, 48.00) text=Решённые задачи по дням
+Button_Classic/Icon_Arrow pos=(414.00, 0.00) size=(70.00, 100.00) text=›
+Tab_Особые/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Особые
+AchievementCard_7/Text_Title pos=(25.00, 48.00) size=(550.00, 60.00) text=Ночной гений
+Button_ForceDefeat/Text_Label pos=(0.00, 0.00) size=(400.00, 113.00) text=Поражение
+DebugControls/Button_RefillFeathers pos=(-230.00, -110.00) size=(420.00, 115.00) text=
+Button_Close/Text_Label pos=(0.00, 0.00) size=(560.00, 99.00) text=Понятно
+Button_Details/Text_Label pos=(0.00, 0.00) size=(57.00, 71.00) text=›
+Button_Buy/Text_Label pos=(26.00, 0.00) size=(290.00, 77.00) text=100
+Button_OpenDetails/Text_Label pos=(0.00, 0.00) size=(50.00, 64.00) text=›
+Button_AddHint/Text_Label pos=(0.00, 0.00) size=(400.00, 113.00) text=+1 подсказка
+CollectionCard_3/Text_Name pos=(-14.00, -90.00) size=(428.00, 52.00) text=Ф. М. Достоевский
+DebugControls/Button_Reset pos=(-230.00, -255.00) size=(420.00, 115.00) text=
+Card_Best/Text_Caption pos=(60.00, -76.00) size=(320.00, 44.00) text=Ваша активность
+ThemeCard_2/Text_Name pos=(-14.00, -90.00) size=(428.00, 52.00) text=Любовь
+Button_Reset/Text_Label pos=(0.00, 0.00) size=(400.00, 113.00) text=Сброс прогресса
+SettingRow_0/Setting_Description pos=(-65.00, -44.00) size=(440.00, 98.00) text=Тихая мелодия библиотеки
+Section_Hints/Text_Name pos=(-96.00, 81.00) size=(680.00, 70.00) text=Подсказки
+DebugControls/Button_Achievements pos=(230.00, 325.00) size=(420.00, 115.00) text=
+ThemeCard_2/Text_Progress pos=(-138.00, -130.00) size=(160.00, 39.00) text=8/20
+Section_Feathers/Text_Title pos=(-88.00, 229.00) size=(550.00, 70.00) text=Перья
+BalanceBar/Button_CoinInfo pos=(374.00, 0.00) size=(72.00, 72.00) text=
+BottomNavigation/Button_Shop pos=(384.00, 0.00) size=(184.00, 148.00) text=
+Button_Statistics/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Статистика
+Info/Button_Open pos=(181.00, 0.00) size=(65.00, 65.00) text=
+Button_Classic/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Открыть Классику
+BottomNavigation/Button_Statistics pos=(-192.00, 0.00) size=(184.00, 148.00) text=
+Section_Special/Text_Title pos=(-50.00, 140.00) size=(590.00, 65.00) text=Особое
+BottomNavigation/Button_Home pos=(-384.00, 0.00) size=(184.00, 148.00) text=
+Screen_Settings/Button_Back pos=(-455.00, 1101.00) size=(85.00, 85.00) text=
+Info/Title pos=(-65.00, 0.00) size=(290.00, 64.00) text=Природа
+Button_Achievements/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Достижения
+BookCard_1/Text_Name pos=(-14.00, -90.00) size=(428.00, 52.00) text=Поэзия
+Button_Details/Text_Label pos=(0.00, 0.00) size=(57.00, 71.00) text=›
+AchievementCard_6/Text_Description pos=(37.00, -3.00) size=(580.00, 57.00) text=Реши 30 задач без ошибок
+DebugControls/Button_UnlockAchievements pos=(-230.00, -545.00) size=(420.00, 115.00) text=
+Screen_Defeat/Text_Encouragement pos=(0.00, -1096.00) size=(900.00, 56.00) text=Ошибаться — часть любого открытия
+Button_SettingsHome/Text_Label pos=(0.00, 0.00) size=(830.00, 113.00) text=Вернуться в библиотеку
+Tabs/Tab_Авторы pos=(-323.00, 0.00) size=(321.00, 104.00) text=
+RestoreCard/Text_Info pos=(0.00, 97.00) size=(800.00, 140.00) text=Перья постепенно
+восстанавливаются.
+BookCard_3/Button_OpenDetails pos=(184.00, -123.00) size=(70.00, 70.00) text=
+Screen_MainMenu/Button_Classic pos=(0.00, -390.00) size=(960.00, 305.00) text=
+Button_OpenDetails/Text_Label pos=(0.00, 0.00) size=(50.00, 64.00) text=›
+ActivityGraph/Count_10 pos=(0.00, -120.00) size=(85.00, 45.00) text=0
+Button_Shop/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Открыть магазин
+AchievementCard_3/Text_Title pos=(25.00, 48.00) size=(550.00, 60.00) text=Эрудит
+BookCard_2/Text_Name pos=(-14.00, -90.00) size=(428.00, 52.00) text=Романы
+QuoteCard/Text_Author pos=(0.00, -179.00) size=(830.00, 61.00) text=— русская пословица
+Period_0/Text_Label pos=(0.00, 0.00) size=(124.00, 61.00) text=Неделя
+Reward_EruditionCard/Reward_Erudition pos=(0.00, -53.00) size=(270.00, 125.00) text=+20 к эрудиции
+QuoteCard/Text_Quote pos=(0.00, 35.00) size=(820.00, 282.00) text=«Знание делает человека
+свободнее, а не сильнее.»
+Button_Statistics/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Статистика
+Tab_Книги/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Книги
+SettingRow_3/Text_State pos=(326.00, -65.00) size=(220.00, 45.00) text=Выключено
+BottomNavigation/Button_Collections pos=(0.00, 0.00) size=(184.00, 148.00) text=
+Tab_Авторы/Text_Label pos=(0.00, 0.00) size=(0.00, 0.00) text=Авторы
+Button_Classic/Text_Label pos=(0.00, 0.00) size=(820.00, 129.00) text=Играть в Классику
+CollectionCard_5/Text_Progress pos=(-138.00, -130.00) size=(160.00, 39.00) text=3/20
+Info/Button_Open pos=(181.00, 0.00) size=(65.00, 65.00) text=
+EruditionCard/Text_NextLevel pos=(210.00, -115.00) size=(435.00, 60.00) text=До следующего уровня: 49
+Button_Shop/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Магазин
+ReadingSample/Sample_Text pos=(20.00, 0.00) size=(660.00, 123.00) text=Уютно читать.
+Легко разгадывать.
+DebugControls/Button_Turbo pos=(-230.00, 615.00) size=(420.00, 115.00) text=
+AchievementCard_4/Text_Progress pos=(286.00, -56.00) size=(136.00, 46.00) text=0/10
+Button_Home/Text_Label pos=(0.00, -47.00) size=(198.00, 53.00) text=Главная

@@ -1,0 +1,8 @@
+<linker>
+  <!-- XML saves use reflection on Android IL2CPP. Keep their serialization shape. -->
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="Erudition.GameSave" preserve="all" />
+    <type fullname="Erudition.PuzzleProgress" preserve="all" />
+    <type fullname="Erudition.ActivityDay" preserve="all" />
+  </assembly>
+</linker>

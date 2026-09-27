@@ -1,0 +1,12 @@
+io.appmetrica.analytics.remotepermissions.BuildConfig
+io.appmetrica.analytics.remotepermissions.impl.a
+io.appmetrica.analytics.remotepermissions.impl.b
+io.appmetrica.analytics.remotepermissions.impl.c
+io.appmetrica.analytics.remotepermissions.impl.d
+io.appmetrica.analytics.remotepermissions.impl.e
+io.appmetrica.analytics.remotepermissions.impl.f
+io.appmetrica.analytics.remotepermissions.impl.g
+io.appmetrica.analytics.remotepermissions.internal.RemotePermissionsModuleEntryPoint
+io.appmetrica.analytics.remotepermissions.internal.RemotePermissionsModuleEntryPoint$remoteConfigExtensionConfiguration$1
+io.appmetrica.analytics.remotepermissions.internal.ServiceSideRemotePermissionsConfigWrapper
+io.appmetrica.analytics.remotepermissions.internal.ServiceSideRemotePermissionsConfigWrapper$Companion

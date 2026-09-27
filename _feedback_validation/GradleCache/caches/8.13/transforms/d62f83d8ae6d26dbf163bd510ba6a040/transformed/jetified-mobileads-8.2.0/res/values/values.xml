@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <attr format="color|reference" name="debug_panel_back_primary"/>
+    <attr format="color|reference" name="debug_panel_back_secondary"/>
+    <attr format="color|reference" name="debug_panel_color_green"/>
+    <attr format="color|reference" name="debug_panel_color_orange"/>
+    <attr format="color|reference" name="debug_panel_color_red"/>
+    <attr format="color|reference" name="debug_panel_label_primary"/>
+    <attr format="color|reference" name="debug_panel_label_secondary"/>
+    <attr format="color|reference" name="debug_panel_support_separator"/>
+    <attr format="reference" name="monetization_ads_divkit_divImageStyle"/>
+    <attr format="reference" name="monetization_ads_divkit_divInputStyle"/>
+    <attr format="reference" name="monetization_ads_divkit_divTabIndicatorLayoutStyle"/>
+    <attr format="reference" name="monetization_ads_divkit_divTextStyle"/>
+    <attr format="color" name="monetization_internal_adtune_container_color"/>
+    <attr format="color" name="monetization_internal_adtune_drag_handle_color"/>
+    <attr format="dimension" name="monetization_internal_bottom_left_corner_radius"/>
+    <attr format="dimension" name="monetization_internal_bottom_right_corner_radius"/>
+    <attr format="dimension" name="monetization_internal_corner_radius"/>
+    <attr format="dimension" name="monetization_internal_top_left_corner_radius"/>
+    <attr format="dimension" name="monetization_internal_top_right_corner_radius"/>
+    <color name="debug_panel_black">#FF000000</color>
+    <color name="debug_panel_dark_gray">#80000000</color>
+    <color name="debug_panel_gray">#1A000000</color>
+    <color name="debug_panel_green">#01613F</color>
+    <color name="debug_panel_light_gray">#08000000</color>
+    <color name="debug_panel_orange">#DC833B</color>
+    <color name="debug_panel_red">#B3261E</color>
+    <color name="debug_panel_white">#FFFFFF</color>
+    <color name="monetization_ads_divkit_div_accent_color">#0077cc</color>
+    <color name="monetization_ads_divkit_div_button_color">#edf0f2</color>
+    <color name="monetization_ads_divkit_div_indicator_default_color">@color/monetization_ads_divkit_div_separator_color</color>
+    <color name="monetization_ads_divkit_div_indicator_selected_color">@color/monetization_ads_divkit_div_tab_indicator</color>
+    <color name="monetization_ads_divkit_div_separator_color">#33919cb5</color>
+    <color name="monetization_ads_divkit_div_tab_indicator">#ffdc60</color>
+    <color name="monetization_ads_divkit_div_text_dark_disabled_40">#66000000</color>
+    <color name="monetization_ads_divkit_div_text_dark_disabled_50">#80000000</color>
+    <color name="monetization_ads_divkit_div_text_dark_disabled_80">#CC000000</color>
+    <color name="monetization_ads_divkit_div_title_menu_color">#66000000</color>
+    <color name="monetization_ads_divkit_div_traffic_item_stroke_color">#edf0f2</color>
+    <color name="monetization_ads_internal_age_text_color">#787878</color>
+    <color name="monetization_ads_internal_app_install_call_to_action_green">#759C47</color>
+    <color name="monetization_ads_internal_app_install_media_view_foreground">#0B000000</color>
+    <color name="monetization_ads_internal_app_install_timer_text_color_dark">#020305</color>
+    <color name="monetization_ads_internal_app_install_timer_text_color_light">#020305</color>
+    <color name="monetization_ads_internal_call_to_action_background_color">#FDD835</color>
+    <color name="monetization_ads_internal_call_to_action_background_color_blue">#167EFB</color>
+    <color name="monetization_ads_internal_call_to_action_background_color_yellow">#FDD835</color>
+    <color name="monetization_ads_internal_call_to_action_blue">#2F7DF5</color>
+    <color name="monetization_ads_internal_call_to_action_ripple_highlight_dark_color">#33ffffff</color>
+    <color name="monetization_ads_internal_call_to_action_ripple_highlight_light_color">#1f000000</color>
+    <color name="monetization_ads_internal_call_to_action_text_color">#000000</color>
+    <color name="monetization_ads_internal_call_to_action_text_color_black">#000000</color>
+    <color name="monetization_ads_internal_domain_grey_text_color">#88000000</color>
+    <color name="monetization_ads_internal_grey_text_color">#99000000</color>
+    <color name="monetization_ads_internal_header_background_end">#00000000</color>
+    <color name="monetization_ads_internal_header_background_start">#66000000</color>
+    <color name="monetization_ads_internal_instream_advertiser_block_color_focused">#A67D7D7D</color>
+    <color name="monetization_ads_internal_instream_advertiser_block_color_unfocused">#A6262626</color>
+    <color name="monetization_ads_internal_instream_background">#2F3747</color>
+    <color name="monetization_ads_internal_instream_background_color">#2B3037</color>
+    <color name="monetization_ads_internal_instream_call_to_action_block_color">#FFD500</color>
+    <color name="monetization_ads_internal_instream_progress_bar_color">#F8CC46</color>
+    <color name="monetization_ads_internal_instream_skip_background_color">#00000040</color>
+    <color name="monetization_ads_internal_instream_skip_text_color">#FFFFFF</color>
+    <color name="monetization_ads_internal_instream_sponsored_text_color">#FFFFFFCC</color>
+    <color name="monetization_ads_internal_instream_video_background">#000000</color>
+    <color name="monetization_ads_internal_price_text_color">#7f7f7f</color>
+    <color name="monetization_ads_internal_review_count_text_color">#7f7f7f</color>
+    <color name="monetization_ads_internal_reward_controls_background_gray">#80404040</color>
+    <color name="monetization_ads_internal_rewarded_close_verification_text_color">#2F3747</color>
+    <color name="monetization_ads_internal_sponsored_text_color">#787878</color>
+    <color name="monetization_ads_internal_text_color_white">#ffffff</color>
+    <color name="monetization_ads_internal_warning_text_color">#aaaaaa</color>
+    <dimen name="debug_panel_corner_radius_large">12dp</dimen>
+    <dimen name="debug_panel_corner_radius_medium">8dp</dimen>
+    <dimen name="debug_panel_corner_radius_small">6dp</dimen>
+    <dimen name="debug_panel_line_spacing_body1">2sp</dimen>
+    <dimen name="debug_panel_line_spacing_body2">1sp</dimen>
+    <dimen name="debug_panel_line_spacing_header1">3sp</dimen>
+    <dimen name="debug_panel_line_spacing_header2">3sp</dimen>
+    <dimen name="debug_panel_space_large">64dp</dimen>
+    <dimen name="debug_panel_space_medium">12dp</dimen>
+    <dimen name="debug_panel_space_medium_large">16dp</dimen>
+    <dimen name="debug_panel_space_medium_large_negative">-16dp</dimen>
+    <dimen name="debug_panel_space_small">6dp</dimen>
+    <dimen name="debug_panel_space_small_extra">4dp</dimen>
+    <dimen name="debug_panel_space_small_negative">-6dp</dimen>
+    <dimen name="debug_panel_text_body1">14sp</dimen>
+    <dimen name="debug_panel_text_body2">12sp</dimen>
+    <dimen name="debug_panel_text_header1">20sp</dimen>
+    <dimen name="debug_panel_text_header2">16sp</dimen>
+    <dimen name="monetization_ads_divkit_div_button_height">36sp</dimen>
+    <dimen name="monetization_ads_divkit_div_button_image_size">24sp</dimen>
+    <dimen name="monetization_ads_divkit_div_button_text_horizontal_image_padding">8dp</dimen>
+    <dimen name="monetization_ads_divkit_div_button_text_horizontal_padding">14dp</dimen>
+    <dimen name="monetization_ads_divkit_div_button_text_vertical_padding">8dp</dimen>
+    <dimen name="monetization_ads_divkit_div_compound_drawable_padding">8dp</dimen>
+    <dimen name="monetization_ads_divkit_div_compound_drawable_vertical_padding">6dp</dimen>
+    <dimen name="monetization_ads_divkit_div_footer_image_size">24dp</dimen>
+    <dimen name="monetization_ads_divkit_div_horizontal_padding">12dp</dimen>
+    <dimen name="monetization_ads_divkit_div_horizontal_padding_l">148dp</dimen>
+    <dimen name="monetization_ads_divkit_div_horizontal_padding_m">88dp</dimen>
+    <dimen name="monetization_ads_divkit_div_horizontal_padding_s">68dp</dimen>
+    <dimen name="monetization_ads_divkit_div_indicator_corner_radius">3dp</dimen>
+    <dimen name="monetization_ads_divkit_div_indicator_default_gap">20dp</dimen>
+    <dimen name="monetization_ads_divkit_div_indicator_default_height">3dp</dimen>
+    <dimen name="monetization_ads_divkit_div_indicator_default_width">7dp</dimen>
+    <dimen name="monetization_ads_divkit_div_indicator_minimum_width">4dp</dimen>
+    <dimen name="monetization_ads_divkit_div_indicator_selected_width">12dp</dimen>
+    <dimen name="monetization_ads_divkit_div_padding_zero">0dp</dimen>
+    <dimen name="monetization_ads_divkit_div_separator_delimiter_height">1dp</dimen>
+    <dimen name="monetization_ads_divkit_div_shadow_elevation">3dp</dimen>
+    <item format="float" name="monetization_ads_divkit_div_style_text_letter_spacing_button" type="dimen">0.04</item>
+    <item format="float" name="monetization_ads_divkit_div_style_text_letter_spacing_card_header" type="dimen">0.09</item>
+    <item format="float" name="monetization_ads_divkit_div_style_text_letter_spacing_no" type="dimen">0.0</item>
+    <item format="float" name="monetization_ads_divkit_div_style_text_letter_spacing_numbers_l" type="dimen">-0.06</item>
+    <item format="float" name="monetization_ads_divkit_div_style_text_letter_spacing_numbers_m" type="dimen">-0.04</item>
+    <item format="float" name="monetization_ads_divkit_div_style_text_letter_spacing_numbers_s" type="dimen">-0.04</item>
+    <dimen name="monetization_ads_divkit_div_style_text_line_space_extra_card_header">5sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_line_space_extra_no">0sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_line_space_extra_numbers_l">1sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_line_space_extra_numbers_m">4sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_line_space_extra_numbers_s">2sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_line_space_extra_text_l">4sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_line_space_extra_text_m">2sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_line_space_extra_text_s">1sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_line_space_extra_title_l">4sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_line_space_extra_title_m">-1sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_line_space_extra_title_s">2sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_size_button">12sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_size_card_header">11sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_size_numbers_l">40sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_size_numbers_m">28sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_size_numbers_s">24sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_size_text_l">16sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_size_text_m">14sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_size_text_s">13sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_size_title_l">20sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_size_title_m">18sp</dimen>
+    <dimen name="monetization_ads_divkit_div_style_text_size_title_s">16sp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_image_size_l">24dp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_image_size_m">20dp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_image_size_s">18dp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_image_size_xl">36dp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_image_size_xs">16dp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_image_size_xxl">40dp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_padding_l">20dp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_padding_m">16dp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_padding_s">12dp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_padding_xl">32dp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_padding_xs">8dp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_padding_xxl">48dp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_padding_xxs">4dp</dimen>
+    <dimen name="monetization_ads_divkit_div_table_padding_zero">0dp</dimen>
+    <dimen name="monetization_ads_divkit_div_text_size_m">13sp</dimen>
+    <dimen name="monetization_ads_divkit_div_text_size_s">11sp</dimen>
+    <dimen name="monetization_ads_divkit_overflow_menu_margin_horizontal">8dp</dimen>
+    <dimen name="monetization_ads_divkit_overflow_menu_margin_vertical">12dp</dimen>
+    <dimen name="monetization_ads_divkit_overflow_menu_size">24dp</dimen>
+    <dimen name="monetization_ads_divkit_tab_scrollable_min_width">72dp</dimen>
+    <dimen name="monetization_ads_divkit_title_tab_title_height">40dp</dimen>
+    <dimen name="monetization_ads_divkit_title_tab_title_margin_horizontal">8dp</dimen>
+    <dimen name="monetization_ads_divkit_title_tab_title_margin_vertical">8dp</dimen>
+    <dimen name="monetization_ads_divkit_title_tab_title_separator_margin_top">4dp</dimen>
+    <dimen name="monetization_ads_internal_adtune_corner_radius">16dp</dimen>
+    <dimen name="monetization_ads_internal_age_text_size">14sp</dimen>
+    <dimen name="monetization_ads_internal_app_install_body_height">40dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_body_margin_top">8dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_call_to_action_bottom_margin_base">32dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_call_to_action_height">48dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_call_to_action_horizontal_margin_base">60dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_call_to_action_horizontal_margin_first_degradation">20dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_call_to_action_top_margin_base">16dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_call_to_action_top_margin_second_degradation">20dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_call_to_action_width_base">320dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_call_to_action_width_first_degradation">280dp
+    </dimen>
+    <dimen name="monetization_ads_internal_app_install_call_to_ction_bottom_margin">32dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_icon_radius_base">16dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_icon_radius_large">16dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_icon_size_base">80dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_icon_size_first_degradation">72dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_info_container_margin">20dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_title_height_base">84dp</dimen>
+    <dimen name="monetization_ads_internal_app_install_title_margin_top">16dp</dimen>
+    <dimen name="monetization_ads_internal_appinstall_age_text_size">14dp</dimen>
+    <dimen name="monetization_ads_internal_appinstall_body_text_size">16dp</dimen>
+    <dimen name="monetization_ads_internal_appinstall_call_to_action_text_size">18dp</dimen>
+    <dimen name="monetization_ads_internal_appinstall_sponsored_text_size">14dp</dimen>
+    <dimen name="monetization_ads_internal_appinstall_warning_text_size">14dp</dimen>
+    <dimen name="monetization_ads_internal_body_container_side_padding">16dp</dimen>
+    <dimen name="monetization_ads_internal_body_container_top_margin">48dp</dimen>
+    <dimen name="monetization_ads_internal_body_margin_top">8dp</dimen>
+    <dimen name="monetization_ads_internal_body_text_size">16sp</dimen>
+    <dimen name="monetization_ads_internal_button_elevation">2dp</dimen>
+    <dimen name="monetization_ads_internal_button_min_height">48dip</dimen>
+    <dimen name="monetization_ads_internal_button_min_width">88dip</dimen>
+    <dimen name="monetization_ads_internal_button_text_size">14sp</dimen>
+    <dimen name="monetization_ads_internal_call_to_action_icon_offset">8dp</dimen>
+    <dimen name="monetization_ads_internal_call_to_action_icon_size">20dp</dimen>
+    <dimen name="monetization_ads_internal_call_to_action_margin">16dp</dimen>
+    <dimen name="monetization_ads_internal_call_to_action_margin_horizontal">20dp</dimen>
+    <dimen name="monetization_ads_internal_call_to_action_margin_vertical">44dp</dimen>
+    <dimen name="monetization_ads_internal_call_to_action_padding_horizontal">24dp</dimen>
+    <dimen name="monetization_ads_internal_call_to_action_radius">6dp</dimen>
+    <dimen name="monetization_ads_internal_call_to_action_stroke_width">1dp</dimen>
+    <dimen name="monetization_ads_internal_close_cross_size">16dp</dimen>
+    <dimen name="monetization_ads_internal_close_padding">4dp</dimen>
+    <dimen name="monetization_ads_internal_close_size">64dp</dimen>
+    <dimen name="monetization_ads_internal_close_space_size">16dp</dimen>
+    <dimen name="monetization_ads_internal_controls_margin_horizontal">12dp</dimen>
+    <dimen name="monetization_ads_internal_controls_margin_vertical">20dp</dimen>
+    <dimen name="monetization_ads_internal_controls_margin_vertical_without_extra_space">8dp</dimen>
+    <dimen name="monetization_ads_internal_details_container_top_margin">4dp</dimen>
+    <dimen name="monetization_ads_internal_domain_text_size">14sp</dimen>
+    <dimen name="monetization_ads_internal_fullscreen_content_v1_media_corner">12dp</dimen>
+    <dimen name="monetization_ads_internal_fullscreen_content_v1_media_offset_top">12dp</dimen>
+    <dimen name="monetization_ads_internal_fullscreen_content_v1_offset">20dp</dimen>
+    <dimen name="monetization_ads_internal_icon_margin_end">16dp</dimen>
+    <dimen name="monetization_ads_internal_icon_size">64dp</dimen>
+    <dimen name="monetization_ads_internal_landscape_content_header_offset">56dp</dimen>
+    <dimen name="monetization_ads_internal_landscape_horizontal_icon_size">48dp</dimen>
+    <dimen name="monetization_ads_internal_landscape_vertical_icon_size">80dp</dimen>
+    <dimen name="monetization_ads_internal_landscape_vertical_media_content_min_width">320dp</dimen>
+    <dimen name="monetization_ads_internal_portaint_large_size">80dp</dimen>
+    <dimen name="monetization_ads_internal_price_text_size">13sp</dimen>
+    <dimen name="monetization_ads_internal_progress_bar_min_margin">6dp</dimen>
+    <dimen name="monetization_ads_internal_progress_bar_size">16dp</dimen>
+    <dimen name="monetization_ads_internal_rating_margin_end">8dp</dimen>
+    <item format="float" name="monetization_ads_internal_rating_step_size" type="dimen">0.5</item>
+    <item format="float" name="monetization_ads_internal_rating_tools_value" type="dimen">3.5</item>
+    <dimen name="monetization_ads_internal_review_count_margin_end">8dp</dimen>
+    <dimen name="monetization_ads_internal_review_count_text_size">13sp</dimen>
+    <dimen name="monetization_ads_internal_reward_header_control_margin">8dp</dimen>
+    <dimen name="monetization_ads_internal_reward_timer_value_margin">2dp</dimen>
+    <dimen name="monetization_ads_internal_reward_timer_value_width">16dp</dimen>
+    <dimen name="monetization_ads_internal_reward_timer_view_radius">22dp</dimen>
+    <dimen name="monetization_ads_internal_rewarded_call_to_action_text_size">18sp</dimen>
+    <dimen name="monetization_ads_internal_rewarded_control_icon_padding">18dp</dimen>
+    <dimen name="monetization_ads_internal_rewarded_control_icon_size">60dp</dimen>
+    <dimen name="monetization_ads_internal_rewarded_control_timer_height">24dp</dimen>
+    <dimen name="monetization_ads_internal_sponsored_container_side_padding">16dp</dimen>
+    <dimen name="monetization_ads_internal_sponsored_container_top_padding">8dp</dimen>
+    <dimen name="monetization_ads_internal_sponsored_text_size">14sp</dimen>
+    <dimen name="monetization_ads_internal_title_text_size">20sp</dimen>
+    <dimen name="monetization_ads_internal_warning_margin_top">8dp</dimen>
+    <dimen name="monetization_ads_internal_warning_text_size">14sp</dimen>
+    <dimen name="monetization_instream_internal_adtune_corner_margin">2dp</dimen>
+    <dimen name="monetization_instream_internal_adtune_size">38dp</dimen>
+    <dimen name="monetization_instream_internal_advertiser_block_height">34dp</dimen>
+    <dimen name="monetization_instream_internal_advertiser_block_width">220dp</dimen>
+    <dimen name="monetization_instream_internal_advertiser_icon_margin_horizontal">2dp</dimen>
+    <dimen name="monetization_instream_internal_advertiser_icon_margin_vertical">2dp</dimen>
+    <dimen name="monetization_instream_internal_advertiser_icon_size">30dp</dimen>
+    <dimen name="monetization_instream_internal_button_margin_bottom">16dp</dimen>
+    <dimen name="monetization_instream_internal_button_margin_end">8dp</dimen>
+    <dimen name="monetization_instream_internal_button_margin_start">8dp</dimen>
+    <dimen name="monetization_instream_internal_button_size">32dp</dimen>
+    <dimen name="monetization_instream_internal_call_to_action_height">24dp</dimen>
+    <dimen name="monetization_instream_internal_call_to_action_margin_horizontal">5dp</dimen>
+    <dimen name="monetization_instream_internal_call_to_action_margin_vertical">5dp</dimen>
+    <dimen name="monetization_instream_internal_call_to_action_text_size">12dp</dimen>
+    <dimen name="monetization_instream_internal_call_to_action_width">86dp</dimen>
+    <dimen name="monetization_instream_internal_controls_margin_horizontal">8dp</dimen>
+    <dimen name="monetization_instream_internal_controls_margin_vertical">24dp</dimen>
+    <dimen name="monetization_instream_internal_corner_margin">7dp</dimen>
+    <dimen name="monetization_instream_internal_domain_margin_horizontal">8dp</dimen>
+    <dimen name="monetization_instream_internal_domain_margin_vertical">11dp</dimen>
+    <dimen name="monetization_instream_internal_domain_text_size">12dp</dimen>
+    <dimen name="monetization_instream_internal_domain_view_height">16dp</dimen>
+    <dimen name="monetization_instream_internal_domain_view_width">85dp</dimen>
+    <dimen name="monetization_instream_internal_label_margin_start">10dp</dimen>
+    <dimen name="monetization_instream_internal_label_margin_top">8dp</dimen>
+    <dimen name="monetization_instream_internal_mute_height">20dp</dimen>
+    <dimen name="monetization_instream_internal_mute_height_v2">28dp</dimen>
+    <dimen name="monetization_instream_internal_mute_width">24dp</dimen>
+    <dimen name="monetization_instream_internal_mute_width_v2">32dp</dimen>
+    <dimen name="monetization_instream_internal_progress_bar_height">2dp</dimen>
+    <dimen name="monetization_instream_internal_progress_bar_height_v2">3dp</dimen>
+    <dimen name="monetization_instream_internal_skip_block_margin_horizontal">8dp</dimen>
+    <dimen name="monetization_instream_internal_skip_text_size">14dp</dimen>
+    <dimen name="monetization_instream_internal_sponsored_block_height">18dp</dimen>
+    <dimen name="monetization_instream_internal_sponsored_block_text_size">11dp</dimen>
+    <dimen name="monetization_instream_internal_sponsored_margin_horizontal">16dp</dimen>
+    <dimen name="monetization_instream_internal_sponsored_margin_vertical">6dp</dimen>
+    <dimen name="monetization_instream_internal_timer_view_height">32dp</dimen>
+    <dimen name="monetization_instream_internal_timer_view_text_size">12dp</dimen>
+    <dimen name="monetization_instream_internal_timer_view_width">36dp</dimen>
+    <dimen name="monetization_instream_internal_trademark_icon_margin_vertical">5dp</dimen>
+    <dimen name="monetization_instream_internal_trademark_icon_size">10dp</dimen>
+    <dimen name="monetization_instream_internal_warning_text_size">12sp</dimen>
+    <item name="monetization_ads_divkit_base_tabbed_title_container_scroller" type="id"/>
+    <item name="monetization_ads_divkit_bitmap_load_references_tag" type="id"/>
+    <item name="monetization_ads_divkit_div_additional_background_layer_tag" type="id"/>
+    <item name="monetization_ads_divkit_div_custom_tag" type="id"/>
+    <item name="monetization_ads_divkit_div_default_background_list_tag" type="id"/>
+    <item name="monetization_ads_divkit_div_focused_background_list_tag" type="id"/>
+    <item name="monetization_ads_divkit_div_gallery" type="id"/>
+    <item name="monetization_ads_divkit_div_gallery_item_index" type="id"/>
+    <item name="monetization_ads_divkit_div_layout_provider_listener_id" type="id"/>
+    <item name="monetization_ads_divkit_div_non_transition_alpha" type="id"/>
+    <item name="monetization_ads_divkit_div_penetrating_longtap_tag" type="id"/>
+    <item name="monetization_ads_divkit_div_releasable_list" type="id"/>
+    <item name="monetization_ads_divkit_div_tabbed_tab_title_item" type="id"/>
+    <item name="monetization_ads_divkit_div_tabs_block" type="id"/>
+    <item name="monetization_ads_divkit_div_tabs_container_helper" type="id"/>
+    <item name="monetization_ads_divkit_div_tabs_divider" type="id"/>
+    <item name="monetization_ads_divkit_div_tabs_pager_container" type="id"/>
+    <item name="monetization_ads_divkit_div_tooltips_tag" type="id"/>
+    <item name="monetization_ads_divkit_div_transition_position" type="id"/>
+    <item name="monetization_ads_divkit_image_loaded_flag" type="id"/>
+    <item name="monetization_ads_divkit_load_references_tag" type="id"/>
+    <item name="monetization_ads_divkit_overflow_menu" type="id"/>
+    <item name="monetization_ads_divkit_tab_height_cache" type="id"/>
+    <item name="monetization_ads_divkit_tab_sliding_oval_indicator" type="id"/>
+    <item name="video_count_down_control" type="id"/>
+    <integer name="monetization_ads_internal_age_max_lines">1</integer>
+    <integer name="monetization_ads_internal_body_max_lines">4</integer>
+    <integer name="monetization_ads_internal_domain_max_lines">1</integer>
+    <integer name="monetization_ads_internal_price_max_lines">1</integer>
+    <integer name="monetization_ads_internal_rating_num_stars">5</integer>
+    <integer name="monetization_ads_internal_review_count_max_lines">1</integer>
+    <integer name="monetization_ads_internal_title_max_lines">2</integer>
+    <integer name="monetization_ads_internal_warning_max_lines">4</integer>
+    <integer name="monetization_ads_internal_warning_max_lines_landscape_v1">1</integer>
+    <integer name="monetization_instream_internal_domain_max_length">25</integer>
+    <integer name="monetization_instream_internal_fullscreen_content_v1_measure_priority_body">1</integer>
+    <integer name="monetization_instream_internal_fullscreen_content_v1_measure_priority_media">2</integer>
+    <integer name="monetization_instream_internal_fullscreen_content_v1_measure_priority_title">3</integer>
+    <integer name="monetization_instream_internal_progress_bar_max">100</integer>
+    <string name="debug_panel_ad_unit_format">Format</string>
+    <string name="debug_panel_ad_unit_id">ID</string>
+    <string name="debug_panel_ad_units">Ad Units</string>
+    <string name="debug_panel_ads_sdk_version">SDK Version</string>
+    <string name="debug_panel_advertisement_network_settings">Advertisement Network Settings</string>
+    <string name="debug_panel_age_restricted_user">Age Restricted User</string>
+    <string name="debug_panel_api_level">API Level</string>
+    <string name="debug_panel_app_id">"Application ID"</string>
+    <string name="debug_panel_app_review_status">App Review Status</string>
+    <string name="debug_panel_app_version">App Version</string>
+    <string name="debug_panel_application_info">Application Info</string>
+    <string name="debug_panel_completed_integration">Completed Integration</string>
+    <string name="debug_panel_disable">Disable</string>
+    <string name="debug_panel_do_you_want_to_enable_logging">Do you want to enable logging?</string>
+    <string name="debug_panel_enable">Enable</string>
+    <string name="debug_panel_features">Features</string>
+    <string name="debug_panel_has_location_consent">Has Location Consent</string>
+    <string name="debug_panel_has_user_consent">Has User Consent</string>
+    <string name="debug_panel_integrated">Integrated</string>
+    <string name="debug_panel_integration_errors">Integration Errors</string>
+    <string name="debug_panel_invalid_integration">Invalid Integration</string>
+    <string name="debug_panel_invalid_mediation_adapter_version">Invalid mediation adapter version</string>
+    <string name="debug_panel_logging_is_disabled">Logging is disabled</string>
+    <string name="debug_panel_logging_is_enabled">Logging is enabled</string>
+    <string name="debug_panel_missing_integration">Missing Integration</string>
+    <string name="debug_panel_no">No</string>
+    <string name="debug_panel_no_value_set">No value set</string>
+    <string name="debug_panel_not_integrated">Not Integrated</string>
+    <string name="debug_panel_ok">OK</string>
+    <string name="debug_panel_provided">Provided</string>
+    <string name="debug_panel_sdk_integration">SDK Integration</string>
+    <string name="debug_panel_sdk_integration_status">SDK Integration Status</string>
+    <string name="debug_panel_sdk_undefined">SDK Undefined</string>
+    <string name="debug_panel_system">System</string>
+    <string name="debug_panel_tcf_consent">TCF Consent</string>
+    <string name="debug_panel_user_privacy">User Privacy</string>
+    <string name="debug_panel_yes">Yes</string>
+    <string name="monetization_ads_divkit_div_slider_range_end" translatable="true">Range end</string>
+    <string name="monetization_ads_divkit_div_slider_range_start" translatable="true">Range start</string>
+    <string name="monetization_ads_internal_after_timer_value">сек</string>
+    <string name="monetization_ads_internal_before_timer_value">До начисления награды осталось</string>
+    <string name="monetization_ads_internal_go">Перейти</string>
+    <string name="monetization_ads_internal_install">Установить</string>
+    <string name="monetization_ads_internal_install_from_google_play">Установить из Google Play</string>
+    <string name="monetization_ads_internal_instream_ad_position">%1$d из %2$d</string>
+    <string name="monetization_ads_internal_instream_call_to_action">Перейти ➔</string>
+    <string name="monetization_ads_internal_instream_feedback">Ещё</string>
+    <string name="monetization_ads_internal_instream_muted">Включить звук</string>
+    <string name="monetization_ads_internal_instream_skip">Пропустить</string>
+    <string name="monetization_ads_internal_instream_sponsored_default">РЕКЛАМА</string>
+    <string name="monetization_ads_internal_instream_sponsored_social">СОЦИАЛЬНАЯ РЕКЛАМА</string>
+    <string name="monetization_ads_internal_instream_unmuted">Выключить звук</string>
+    <string name="monetization_ads_internal_mediation_sponsored_text">Реклама</string>
+    <string name="monetization_ads_internal_rewarded_close_verification_button_close">Закрыть</string>
+    <string name="monetization_ads_internal_rewarded_close_verification_button_dismiss">Досмотреть</string>
+    <string name="monetization_ads_internal_rewarded_close_verification_text">Если закрыть рекламу до окончания таймера, награда за просмотр не будет начислена</string>
+    <string name="monetization_ads_internal_rewarded_close_verification_title">Закрыть рекламу?</string>
+    <string name="monetization_ads_internal_scan_qrcode">Отсканируйте код</string>
+    <string name="monetization_ads_internal_text_divider">·</string>
+    <string name="monetization_ads_internal_text_divider_with_space"> · </string>
+    <string name="monetization_ads_internal_tools_age_text">3+</string>
+    <string name="monetization_ads_internal_tools_app_install_call_to_action_text">Установить</string>
+    <string name="monetization_ads_internal_tools_app_install_call_to_action_text_large">Установить из Google Play</string>
+    <string name="monetization_ads_internal_tools_body_text">Огромный выбор авто. Удобный поиск. Авто новые и с пробегом. Ежедневные обновления. Огромный выбор авто.
+        Огромный выбор авто. Удобный поиск. Авто новые и с пробегом. Ежедневные обновления. Огромный выбор авто</string>
+    <string name="monetization_ads_internal_tools_call_to_action_text">Перейти на сайт</string>
+    <string name="monetization_ads_internal_tools_domain_text">domain</string>
+    <string name="monetization_ads_internal_tools_price_text">price</string>
+    <string name="monetization_ads_internal_tools_rating_text">rating</string>
+    <string name="monetization_ads_internal_tools_review_count_text">review count</string>
+    <string name="monetization_ads_internal_tools_sponsored_text">sponsored</string>
+    <string name="monetization_ads_internal_tools_title_text">Покупка и продажа элитных и дешёвых машин на Авто.ру</string>
+    <string name="monetization_ads_internal_tools_warning_text">Есть противопоказания. Обратитесь к специалисту Есть противопоказания. Обратитесь к специалисту</string>
+    <string name="monetization_ads_mediation_api_sponsored_text">Ad</string>
+    <string name="yandex_mobileads_age_restricted_user" translatable="false">com.yandex.mobile.ads.AGE_RESTRICTED_USER</string>
+    <string name="yandex_mobileads_appmetrica_easy_integration_enabled" translatable="false">com.yandex.mobile.ads.APPMETRICA_EASY_INTEGRATION_ENABLED</string>
+    <string name="yandex_mobileads_automatic_sdk_initialization" translatable="false">com.yandex.mobile.ads.AUTOMATIC_SDK_INITIALIZATION</string>
+    <string name="yandex_mobileads_enable_logging" translatable="false">com.yandex.mobile.ads.ENABLE_LOGGING</string>
+    <style name="Base.Theme.DebugPanel" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowLightStatusBar" ns1:targetApi="23">true</item>
+
+        <item name="debug_panel_support_separator">@color/debug_panel_gray</item>
+        <item name="debug_panel_label_primary">@color/debug_panel_black</item>
+        <item name="debug_panel_label_secondary">@color/debug_panel_dark_gray</item>
+        <item name="debug_panel_color_red">@color/debug_panel_red</item>
+        <item name="debug_panel_color_green">@color/debug_panel_green</item>
+        <item name="debug_panel_color_orange">@color/debug_panel_orange</item>
+        <item name="debug_panel_back_primary">@color/debug_panel_white</item>
+        <item name="debug_panel_back_secondary">@color/debug_panel_light_gray</item>
+    </style>
+    <style name="DebugPanelText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">?attr/debug_panel_label_primary</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/monetization_ads_internal_font_regular</item>
+    </style>
+    <style name="DebugPanelText.Body1">
+        <item name="android:textSize">@dimen/debug_panel_text_body1</item>
+        <item name="android:paddingVertical" ns1:targetApi="26">@dimen/debug_panel_line_spacing_body1</item>
+    </style>
+    <style name="DebugPanelText.Body2">
+        <item name="android:textSize">@dimen/debug_panel_text_body2</item>
+        <item name="android:paddingVertical" ns1:targetApi="26">@dimen/debug_panel_line_spacing_body2</item>
+        <item name="android:textColor">?attr/debug_panel_label_secondary</item>
+    </style>
+    <style name="DebugPanelText.Header1">
+        <item name="android:textSize">@dimen/debug_panel_text_header1</item>
+        <item name="android:paddingVertical" ns1:targetApi="26">@dimen/debug_panel_line_spacing_header1</item>
+        <item name="android:fontFamily">@font/monetization_ads_internal_font_medium</item>
+    </style>
+    <style name="DebugPanelText.Header2">
+        <item name="android:textSize">@dimen/debug_panel_text_header2</item>
+        <item name="android:paddingVertical" ns1:targetApi="26">@dimen/debug_panel_line_spacing_header2</item>
+        <item name="android:fontFamily">@font/monetization_ads_internal_font_medium</item>
+    </style>
+    <style name="DebugPanelTheme" parent="Base.Theme.DebugPanel">
+        <item name="android:colorBackground">?attr/debug_panel_back_primary</item>
+        <item name="android:statusBarColor">?attr/debug_panel_back_primary</item>
+        <item name="android:textViewStyle">@style/DebugPanelText.Body1</item>
+    </style>
+    <style name="DebugPanelToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/debug_panel_black</item>
+    </style>
+    <style name="MonetizationAdsInternal"/>
+    <style name="MonetizationAdsInternal.AdActivity" parent="android:Theme.Translucent.NoTitleBar">
+        <item name="android:forceDarkAllowed" ns1:targetApi="q">false</item>
+    </style>
+    <style name="MonetizationAdsInternal.AdtuneTheme"/>
+    <style name="MonetizationAdsInternal.AdtuneTheme.Dark">
+        <item name="monetization_internal_adtune_container_color">#111111</item>
+        <item name="monetization_internal_adtune_drag_handle_color">#111111</item>
+    </style>
+    <style name="MonetizationAdsInternal.AdtuneTheme.Light">
+        <item name="monetization_internal_adtune_container_color">#FFFFFF</item>
+        <item name="monetization_internal_adtune_drag_handle_color">#FFFFFF</item>
+    </style>
+    <style name="MonetizationAdsInternal.BaseCallToAction" parent="android:Widget">
+        <item name="android:textAppearance">@style/MonetizationAdsInternal.CallToActionTextAppearance</item>
+        <item name="android:minHeight">@dimen/monetization_ads_internal_button_min_height</item>
+        <item name="android:minWidth">@dimen/monetization_ads_internal_button_min_width</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style>
+    <style name="MonetizationAdsInternal.BaseCallToActionTextAppearance" ns1:ignore="NewApi">
+        <item name="android:textColor">@color/monetization_ads_internal_text_color_white</item>
+    </style>
+    <style name="MonetizationAdsInternal.BaseContentAnimatedGradientCallToAction" parent="MonetizationAdsInternal.BaseCallToAction">
+        <item name="android:textAppearance">@style/MonetizationAdsInternal.ContentAnimatedCallToActionTextAppearance</item>
+        <item name="android:background">@drawable/monetization_ads_internal_call_to_action_gradient_yellow_background</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:textColor">@color/monetization_ads_internal_call_to_action_text_color_black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="MonetizationAdsInternal.BottomAdtuneDialog" parent="MonetizationAdsInternal.FullscreenDialog">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/MonetizationAdsInternal.BottomAdtuneDialogAnimation</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+    <style name="MonetizationAdsInternal.BottomAdtuneDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/monetization_ads_internal_bottom_adtune_dialog_animation_in</item>
+        <item name="android:windowExitAnimation">@anim/monetization_ads_internal_bottom_adtune_dialog_animation_out</item>
+    </style>
+    <style name="MonetizationAdsInternal.CallToAction" parent="MonetizationAdsInternal.BaseCallToAction"/>
+    <style name="MonetizationAdsInternal.CallToAction." parent="MonetizationAdsInternal.BaseCallToAction">
+        <item name="android:elevation">@dimen/monetization_ads_internal_button_elevation</item>
+    </style>
+    <style name="MonetizationAdsInternal.CallToActionTextAppearance" parent="MonetizationAdsInternal.BaseCallToActionTextAppearance">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="MonetizationAdsInternal.ContentAnimatedCallToActionTextAppearance" parent="MonetizationAdsInternal.CallToActionTextAppearance" ns1:ignore="NewApi">
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">3</item>
+        <item name="android:shadowColor">#CCFFFFFF</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+    <style name="MonetizationAdsInternal.ContentAnimatedGradientCallToAction" parent="MonetizationAdsInternal.BaseContentAnimatedGradientCallToAction">
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    <style name="MonetizationAdsInternal.FullscreenDialog" parent="android:Theme.DeviceDefault.NoActionBar.Fullscreen">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="MonetizationAdsInternal.RatingBar.Small" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/monetization_ads_internal_rating_bar</item>
+        <item name="android:indeterminateDrawable">@drawable/monetization_ads_internal_rating_bar</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxHeight">16dp</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:thumb">@null</item>
+    </style>
+    <style name="MonetizationAdsInternal.RewardedCallToAction" parent="MonetizationAdsInternal.BaseCallToAction">
+        <item name="android:background">@drawable/monetization_ads_internal_call_to_action_background_shape_blue</item>
+        <item name="android:textColor">@color/monetization_ads_internal_text_color_white</item>
+        <item name="android:elevation">@dimen/monetization_ads_internal_button_elevation</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="monetization_ads_divkit_Div"/>
+    <style name="monetization_ads_divkit_Div.Gallery" parent="android:Widget">
+        <item name="android:scrollbars">vertical</item>
+    </style>
+    <style name="monetization_ads_divkit_Div.Image"/>
+    <style name="monetization_ads_divkit_Div.Input">
+        <item name="android:imeOptions">flagNoFullscreen</item>
+    </style>
+    <style name="monetization_ads_divkit_Div.Tabs"/>
+    <style name="monetization_ads_divkit_Div.Tabs.IndicatorTabLayout">
+        <item name="monetization_ads_divkit_tabTextAppearance">@style/monetization_ads_divkit_Div.Tabs.IndicatorTabLayout.Text</item>
+        <item name="monetization_ads_divkit_tabIndicatorColor">@color/monetization_ads_divkit_div_tab_indicator</item>
+        <item name="monetization_ads_divkit_tabMinWidth">0dp</item>
+        <item name="monetization_ads_divkit_tabPaddingStart">8dp</item>
+        <item name="monetization_ads_divkit_tabPaddingEnd">8dp</item>
+        <item name="monetization_ads_divkit_tabContentEnd">0dp</item>
+        <item name="monetization_ads_divkit_tabContentStart">0dp</item>
+        <item name="monetization_ads_divkit_tabPaddingBottom">1dp</item>
+        <item name="monetization_ads_divkit_tabTextColor">@color/monetization_ads_divkit_div_text_dark_disabled_50</item>
+        <item name="monetization_ads_divkit_tabSelectedTextColor">@color/monetization_ads_divkit_div_text_dark_disabled_80</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+    <style name="monetization_ads_divkit_Div.Tabs.IndicatorTabLayout.Text">
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="monetization_ads_divkit_Div.Text"/>
+    <style name="monetization_ads_divkit_Div.Theme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/monetization_ads_divkit_div_accent_color</item>
+        <item name="colorPrimaryDark">@color/monetization_ads_divkit_div_accent_color</item>
+        <item name="colorAccent">@color/monetization_ads_divkit_div_accent_color</item>
+        <item name="monetization_ads_divkit_divTextStyle">@style/monetization_ads_divkit_Div.Text</item>
+        <item name="monetization_ads_divkit_divImageStyle">@style/monetization_ads_divkit_Div.Image</item>
+        <item name="monetization_ads_divkit_divInputStyle">@style/monetization_ads_divkit_Div.Input</item>
+        <item name="monetization_ads_divkit_divTabIndicatorLayoutStyle">@style/monetization_ads_divkit_Div.Tabs.IndicatorTabLayout</item>
+        <item name="android:textCursorDrawable">@drawable/monetization_ads_divkit_cursor_drawable</item>
+    </style>
+    <declare-styleable name="MonetizationAdsInternalExtendedContainer">
+        <attr name="monetization_internal_corner_radius"/>
+        <attr name="monetization_internal_top_left_corner_radius"/>
+        <attr name="monetization_internal_top_right_corner_radius"/>
+        <attr name="monetization_internal_bottom_right_corner_radius"/>
+        <attr name="monetization_internal_bottom_left_corner_radius"/>
+        <attr format="float" name="monetization_internal_max_screen_width"/>
+        <attr format="float" name="monetization_internal_max_screen_height"/>
+    </declare-styleable>
+    <declare-styleable name="MonetizationAdsInternalIconButton">
+        <attr format="reference" name="monetization_internal_icon"/>
+        <attr format="dimension" name="monetization_internal_icon_size"/>
+        <attr format="dimension" name="monetization_internal_icon_offset"/>
+    </declare-styleable>
+    <declare-styleable name="MonetizationAdsInternalInstreamMuteView">
+        <attr format="reference" name="monetization_internal_sound_on"/>
+        <attr format="reference" name="monetization_internal_sound_off"/>
+    </declare-styleable>
+    <declare-styleable name="MonetizationAdsInternalMediaView">
+        <attr format="reference" name="monetization_internal_video_controls_layout"/>
+        <attr format="enum" name="monetization_internal_video_scale_type">
+            <enum name="fitXY" value="0"/>
+            <enum name="fitCenter" value="1"/>
+            <enum name="centerCrop" value="2"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MonetizationAdsInternalPriorityLinearLayout">
+        <attr format="integer" name="monetization_internal_measure_priority"/>
+    </declare-styleable>
+    <declare-styleable name="MonetizationAdsInternalRoundImageView">
+        <attr name="monetization_internal_corner_radius"/>
+    </declare-styleable>
+    <declare-styleable name="monetization_ads_divkit_BaseIndicatorTabLayout">
+        <attr format="dimension" name="monetization_ads_divkit_tabIndicatorPaddingTop"/>
+        <attr format="dimension" name="monetization_ads_divkit_tabIndicatorPaddingBottom"/>
+        <attr format="dimension" name="monetization_ads_divkit_tabContentEnd"/>
+        <attr format="boolean" name="monetization_ads_divkit_tabTextBoldOnSelection"/>
+        <attr format="boolean" name="monetization_ads_divkit_tabEllipsizeEnabled"/>
+        <attr format="boolean" name="monetization_ads_divkit_tabScrollPaddingEnabled"/>
+        <attr format="dimension" name="monetization_ads_divkit_tabScrollPadding"/>
+    </declare-styleable>
+    <declare-styleable name="monetization_ads_divkit_EllipsizedTextView">
+        <attr format="string|reference" name="monetization_ads_divkit_ellipsis"/>
+        <attr format="reference" name="monetization_ads_divkit_ellipsisTextViewStyle"/>
+    </declare-styleable>
+    <declare-styleable name="monetization_ads_divkit_GridContainer">
+        <attr name="android:columnCount"/>
+        <attr name="android:gravity"/>
+    </declare-styleable>
+    <declare-styleable name="monetization_ads_divkit_TabItem">
+        
+        <attr name="android:text"/>
+        
+        <attr name="android:icon"/>
+        
+        <attr name="android:layout"/>
+    </declare-styleable>
+    <declare-styleable name="monetization_ads_divkit_TabLayout">
+        
+        <attr format="color" name="monetization_ads_divkit_tabIndicatorColor"/>
+        
+        <attr format="dimension" name="monetization_ads_divkit_tabIndicatorHeight"/>
+        
+        <attr format="dimension" name="monetization_ads_divkit_tabContentStart"/>
+        
+        <attr format="reference" name="monetization_ads_divkit_tabBackground"/>
+        
+        <attr format="reference" name="monetization_ads_divkit_tabIndicator"/>
+        
+        <attr name="monetization_ads_divkit_tabIndicatorGravity">
+            <!-- Align indicator to the bottom of this tab layout. -->
+            <enum name="bottom" value="0"/>
+            <!-- Align indicator along the center of this tab layout. -->
+            <enum name="center" value="1"/>
+            <!-- Align indicator to the top of this tab layout. -->
+            <enum name="top" value="2"/>
+            <!-- Stretch indicator to match the height and width of a tab item in this layout. -->
+            <enum name="stretch" value="3"/>
+        </attr>
+        
+        <attr format="integer" name="monetization_ads_divkit_tabIndicatorAnimationDuration"/>
+        
+        <attr format="boolean" name="monetization_ads_divkit_tabIndicatorFullWidth"/>
+        
+        <attr name="monetization_ads_divkit_tabMode">
+            <enum name="scrollable" value="0"/>
+            <enum name="fixed" value="1"/>
+            <enum name="auto" value="2"/>
+        </attr>
+        
+        <attr name="monetization_ads_divkit_tabGravity">
+            <enum name="fill" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="start" value="2"/>
+        </attr>
+        
+        <attr format="boolean" name="monetization_ads_divkit_tabInlineLabel"/>
+        
+        <attr format="dimension" name="monetization_ads_divkit_tabMinWidth"/>
+        
+        <attr format="dimension" name="monetization_ads_divkit_tabMaxWidth"/>
+        
+        <attr format="reference" name="monetization_ads_divkit_tabTextAppearance"/>
+        
+        <attr format="color" name="monetization_ads_divkit_tabTextColor"/>
+        
+        <attr format="color" name="monetization_ads_divkit_tabSelectedTextColor"/>
+        
+        <attr format="dimension" name="monetization_ads_divkit_tabPaddingStart"/>
+        
+        <attr format="dimension" name="monetization_ads_divkit_tabPaddingTop"/>
+        
+        <attr format="dimension" name="monetization_ads_divkit_tabPaddingEnd"/>
+        
+        <attr format="dimension" name="monetization_ads_divkit_tabPaddingBottom"/>
+        
+        <attr format="dimension" name="monetization_ads_divkit_tabPadding"/>
+        
+        <attr format="color" name="monetization_ads_divkit_tabIconTint"/>
+        
+        <attr name="monetization_ads_divkit_tabIconTintMode">
+            <enum name="src_over" value="3"/>
+            <enum name="src_in" value="5"/>
+            <enum name="src_atop" value="9"/>
+            <enum name="multiply" value="14"/>
+            <enum name="screen" value="15"/>
+            <enum name="add" value="16"/>
+        </attr>
+        
+        <attr format="color" name="monetization_ads_divkit_tabRippleColor"/>
+        
+        <attr format="boolean" name="monetization_ads_divkit_tabUnboundedRipple"/>
+    </declare-styleable>
+    <declare-styleable name="monetization_ads_divkit_ViewPagerFixedSizeLayout">
+        <attr format="dimension" name="monetization_ads_divkit_collapsiblePaddingBottom"/>
+    </declare-styleable>
+</resources>

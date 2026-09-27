@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="debug_panel_ad_unit_format">Формат</string>
+    <string name="debug_panel_ad_unit_id">ID</string>
+    <string name="debug_panel_ad_units">Рекламные блоки</string>
+    <string name="debug_panel_ads_sdk_version">Версия SDK</string>
+    <string name="debug_panel_advertisement_network_settings">Настройки рекламной сети</string>
+    <string name="debug_panel_age_restricted_user">Age Restricted User</string>
+    <string name="debug_panel_api_level">Уровень API</string>
+    <string name="debug_panel_app_id">Application ID</string>
+    <string name="debug_panel_app_review_status">Статус ревью</string>
+    <string name="debug_panel_app_version">Версия приложения</string>
+    <string name="debug_panel_application_info">Информация о приложении</string>
+    <string name="debug_panel_completed_integration">Успешная интеграция</string>
+    <string name="debug_panel_disable">Выключить</string>
+    <string name="debug_panel_do_you_want_to_enable_logging">Хотите включить логирование?</string>
+    <string name="debug_panel_enable">Включить</string>
+    <string name="debug_panel_features">Функции</string>
+    <string name="debug_panel_has_location_consent">Has Location Consent</string>
+    <string name="debug_panel_has_user_consent">Has User Consent</string>
+    <string name="debug_panel_integrated">Интегрирован</string>
+    <string name="debug_panel_integration_errors">Ошибки интеграции</string>
+    <string name="debug_panel_invalid_integration">Неверная интеграция</string>
+    <string name="debug_panel_invalid_mediation_adapter_version">Некорректная версия адаптера медиации</string>
+    <string name="debug_panel_logging_is_disabled">Логирование выключено</string>
+    <string name="debug_panel_logging_is_enabled">Логирование включено</string>
+    <string name="debug_panel_missing_integration">Отсутствие интеграции</string>
+    <string name="debug_panel_no">Нет</string>
+    <string name="debug_panel_no_value_set">Не задано</string>
+    <string name="debug_panel_not_integrated">Не интегрирован</string>
+    <string name="debug_panel_ok">Ok</string>
+    <string name="debug_panel_provided">Предоставлено</string>
+    <string name="debug_panel_sdk_integration">Интеграция SDK</string>
+    <string name="debug_panel_sdk_integration_status">Статус интеграции SDK</string>
+    <string name="debug_panel_sdk_undefined">SDK Неизвестно</string>
+    <string name="debug_panel_system">Система</string>
+    <string name="debug_panel_tcf_consent">TCF Consent</string>
+    <string name="debug_panel_user_privacy">Конфиденциальность пользователя</string>
+    <string name="debug_panel_yes">Да</string>
+    <string name="monetization_ads_divkit_div_slider_range_end" translatable="true">Конец диапазона</string>
+    <string name="monetization_ads_divkit_div_slider_range_start" translatable="true">Начало диапазона</string>
+    <string name="monetization_ads_mediation_api_sponsored_text">Реклама</string>
+</resources>

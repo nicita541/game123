@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="monetization_ads_internal_after_timer_value">saniye kadar</string>
+    <string name="monetization_ads_internal_before_timer_value">Ödül</string>
+    <string name="monetization_ads_internal_go">Git</string>
+    <string name="monetization_ads_internal_install">Yüklemek</string>
+    <string name="monetization_ads_internal_install_from_google_play">Google Play\'den yükle</string>
+    <string name="monetization_ads_internal_instream_ad_position">%1$d / %2$d</string>
+    <string name="monetization_ads_internal_instream_call_to_action">Git ➔</string>
+    <string name="monetization_ads_internal_instream_skip">Reklamı Atla</string>
+    <string name="monetization_ads_internal_instream_sponsored_default">Reklam</string>
+    <string name="monetization_ads_internal_instream_sponsored_social">Kamu hizmet reklamı</string>
+    <string name="monetization_ads_internal_mediation_sponsored_text">Reklam</string>
+    <string name="monetization_ads_internal_rewarded_close_verification_button_close">Kapat</string>
+    <string name="monetization_ads_internal_rewarded_close_verification_button_dismiss">İzlemeye devam edin</string>
+    <string name="monetization_ads_internal_rewarded_close_verification_text">Reklamı zamanlayıcı sona ermeden kapatırsanız, izlediğiniz için ödüllendirilmeyeceksiniz</string>
+    <string name="monetization_ads_internal_rewarded_close_verification_title">Reklamı Kapat?</string>
+    <string name="monetization_ads_internal_text_divider">·</string>
+    <string name="monetization_ads_internal_text_divider_with_space"> · </string>
+    <string name="monetization_ads_internal_tools_age_text">3+</string>
+    <string name="monetization_ads_internal_tools_app_install_call_to_action_text">Yüklemek</string>
+    <string name="monetization_ads_internal_tools_app_install_call_to_action_text_large">Google Play\'den yükle</string>
+    <string name="monetization_ads_internal_tools_body_text">Çok çeşitli arabalar. Kolay arama. Arabalar yeni ve kilometre ile. Günlük güncellemeler. Çok çeşitli arabalar.
+Çok çeşitli arabalar. Kolay arama. Arabalar yeni ve kilometre ile. Günlük güncellemeler. Çok çeşitli arabalar</string>
+    <string name="monetization_ads_internal_tools_call_to_action_text">Git</string>
+    <string name="monetization_ads_internal_tools_domain_text">domain</string>
+    <string name="monetization_ads_internal_tools_price_text">price</string>
+    <string name="monetization_ads_internal_tools_rating_text">rating</string>
+    <string name="monetization_ads_internal_tools_review_count_text">review count</string>
+    <string name="monetization_ads_internal_tools_sponsored_text">sponsored</string>
+    <string name="monetization_ads_internal_tools_title_text">Otomobillerde lüks ve ucuz otomobillerin satın alınması ve Авто.ру</string>
+    <string name="monetization_ads_internal_tools_warning_text">KONTRENDİKASYONLAR var. Kontrendikasyonları olan bir uzmana danışın. Bir uzmana danışın</string>
+    <string name="monetization_ads_mediation_api_sponsored_text">Reklam</string>
+</resources>

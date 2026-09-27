@@ -1,0 +1,6 @@
+io.appmetrica.analytics.network.BuildConfig
+io.appmetrica.analytics.network.impl.a
+io.appmetrica.analytics.network.impl.b
+io.appmetrica.analytics.network.impl.c
+io.appmetrica.analytics.network.internal.NetworkClientBuilder
+io.appmetrica.analytics.network.internal.NetworkClientServiceLocator

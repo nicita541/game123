@@ -1,0 +1,7 @@
+io.appmetrica.analytics.gpllibrary.BuildConfig
+io.appmetrica.analytics.gpllibrary.internal.GplLibraryWrapper
+io.appmetrica.analytics.gpllibrary.internal.GplLibraryWrapper$ClientProvider
+io.appmetrica.analytics.gpllibrary.internal.GplLibraryWrapper$Priority
+io.appmetrica.analytics.gpllibrary.internal.GplLocationCallback
+io.appmetrica.analytics.gpllibrary.internal.GplOnSuccessListener
+io.appmetrica.analytics.gpllibrary.internal.IGplLibraryWrapper

@@ -1,0 +1,18 @@
+Music: Erik Satie — Gymnopédie No. 1
+Piano performance: Robin Alciatore, provided by Musopen.
+Recording released into the public domain by the performer.
+https://commons.wikimedia.org/wiki/File:Erik_Satie_-_gymnopedies_-_la_1_ere._lent_et_douloureux.ogg
+Source SHA-1: 96b2343c81047abd9723488d8540b5a2af688233
+Changes: decoded to PCM, +6 dB gain, gentle fade at beginning/end. Full performance retained.
+
+Sound effects: Kenney, RPG Audio (2014), Creative Commons CC0.
+https://kenney.nl/assets/rpg-audio
+https://creativecommons.org/publicdomain/zero/1.0/
+Click.wav: bookFlip1.ogg
+Correct.wav: metalClick.ogg
+Mistake.wav: bookClose.ogg
+Victory.wav: handleCoins2.ogg
+Changes: decoded to mono PCM, balanced gain, short fade-in and peak limiting.
+
+These are existing human performances and authored Foley recordings, not AI-generated audio.
+Original files and Kenney's license are archived under Tools/AudioSources.

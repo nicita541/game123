@@ -1,0 +1,9 @@
+io.appmetrica.analytics.logger.common.BaseDebugLogger
+io.appmetrica.analytics.logger.common.BaseImportantLogger
+io.appmetrica.analytics.logger.common.BaseReleaseLogger
+io.appmetrica.analytics.logger.common.BuildConfig
+io.appmetrica.analytics.logger.common.impl.a
+io.appmetrica.analytics.logger.common.impl.b
+io.appmetrica.analytics.logger.common.impl.c
+io.appmetrica.analytics.logger.common.impl.d
+io.appmetrica.analytics.logger.common.impl.e

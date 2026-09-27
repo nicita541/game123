@@ -1,0 +1,6 @@
+com.yandex.varioqub.analyticadapter.AdapterIdentifiersCallback
+com.yandex.varioqub.analyticadapter.BuildConfig
+com.yandex.varioqub.analyticadapter.VarioqubConfigAdapter
+com.yandex.varioqub.analyticadapter.VarioqubConfigClientIdentifiersProvider
+com.yandex.varioqub.analyticadapter.VarioqubConfigReporter
+com.yandex.varioqub.analyticadapter.data.ConfigData
