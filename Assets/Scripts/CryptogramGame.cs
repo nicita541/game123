@@ -415,6 +415,23 @@ namespace Erudition
                     noFeathersNote.gameObject.SetActive(true);
                 }
                 Persist();
+
+                if (save.activePuzzle.puzzleIndex >= 0 && classicBoard != null)
+                {
+                    classicBoard.StartPuzzle(
+                        Entries[save.activePuzzle.puzzleIndex],
+                        save.activePuzzle.puzzleIndex,
+                        save.activePuzzle,
+                        save.erudition,
+                        save.hints
+                    );
+
+                    ShowScreen(2);
+                }
+                else
+                {
+                    ShowScreen(0);
+                }
             });
         }
 
