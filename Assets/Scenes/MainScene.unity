@@ -484,7 +484,7 @@ RectTransform:
   m_GameObject: {fileID: 1016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.17777778, y: 0.17777778, z: 0.17777778}
+  m_LocalScale: {x: 3.52848, y: 3.52848, z: 3.52848}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1019}
@@ -501,8 +501,8 @@ RectTransform:
   - {fileID: 1997031614}
   m_Father: {fileID: 1004}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1.125, y: 3.021875}
+  m_AnchorMax: {x: 1.125, y: 3.021875}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1080, y: 2340}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8458,10 +8458,10 @@ RectTransform:
   - {fileID: 1619959102}
   m_Father: {fileID: 524756350}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -253, y: -280}
-  m_SizeDelta: {x: 484, y: 548}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2328
 CanvasRenderer:
@@ -23332,7 +23332,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 1745}
+  m_SizeDelta: {x: 1000, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &524756351
 MonoBehaviour:
@@ -26690,8 +26690,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.00024414062}
-  m_SizeDelta: {x: 10325.515, y: 7744.1353}
+  m_AnchoredPosition: {x: -325.14835, y: -983.9801}
+  m_SizeDelta: {x: 520.23724, y: 390.17804}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695810917
 MonoBehaviour:
@@ -26731,10 +26731,10 @@ MonoBehaviour:
   m_Texture: {fileID: 2800000, guid: f83e633e12f0dc14b806fb864919b8a4, type: 3}
   m_UVRect:
     serializedVersion: 2
-    x: -4.2803307
-    y: -1.1547296
-    width: 9.560661
-    height: 3.3094594
+    x: -0.04191386
+    y: -0.0038756803
+    width: 0.48170117
+    height: 0.16674276
 --- !u!222 &695810919
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44268,8 +44268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2472ea6ab625a164cbbc67faff4c0453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Erudition.AdsBridge
-  rewardedAdUnitId: demo-rewarded-yandex
-  interstitialAdUnitId: demo-interstitial-yandex
+  rewardedAdUnitId: R-M-20130521-1
+  interstitialAdUnitId: R-M-20130521-2
 --- !u!114 &1735082595
 MonoBehaviour:
   m_ObjectHideFlags: 0
