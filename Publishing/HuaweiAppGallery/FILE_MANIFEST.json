@@ -1,0 +1,207 @@
+[
+  {
+    "file": "ASSETS.html",
+    "bytes": 6375,
+    "sha256": "60474933593a1ab034a588586b10002a1b2d44b509543da327dde4a038fd5de2"
+  },
+  {
+    "file": "ASSETS.md",
+    "bytes": 3732,
+    "sha256": "c7bc19d29ed4e752e41c2424119aa21cad521d977f498ba83236be6d53f75970"
+  },
+  {
+    "file": "icons/app-icon-1024.png",
+    "bytes": 825419,
+    "sha256": "23c7ec9517375ab8647f4049321507886007985ba3b7555622e7d224659e15f5"
+  },
+  {
+    "file": "icons/app-icon-216.png",
+    "bytes": 59819,
+    "sha256": "bf9a4a281f7d70f0f1246d5a4acacfb46bc806aed2631bc64d6421f9d9040941"
+  },
+  {
+    "file": "icons/app-icon-512.png",
+    "bytes": 255530,
+    "sha256": "5578b5895a2b26a202c961cbfe844de6d271e95d496f2ca49b3650dbcb5083af"
+  },
+  {
+    "file": "INSTRUCTION_RU.html",
+    "bytes": 22791,
+    "sha256": "7da372d4166b28cea9fe02289ae46d29e3d959585b2994e4ec1ff8fee045865e"
+  },
+  {
+    "file": "INSTRUCTION_RU.md",
+    "bytes": 19234,
+    "sha256": "66d85f403713615f2f434fdcdfecda4f8554e0dbb1a1fe7bf2bad3a0554df0bf"
+  },
+  {
+    "file": "listing/full-description.txt",
+    "bytes": 3029,
+    "sha256": "67261846e96a0d8ffc7d1817e45c8c86712e625061262d5df6e6467701a484cc"
+  },
+  {
+    "file": "listing/reviewer-notes.txt",
+    "bytes": 1602,
+    "sha256": "cd676d863ca434d2fdfb0000a5cd638519562f3b02d0ac25fd0501c623a0de9b"
+  },
+  {
+    "file": "listing/short-description.txt",
+    "bytes": 146,
+    "sha256": "9563ac81b10f89095921a6c9018bb23130a624e34f43465afd65125952467cf5"
+  },
+  {
+    "file": "listing/store-fields.json",
+    "bytes": 1026,
+    "sha256": "429b08f55c11e751cf04fdbda1c55711a5e222cb9863a3dddbf61d0560f7c33f"
+  },
+  {
+    "file": "listing/title.txt",
+    "bytes": 46,
+    "sha256": "8958d2c7d8c9d0b56b84a2be080e293a2917edeea3f75e6e2f981f4f08c84d5b"
+  },
+  {
+    "file": "listing/whats-new.txt",
+    "bytes": 326,
+    "sha256": "27eaf509c0430c181c892493d157acd5931cfe52aa37791d94f54edf68afca85"
+  },
+  {
+    "file": "preview/contact-sheet.jpg",
+    "bytes": 474769,
+    "sha256": "e11630bc29682298e0f0e268707d93edcb831779ca9f0fd06844b5092b067315"
+  },
+  {
+    "file": "preview/index.html",
+    "bytes": 12219,
+    "sha256": "a007fa8d47172eb9c930c5470e6f1d3576ddde7b68ce5fd37a6488fe5a093aa4"
+  },
+  {
+    "file": "privacy/privacy-policy-draft.html",
+    "bytes": 10616,
+    "sha256": "3c7322ac5d56464f4d5856afc8c190cef559e6d8d803248342e8b27d0e32a009"
+  },
+  {
+    "file": "privacy/PRIVACY_POLICY_DRAFT_RU.md",
+    "bytes": 8050,
+    "sha256": "aaae8ad3066f1aca634b184a355dac0255dcaa130c6342049ebcd91e7baf2471"
+  },
+  {
+    "file": "privacy/PRIVACY_REVIEW.md",
+    "bytes": 5319,
+    "sha256": "eaa45d2e9acff1004e5627da27200102a260cb89b8c99acc9a443c9e50138e35"
+  },
+  {
+    "file": "promo/banner-1920x1080.jpg",
+    "bytes": 397311,
+    "sha256": "1786235c8ccc8b0f2c98082cd08e91df233c0ffcf8cb8050c5a471dff9456c11"
+  },
+  {
+    "file": "RELEASE_CHECKLIST.html",
+    "bytes": 9267,
+    "sha256": "3aed5565be5f7d581a181223010fb065542a3ac5957b365f33bec619a07df689"
+  },
+  {
+    "file": "RELEASE_CHECKLIST.md",
+    "bytes": 6596,
+    "sha256": "9ac69319b3e0ce4e3cadefb782f51227c4d37ce63c3986b9f6eed8546b0659b3"
+  },
+  {
+    "file": "screenshots/01_gameplay.jpg",
+    "bytes": 736532,
+    "sha256": "2d0a7a5a228c051cb003247fcf00209160f9f7af9146c28f2f54d7e85d4c9955"
+  },
+  {
+    "file": "screenshots/02_collections.jpg",
+    "bytes": 779737,
+    "sha256": "b1995b95a7b95329a22b62794f3d7d2d53879cb88dc83cd4b5e1156c80a88483"
+  },
+  {
+    "file": "screenshots/03_text_types.jpg",
+    "bytes": 956361,
+    "sha256": "b7194be8fcf7aeefffb13e8305355d2d01cc7c1ae504fe9898d8e4a2c803ccdc"
+  },
+  {
+    "file": "screenshots/05_progress.jpg",
+    "bytes": 707001,
+    "sha256": "f9b1a86b348aa7c1ee77823154dc5f3996468cc4adb8e22288f4d4502a37ee06"
+  },
+  {
+    "file": "screenshots_original/01_gameplay.png",
+    "bytes": 2786164,
+    "sha256": "fdbbeab60209f259c78266cc649801b08c9cb5f0244db2430e3528341bcfe0b0"
+  },
+  {
+    "file": "screenshots_original/02_collections.png",
+    "bytes": 2478499,
+    "sha256": "43adb29b1c8ec145732378ad43eb5ade038c60a0e55f170fd2ae72ac21ef4c87"
+  },
+  {
+    "file": "screenshots_original/03_text_types.png",
+    "bytes": 3232311,
+    "sha256": "096808544823fdb4b9c2a709f4576815b58cebe16859ff704d1c22716f462a26"
+  },
+  {
+    "file": "screenshots_original/04_reading.png",
+    "bytes": 2038450,
+    "sha256": "073897d5b5bc099a803ac4d03f54e97429618b09f3d7b52f9ac11e4c5616827d"
+  },
+  {
+    "file": "screenshots_original/05_progress.png",
+    "bytes": 2266343,
+    "sha256": "59ca512065d99a03d5fd0e7203874cc39b78b1a501a2a526b19bc703d926613d"
+  },
+  {
+    "file": "source/build_assets.py",
+    "bytes": 4505,
+    "sha256": "8c215c09bbcc53c6f095c8c5cfecdda536eed3a7eebba427d1fa7f384781bdc0"
+  },
+  {
+    "file": "source/build_preview.py",
+    "bytes": 9409,
+    "sha256": "3663d1b16a970c7225101b40dd73fa5f92d995c614b20a57be34b793d4c161fd"
+  },
+  {
+    "file": "source/IMAGEGEN_ATTEMPT.md",
+    "bytes": 1307,
+    "sha256": "8df84dd7692062dbfde257e957266f8ef0b796d4a962e7c27f274a3618043c22"
+  },
+  {
+    "file": "source/provenance.json",
+    "bytes": 1295,
+    "sha256": "419fdf29b8d7bfaa710ddca1c7ad4eb2b3c7c6c706b379e0a7d7830ee49fa22a"
+  },
+  {
+    "file": "source/verify_pack.py",
+    "bytes": 4172,
+    "sha256": "2598c71842e2e01cdf287cfa351289cf21974c0e3a2329d9147ccdf3878b80d9"
+  },
+  {
+    "file": "SOURCES.html",
+    "bytes": 7241,
+    "sha256": "c5de25363341ca9ae1ce3eeba9e842cb19f784cff7aa9a5572e603f1487b469c"
+  },
+  {
+    "file": "SOURCES.md",
+    "bytes": 4677,
+    "sha256": "1bf7a9d4297dda7fd1f086fdc2c3de552eb30ea14ed256d72d8db0e4d296a08a"
+  },
+  {
+    "file": "START_HERE.html",
+    "bytes": 7166,
+    "sha256": "ae8521a6556036344966ff64a8e36fdd6e6360d14f2227c7410897aee51156f4"
+  },
+  {
+    "file": "START_HERE.md",
+    "bytes": 4477,
+    "sha256": "1d86bc2ca3802fb692a17e6937101979bf4bb009bf2c514fb44e35494202f5be"
+  },
+  {
+    "file": "TECHNICAL_AUDIT.html",
+    "bytes": 8542,
+    "sha256": "c5b35ccf0447108bec99ff5f8717e75bfe37474a8a486f743eaa76870d1d6708"
+  },
+  {
+    "file": "TECHNICAL_AUDIT.md",
+    "bytes": 5614,
+    "sha256": "9313d0a4619e78517dc448cf4823400aa16b78448c27ea104ec9e60c7b06c9c0"
+  }
+]

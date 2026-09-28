@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Owlberry Studio
-  productName: "\u042D\u0440\u0443\u0434\u0438\u0446\u0438\u044F \u2014 \u041A\u0440\u0438\u043F\u0442\u043E\u0433\u0440\u0430\u043C\u043C\u0430"
+  companyName: "Никита Цурбан"
+  productName: "Криптограммы: Шифры совы"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.96, g: 0.85, b: 0.62, a: 1}

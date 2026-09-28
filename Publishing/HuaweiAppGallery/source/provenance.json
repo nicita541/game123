@@ -1,0 +1,42 @@
+[
+  {
+    "file": "screenshots/01_gameplay.jpg",
+    "source": "Review/ContentCatalogReview/Gameplay_ThreeHearts.png",
+    "source_sha256": "fdbbeab60209f259c78266cc649801b08c9cb5f0244db2430e3528341bcfe0b0",
+    "size": [
+      1080,
+      2340
+    ],
+    "method": "full unmodified game screenshot; JPEG encoding only"
+  },
+  {
+    "file": "screenshots/02_collections.jpg",
+    "source": "Review/ContentCatalogReview/Collections.png",
+    "source_sha256": "43adb29b1c8ec145732378ad43eb5ade038c60a0e55f170fd2ae72ac21ef4c87",
+    "size": [
+      1080,
+      2340
+    ],
+    "method": "full unmodified game screenshot; JPEG encoding only"
+  },
+  {
+    "file": "screenshots/03_text_types.jpg",
+    "source": "Review/VarietyReview/TextKinds.png",
+    "source_sha256": "096808544823fdb4b9c2a709f4576815b58cebe16859ff704d1c22716f462a26",
+    "size": [
+      1080,
+      2340
+    ],
+    "method": "full unmodified game screenshot; JPEG encoding only"
+  },
+  {
+    "file": "screenshots/05_progress.jpg",
+    "source": "Review/FeedbackPass/Statistics.png",
+    "source_sha256": "59ca512065d99a03d5fd0e7203874cc39b78b1a501a2a526b19bc703d926613d",
+    "size": [
+      1080,
+      2340
+    ],
+    "method": "full unmodified game screenshot; JPEG encoding only"
+  }
+]
