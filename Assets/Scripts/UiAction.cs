@@ -10,7 +10,8 @@ namespace Erudition
         CollectionTab, AchievementTab, ToggleSetting, Debug, DebugAddErudition,
         DebugRemoveFeather, DebugZeroFeathers, DebugRefillFeathers, DebugAddHint,
         DebugVictory, DebugDefeat, DebugReset, Retry, DebugOneHeart, DebugUnlockCollections, DebugUnlockAchievements,
-        FeatherInfo, CoinInfo, StatisticsPeriod, ClearSelection, LikeQuote, AchievementDetails, ClosePopup
+        FeatherInfo, CoinInfo, StatisticsPeriod, ClearSelection, LikeQuote, AchievementDetails, ClosePopup,
+        BuyHintOffer, RewardHint, CloseHintOffer
     }
 
     public sealed class UiAction : MonoBehaviour

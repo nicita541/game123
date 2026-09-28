@@ -14,6 +14,10 @@ namespace Erudition
         private const int FeatherRestoreMinutes = 20;
 
         public PuzzleLibrary library;
+        public CollectionGallery gallery;
+        public GameObject hintOffer;
+        public Text hintOfferMessage;
+        public Button hintOfferBuy, hintOfferAd, hintOfferClose;
         public AdsBridge ads;
         public GameAudio soundPlayer;
         public ReferenceUiPresenter presentation;
@@ -83,17 +87,20 @@ namespace Erudition
         private int pendingIndex = -1;
         private Vector2[] achievementPositions;
         public static CryptogramGame Current { get; private set; }
-        public PuzzleEntry[] Entries => puzzles ?? (puzzles = PuzzleGenerator.Build(library));
+        public PuzzleEntry[] Entries => puzzles ?? (puzzles = PuzzleGenerator.Build(library, gallery == null ? null : gallery.catalog));
+        private bool hintRewardPending;
 
         public int Hints => save == null ? 0 : save.hints;
 
         private void Awake()
         {
             Current = this;
+            if (gallery != null) gallery.Build(this);
             achievementPositions = achievementCards.Select(card => ((RectTransform)card.transform).anchoredPosition).ToArray();
             baseFontSizes = FindObjectsByType<Text>(FindObjectsInactive.Include, FindObjectsSortMode.None)
                 .ToDictionary(label => label, label => label.fontSize);
             save = SaveStore.Load();
+            ResolveSavedPuzzles();
             if (!save.kindProgressInitialized)
             {
                 var solvedIds = new HashSet<string>(save.solvedPuzzleIds.Split('|'));
@@ -147,7 +154,8 @@ namespace Erudition
 
         private void Update()
         {
-            if (!applicationPaused && Application.isFocused && currentScreen == 2 && HasActivePuzzle())
+            if (!applicationPaused && Application.isFocused && currentScreen == 2 && HasActivePuzzle()
+                && (hintOffer == null || !hintOffer.activeSelf) && (ads == null || !ads.IsShowing))
             {
                 classicBoard?.TickPlayTime(Time.unscaledDeltaTime);
                 if (Time.unscaledTime >= nextProgressSave)
@@ -205,6 +213,9 @@ namespace Erudition
                 case UiActionKind.Back: GoBack(); break;
                 case UiActionKind.Continue: ShowScreen(0); break;
                 case UiActionKind.Hint: ActiveBoard()?.UseHint(); break;
+                case UiActionKind.BuyHintOffer: BuyHintOffer(); break;
+                case UiActionKind.RewardHint: RewardHint(); break;
+                case UiActionKind.CloseHintOffer: if (!hintRewardPending) hintOffer?.SetActive(false); break;
                 case UiActionKind.Check: ActiveBoard()?.Check(); break;
                 case UiActionKind.RewardVictory: break; // Retired action; keep serialized enum indices stable.
                 case UiActionKind.RewardFeather: RewardFeather(); break;
@@ -231,10 +242,7 @@ namespace Erudition
                 case UiActionKind.DebugUnlockCollections:
                     if (DebugAllowed())
                     {
-                        for (var i = 0; i < save.authorProgress.Length; i++) save.authorProgress[i] = authorCards[i].target;
-                        for (var i = 0; i < save.themeProgress.Length; i++) save.themeProgress[i] = themeCards[i].target;
-                        for (var i = 0; i < save.bookProgress.Length; i++) save.bookProgress[i] = bookCards[i].target;
-                        for (var i = 0; kindCards != null && i < kindCards.Length; i++) save.kindProgress[i] = kindCards[i].target;
+                        save.solvedPuzzleIds = string.Join("|", Entries.Select(e => e.id)) + "|";
                         Persist();
                     }
                     break;
@@ -277,6 +285,70 @@ namespace Erudition
             save.hints--;
             Persist();
             return true;
+        }
+
+        private void ResolveSavedPuzzles()
+        {
+            var progress = save.activePuzzle;
+            if (!string.IsNullOrEmpty(progress.puzzleId))
+                progress.puzzleIndex = Array.FindIndex(Entries, e => e.id == progress.puzzleId);
+            else if (progress.puzzleIndex >= 0 && progress.puzzleIndex < Entries.Length)
+                progress.puzzleId = Entries[progress.puzzleIndex].id;
+            if (progress.puzzleIndex < 0 || progress.puzzleIndex >= Entries.Length)
+                save.activePuzzle = new PuzzleProgress();
+            else progress.remainingHearts = Mathf.Min(progress.remainingHearts,
+                Mathf.Max(1, PuzzleBoard.MaxHearts - progress.mistakesInLevel));
+            if (!string.IsNullOrEmpty(save.lastFailedPuzzleId))
+                save.lastFailedPuzzleIndex = Array.FindIndex(Entries, e => e.id == save.lastFailedPuzzleId);
+            else if (save.lastFailedPuzzleIndex >= 0 && save.lastFailedPuzzleIndex < Entries.Length)
+                save.lastFailedPuzzleId = Entries[save.lastFailedPuzzleIndex].id;
+            SaveStore.Save(save);
+        }
+
+        public void OfferHints()
+        {
+            if (currentScreen != 2 || !HasActivePuzzle() || hintOffer == null) return;
+            StoreActiveProgress();
+            hintOfferMessage.text = "Купить 5 подсказок за 150 монет\nили посмотреть видео за 1 подсказку.\n\nВаши монеты: " + save.coins;
+            hintOffer.SetActive(true);
+        }
+
+        private void BuyHintOffer()
+        {
+            if (hintRewardPending || hintOffer == null || !hintOffer.activeSelf) return;
+            if (save.coins < 150)
+            { hintOfferMessage.text = "Недостаточно монет: " + save.coins + " из 150.\nМожно получить подсказку за видео."; return; }
+            save.coins -= 150;
+            save.hints += 5;
+            Persist();
+            hintOffer.SetActive(false);
+            ActiveBoard()?.UseHint();
+        }
+
+        private void RewardHint()
+        {
+            if (hintRewardPending || hintOffer == null || !hintOffer.activeSelf) return;
+            if (ads == null || !ads.IsAvailable)
+            { hintOfferMessage.text = "Видео пока недоступно. Попробуйте ещё раз через несколько секунд."; return; }
+            hintRewardPending = true;
+            hintOfferBuy.interactable = hintOfferAd.interactable = hintOfferClose.interactable = false;
+            hintOfferMessage.text = "Загружаем видео…";
+            var recipient = save;
+            var puzzleId = classicBoard.Entry.id;
+            ads.ShowRewarded(success =>
+            {
+                if (this == null) return;
+                hintRewardPending = false;
+                hintOfferBuy.interactable = hintOfferAd.interactable = hintOfferClose.interactable = true;
+                if (recipient != save) return;
+                if (!success)
+                { hintOfferMessage.text = ads.Status + "\nПодсказка выдаётся после полного просмотра."; return; }
+                save.hints++;
+                Persist();
+                var apply = hintOffer.activeSelf && currentScreen == 2 && HasActivePuzzle() && classicBoard.Entry.id == puzzleId;
+                hintOffer.SetActive(false);
+                if (apply) classicBoard.UseHint();
+            });
         }
 
         public void CompletePuzzle(PuzzleBoard board)
@@ -327,12 +399,19 @@ namespace Erudition
         {
             if (board == null || board.Entry == null || save.activePuzzle.puzzleIndex != board.PuzzleIndex) return;
             save.lastFailedPuzzleIndex = board.PuzzleIndex;
+            save.lastFailedPuzzleId = board.Entry.id;
             save.streak = 0;
             save.eveningStreak = 0;
             save.activePuzzle = new PuzzleProgress();
             UpdateDefeatMessage();
             Persist();
             ShowScreen(12);
+            // Every defeat requests an ad, independently of the victory cooldown.
+            if (ads != null && ads.TryShowInterstitial())
+            {
+                save.lastInterstitialUtcTicks = DateTime.UtcNow.Ticks;
+                SaveStore.Save(save);
+            }
         }
 
         private void UpdateDefeatMessage()
@@ -373,9 +452,10 @@ namespace Erudition
             save.activePuzzle = new PuzzleProgress
             {
                 puzzleIndex = index,
+                puzzleId = Entries[index].id,
                 scoringRevision = 1,
                 playerTierAtStart = PuzzleGenerator.Tier(save.erudition),
-                remainingHearts = 5
+                remainingHearts = PuzzleBoard.MaxHearts
             };
             save.lastClassicIndex = index;
             board.StartPuzzle(Entries[index], index, save.activePuzzle, save.erudition, save.hints);
@@ -554,6 +634,7 @@ namespace Erudition
         private void ShowScreen(int index)
         {
             if (screens == null || index < 0 || index >= screens.Length) return;
+            hintOffer?.SetActive(false);
             if (currentScreen == 2 && index != 2) StoreActiveProgress();
             currentScreen = index;
             presentation?.ClosePopup();
@@ -614,6 +695,7 @@ namespace Erudition
 
         private void UpdateCollections()
         {
+            if (gallery != null) { gallery.Refresh(save, Entries); return; }
             for (var i = 0; kindCards != null && i < Math.Min(kindCards.Length, save.kindProgress.Length); i++) kindCards[i].SetProgress(save.kindProgress[i]);
             for (var i = 0; authorCards != null && i < Math.Min(authorCards.Length, save.authorProgress.Length); i++) authorCards[i].SetProgress(save.authorProgress[i]);
             for (var i = 0; themeCards != null && i < Math.Min(themeCards.Length, save.themeProgress.Length); i++) themeCards[i].SetProgress(save.themeProgress[i]);

@@ -6,6 +6,7 @@ namespace Erudition
     public sealed class CollectionCardView : MonoBehaviour
     {
         public Text title;
+        public Image picture;
         public Text progressText;
         public RectTransform progressFill;
         public RectTransform progressTrack;

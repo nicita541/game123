@@ -1,0 +1,1536 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/staging' branch; Version is '6000.3.8f1 (1c7db571dde0) revision 1867189'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 32478 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Никита" at "2026-09-28T03:27:02.8339044Z"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-09-28T03:27:02Z
+
+COMMAND LINE ARGUMENTS:
+D:\uni\uniti\6000.3.8f1\Editor\Unity.exe
+-batchmode
+-projectPath
+F:/game/_feedback_validation
+-executeMethod
+ContentCatalogRegression.Run
+-logFile
+F:/game/Logs/content-complete.log
+Successfully changed project path to: F:/game/_feedback_validation
+F:/game/_feedback_validation
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Player connection [26964]  Target information:
+
+Player connection [26964]  * "[IP] 172.26.192.1 [Port] 55504 [Flags] 2 [Guid] 3186344097 [EditorId] 3186344097 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26964]  * "[IP] 192.168.0.30 [Port] 55504 [Flags] 2 [Guid] 3186344097 [EditorId] 3186344097 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26964]  * "[IP] 26.192.55.79 [Port] 55504 [Flags] 2 [Guid] 3186344097 [EditorId] 3186344097 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26964]  * "[IP] 172.29.112.1 [Port] 55504 [Flags] 2 [Guid] 3186344097 [EditorId] 3186344097 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26964]  * "[IP] 172.23.0.1 [Port] 55504 [Flags] 2 [Guid] 3186344097 [EditorId] 3186344097 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26964]  * "[IP] 172.30.48.1 [Port] 55504 [Flags] 2 [Guid] 3186344097 [EditorId] 3186344097 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26964]  * "[IP] 172.26.144.1 [Port] 55504 [Flags] 2 [Guid] 3186344097 [EditorId] 3186344097 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26964]  * "[IP] 172.18.0.1 [Port] 55504 [Flags] 2 [Guid] 3186344097 [EditorId] 3186344097 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-EBPHEGH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26964] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [26964] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-2884" after 0.2 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.4+4293ba1
+  Session Id:              49a87cccd247478d87e39ff422a3a534
+  Correlation Id:          119125b7858fefebaf6509c67999fa32
+  External correlation Id: 6032949679989094256
+  Machine Id:              jzHodTWF6+Fi1Wy/9uv33iXnNe4=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Никита" (connect: 0.00s, validation: 0.00s, handshake: 0.82s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Никита-notifications" at "2026-09-28T03:27:03.654625Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 10171185444303-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.83s
+[Licensing::Module] Licensing is initialized (took 0.50s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+[Licensing::Client] Successfully resolved entitlement details
+Refreshing native plugins compatible for Editor in 4.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.8f1 (1c7db571dde0)
+[Subsystems] Discovering subsystems at path D:/uni/uniti/6000.3.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/game/_feedback_validation/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 5060 Ti (ID=0x2d04)
+    Vendor:   NVIDIA
+    VRAM:     7891 MB
+    Driver:   32.0.16.1088
+Initialize mono
+Mono path[0] = 'D:/uni/uniti/6000.3.8f1/Editor/Data/Managed'
+Mono path[1] = 'D:/uni/uniti/6000.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/uni/uniti/6000.3.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56884
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/uni/uniti/6000.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: D:/uni/uniti/6000.3.8f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.001245 seconds.
+- Loaded All Assemblies, in  0.353 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 2165 ms
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.521 seconds
+Domain Reload Profiling: 2872ms
+	BeginReloadAssembly (113ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (18ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (162ms)
+		LoadAssemblies (95ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (159ms)
+			TypeCache.Refresh (158ms)
+				TypeCache.ScanAssembly (147ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (2521ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2493ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2239ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (67ms)
+			ProcessInitializeOnLoadAttributes (121ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+Package Manager log level set to [2]
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 7 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.device-simulator.devices@1.0.1 (location: F:\game\_feedback_validation\Library\PackageCache\com.unity.device-simulator.devices@2af643ceec84)
+  Built-in packages:
+    com.unity.ugui@2.0.0 (location: F:\game\_feedback_validation\Library\PackageCache\com.unity.ugui@bb329a87fcdc)
+    com.unity.modules.androidjni@1.0.0 (location: F:\game\_feedback_validation\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.audio@1.0.0 (location: F:\game\_feedback_validation\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imageconversion@1.0.0 (location: F:\game\_feedback_validation\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.ui@1.0.0 (location: F:\game\_feedback_validation\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.imgui@1.0.0 (location: F:\game\_feedback_validation\Library\PackageCache\com.unity.modules.imgui)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.00 seconds
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+Starting: D:\uni\uniti\6000.3.8f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1300b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: F:/game/_feedback_validation
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 1s202ms
+[226/229    0s] Csc Library/Bee/artifacts/1300b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[227/229    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[228/229    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (1.18 seconds), 3 items updated, 229 evaluated
+AssetDatabase: script compilation time: 1.631784s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.537 seconds
+Refreshing native plugins compatible for Editor in 4.34 ms, found 0 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.473 seconds
+Domain Reload Profiling: 1009ms
+	BeginReloadAssembly (272ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (147ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (208ms)
+		LoadAssemblies (272ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (20ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (9ms)
+			BuildScriptInfoCaches (3ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (474ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (362ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (33ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (123ms)
+			ProcessInitializeOnLoadAttributes (124ms)
+			ProcessInitializeOnLoadMethodAttributes (77ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Start importing ProjectSettings/ProjectSettings.asset using Guid(00000000000000004000000000000000) (LibraryAssetImporter) -> (artifact id: 'ee906981156d4678101c0f0e8f3d40bf') in 0.0097117 seconds
+Refreshing native plugins compatible for Editor in 4.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=6f3d5795e8267344d94c04acf3e62a55): Total: 2.861 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=1 ms, native=631 ms
+		Asset DB Callback time: managed=39 ms, native=9 ms
+		Scripting: domain reloads=1, domain reload time=537 ms, compile time=1634 ms, other=6 ms
+		Project Asset Count: scripts=176, non-scripts=277
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.001ms
+	InvokePackagesCallback: 5.017ms
+	ApplyChangesToAssetFolders: 0.274ms
+	Scan: 77.497ms
+	OnSourceAssetsModified: 0.745ms
+	CategorizeAssetsWithTransientArtifact: 1.659ms
+	ProcessAssetsWithTransientArtifactChanges: 5.864ms
+	CategorizeAssets: 2.924ms
+	ImportOutOfDateAssets: 495.139ms (-1149.370ms without children)
+		ImportManagerImport: 10.654ms (0.688ms without children)
+			ImportInProcess: 9.947ms
+			UpdateCategorizedAssets: 0.018ms
+		CompileScripts: 1633.586ms
+		ReloadNativeAssets: 0.000ms
+		UnloadImportedAssets: 0.216ms
+		ReloadImportedAssets: 0.000ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.052ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.000ms
+	PostProcessAllAssets: 40.483ms
+	Hotreload: 4.807ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.002ms
+	UnloadStreamsBegin: 0.997ms
+	PersistCurrentRevisions: 0.013ms
+	UnloadStreamsEnd: 0.001ms
+	GenerateScriptTypeHashes: 0.604ms
+	Untracked: 2225.332ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Scanning for USB devices : 3.335ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Эрудиция — Криптограмма
+GetVirtualKey: Could not map char: z (122) to any virtual key
+GetVirtualKey: Could not map char: y (121) to any virtual key
+GetVirtualKey: Could not map char: x (120) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: v (118) to any virtual key
+GetVirtualKey: Could not map char: V (86) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: i (105) to any virtual key
+GetVirtualKey: Could not map char: l (108) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: k (107) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: P (80) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: g (103) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: o (111) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: u (117) to any virtual key
+Depth and stencil buffers are disabled in Player settings. Depending on the platform and Graphics API in use, UI elements might not render correctly.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 614 unused Assets / (1.5 MB). Loaded Objects now: 1158.
+Memory consumption went from 96.4 MB to 94.9 MB.
+Total: 5.001000 ms (FindLiveObjects: 0.065200 ms CreateObjectMapping: 0.018000 ms MarkObjects: 4.321600 ms  DeleteObjects: 0.595200 ms)
+
+GetVirtualKey: Could not map char: z (122) to any virtual key
+GetVirtualKey: Could not map char: y (121) to any virtual key
+GetVirtualKey: Could not map char: x (120) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: v (118) to any virtual key
+GetVirtualKey: Could not map char: V (86) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: d (100) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: i (105) to any virtual key
+GetVirtualKey: Could not map char: l (108) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: k (107) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: p (112) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: r (114) to any virtual key
+GetVirtualKey: Could not map char: P (80) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: g (103) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: f (102) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: a (97) to any virtual key
+GetVirtualKey: Could not map char: n (110) to any virtual key
+GetVirtualKey: Could not map char: o (111) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: s (115) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: b (98) to any virtual key
+GetVirtualKey: Could not map char: c (99) to any virtual key
+GetVirtualKey: Could not map char: u (117) to any virtual key
+Opening scene 'Assets/Scenes/MainScene.unity'
+Unloading 28 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/MainScene.unity'
+	Deserialize:            62.592 ms
+	Integration:            53.085 ms
+	Integration of assets:  126.154 ms
+	Thread Wait Time:       0.146 ms
+	Total Operation Time:   241.977 ms
+Unloading 5 unused Assets / (47.6 KB). Loaded Objects now: 3728.
+Memory consumption went from 165.9 MB to 165.9 MB.
+Total: 4.578400 ms (FindLiveObjects: 0.266000 ms CreateObjectMapping: 0.038300 ms MarkObjects: 4.195500 ms  DeleteObjects: 0.077600 ms)
+
+CONTENT_OK: Gallery template is in UI, not systems
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Run () (at Assets/Editor/ContentCatalogRegression.cs:28)
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Exactly one card is authored in scene
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Run () (at Assets/Editor/ContentCatalogRegression.cs:29)
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Visible template and seventeen definitions
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Run () (at Assets/Editor/ContentCatalogRegression.cs:30)
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Hint offer serialized and initially closed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Run () (at Assets/Editor/ContentCatalogRegression.cs:31)
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+Opening scene 'Assets/Scenes/GameplayScene.unity additively'
+Loaded scene 'Assets/Scenes/GameplayScene.unity'
+	Deserialize:            131.527 ms
+	Integration:            27.325 ms
+	Integration of assets:  1.548 ms
+	Thread Wait Time:       -0.155 ms
+	Total Operation Time:   160.245 ms
+CONTENT_OK: Three authored heart objects
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Run () (at Assets/Editor/ContentCatalogRegression.cs:34)
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Unique puzzle IDs
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Run () (at Assets/Editor/ContentCatalogRegression.cs:36)
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Entire catalogue fits game grid
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Run () (at Assets/Editor/ContentCatalogRegression.cs:37)
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Three example phrases appended without moving old entries
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Run () (at Assets/Editor/ContentCatalogRegression.cs:38)
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+Opening scene 'Assets/Scenes/MainScene.unity'
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/MainScene.unity'
+	Deserialize:            27.052 ms
+	Integration:            7.201 ms
+	Integration of assets:  0.017 ms
+	Thread Wait Time:       -0.001 ms
+	Total Operation Time:   34.268 ms
+Unloading 7 unused Assets / (50.3 KB). Loaded Objects now: 3730.
+Memory consumption went from 189.4 MB to 189.3 MB.
+Total: 6.042400 ms (FindLiveObjects: 0.891500 ms CreateObjectMapping: 0.033200 ms MarkObjects: 5.014600 ms  DeleteObjects: 0.101800 ms)
+
+[Project] Loading completed in 7.890 seconds
+	Project init time: 				7.011 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		0.691 seconds
+		Asset Database init time: 		0.118 seconds
+		Global illumination init time: 	0.002 seconds
+		Assemblies load time: 			2.886 seconds
+		Unity extensions init time: 	0.001 seconds
+		Asset Database refresh time: 	2.861 seconds
+	Scene opening time: 			0.777 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1790566030714,"processId":2884,"projectLoad":7.8904789,"projectInit":7.011417,"templateInit":0.0,"packageManagerInit":0.6910653,"assetDatabaseInit":0.1184643,"globalIlluminationInit":0.0022334,"assembliesLoad":2.8858175,"unityExtensionsInit":0.0010633,"assetDatabaseRefresh":2.8608373,"sceneOpening":0.7771462}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1790566030714,"processId":2884,"editorVersion":"6000.3.8f1 (1c7db571dde0)","branch":"6000.3/staging","buildType":"Release","platform":"Windows"}
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            13.899 ms
+	Integration:            79.778 ms
+	Integration of assets:  0.030 ms
+	Thread Wait Time:       -0.003 ms
+	Total Operation Time:   93.705 ms
+Asset Pipeline Refresh (id=08d355b7faa3c704d8db6afe4420ddcf): Total: 0.010 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Start Indexing on Editor startup
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <1eb9db207454431c84a47bcd81e79c37>:0 
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__80.MoveNext () [0x00106] in <63714a6838894918831f297634c4de84>:0 
+  at System.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) [0x00045] in <6faa6124236442759eb396cfbfdad508>:0 
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <6faa6124236442759eb396cfbfdad508>:0 
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00006] in <63714a6838894918831f297634c4de84>:0 
+  at UnityEditor.Search.SearchInit.IndexationOnStartup () [0x0000c] in <63714a6838894918831f297634c4de84>:0 
+  at UnityEditor.EditorApplication.Internal_CallDelayFunctions () [0x0002c] in <6dd00658fb454e6fb4c06a416ab8eaa1>:0 
+
+Created GICache directory at C:/Users/Никита/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.013s, timestamps: [8.237 - 8.250]
+Loaded scene 'Assets/Scenes/GameplayScene.unity'
+	Deserialize:            156.393 ms
+	Integration:            15.605 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       348.692 ms
+	Total Operation Time:   520.694 ms
+CONTENT_OK: All cards generated from hidden template
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:127)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Grid content grows for six author cards
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:130)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Cards laid out into separate slots
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:131)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 6
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 6
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 7
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 7
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 8
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 8
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 9
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 9
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 10
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 10
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 11
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 11
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 12
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 12
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 13
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 13
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 14
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 14
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 15
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 15
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Card button opens definition 16
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:138)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Correct detail picture 16
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:139)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Matching text solved through another collection is counted
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:144)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Moving legacy card to another tab retains membership
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:147)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Added phrase enters selection
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:149)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Solved new phrase enters collection
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:155)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: New collection tracks progress without fixed arrays
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:156)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Old five-heart attempt accounts for previous mistakes
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:162)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: New puzzle starts with three hearts
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:164)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+iPhoneUtils.Vibrate()
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+Erudition.CryptogramGame:RecordGuess (bool) (at Assets/Scripts/CryptogramGame.cs:275)
+Erudition.PuzzleBoard:Guess (char,Erudition.KeyboardKeyView) (at Assets/Scripts/PuzzleBoard.cs:229)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:171)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+[Assets/Scripts/CryptogramGame.cs line 275]
+
+CONTENT_OK: Repeated same wrong guess costs only one heart
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:172)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+iPhoneUtils.Vibrate()
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+Erudition.CryptogramGame:RecordGuess (bool) (at Assets/Scripts/CryptogramGame.cs:275)
+Erudition.PuzzleBoard:Guess (char,Erudition.KeyboardKeyView) (at Assets/Scripts/PuzzleBoard.cs:229)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:173)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+[Assets/Scripts/CryptogramGame.cs line 275]
+
+CONTENT_OK: Two mistakes leave one heart
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:174)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+iPhoneUtils.Vibrate()
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+Erudition.CryptogramGame:RecordGuess (bool) (at Assets/Scripts/CryptogramGame.cs:275)
+Erudition.PuzzleBoard:Guess (char,Erudition.KeyboardKeyView) (at Assets/Scripts/PuzzleBoard.cs:229)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:175)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+[Assets/Scripts/CryptogramGame.cs line 275]
+
+CONTENT_OK: Third mistake loses and requests ad despite cooldown
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:176)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Duplicate defeat does not request another ad
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:178)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Retry restores three hearts
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:180)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Consecutive defeat requests ad again
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:182)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Offline ad request leaves defeat usable
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:185)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Empty hint opens offer over same puzzle
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:191)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Hint modal is active in hierarchy
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:192)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Hint modal sorts above gameplay canvas: 100
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:193)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Hint purchase receives rendered pointer input: Button_BuyHints,HintOfferPopup,ReadingViewport
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Shot (string,int,int,bool) (at Assets/Editor/ContentCatalogRegression.cs:105)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:195)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Insufficient coins spend nothing
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:197)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Failed video reveals nothing
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:200)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Close returns to unchanged level for free
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:203)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Purchase charges once and applies one of five hints
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:208)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Purchase stays on same puzzle
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:209)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Rewarded video applies exactly one hint
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:214)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Video returns to same puzzle for free
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:215)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Stable puzzle ID and revealed cells persisted
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:219)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Reordered catalogue resumes by stable ID
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:224)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Progress resumes without spending a feather
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:228)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_OK: Legacy save arrays unchanged despite extra collection
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Check (bool,string) (at Assets/Editor/ContentCatalogRegression.cs:20)
+ContentCatalogRegression:Test (Erudition.CryptogramGame) (at Assets/Editor/ContentCatalogRegression.cs:229)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 20)
+
+CONTENT_RUNTIME_PASS
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+ContentCatalogRegression:Tick () (at Assets/Editor/ContentCatalogRegression.cs:59)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/ContentCatalogRegression.cs Line: 59)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            12.782 ms
+	Integration:            7.807 ms
+	Integration of assets:  0.011 ms
+	Thread Wait Time:       0.026 ms
+	Total Operation Time:   20.626 ms
+Unloading 7 unused Assets / (49.3 KB). Loaded Objects now: 3772.
+Memory consumption went from 227.7 MB to 227.6 MB.
+Total: 9.885100 ms (FindLiveObjects: 0.131100 ms CreateObjectMapping: 0.024900 ms MarkObjects: 9.614900 ms  DeleteObjects: 0.113100 ms)
+
+Killing ADB server in 0,0459449 seconds.
+Start importing ProjectSettings/EditorSettings.asset using Guid(0000000000000000c000000000000000) (LibraryAssetImporter) -> (artifact id: 'fdcca38f5f1944c9bec0b9f00395ab39') in 0.0029645 seconds
+Refreshing native plugins compatible for Editor in 4.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=d2a679170d4e75540b477833134c9970): Total: 0.023 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-Никита-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-Никита channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1790566033048,"processId":2884,"allocatedMemory":10522583,"memoryLabels":[{"Default":29313},{"Permanent":15236},{"NewDelete":67707},{"Thread":4230344},{"Manager":33791},{"VertexData":200},{"Geometry":816},{"Texture":296},{"Shader":79337},{"Material":24},{"GfxDevice":55401},{"Animation":392},{"Audio":2664},{"FreeType":8},{"FontEngine":736},{"Physics":2090},{"Physics2D":16},{"Serialization":656},{"Input":14984},{"JobScheduler":33024},{"TextLib":216},{"Mono":32},{"ScriptingNativeRuntime":155060},{"BaseObject":1620272},{"Resource":1336},{"Renderer":3000},{"Transform":4685},{"File":6870},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":23359},{"DynamicArray":82799},{"HashMap":44085},{"Utility":2660678},{"Curl":2478},{"PoolAlloc":2056},{"AI":80},{"TypeTree":5341},{"ScriptManager":512},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":112},{"GI":7792},{"Director":8240},{"CloudService":8640},{"WebRequest":808},{"VR":47994},{"SceneManager":504},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2113},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":384},{"Hierarchy":608},{"CoreStats":13032},{"Identifiers":12960},{"Gui":96},{"EditorUtility":93486},{"VersionControl":4},{"Undo":947},{"AssetDatabase":738920},{"EditorGi":328},{"UnityConnect":29232},{"Upm":1896},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":218},{"ProfilerEditor":9778},{"CoreBusinessMetrics":2762},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

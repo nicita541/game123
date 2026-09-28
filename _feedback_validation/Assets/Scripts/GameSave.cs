@@ -16,6 +16,7 @@ namespace Erudition
     public sealed class PuzzleProgress
     {
         public int puzzleIndex = -1;
+        public string puzzleId;
         public int remainingHearts;
         public string revealedCodes = "";
         public string filledSlots = "";
@@ -60,6 +61,7 @@ namespace Erudition
         public int lastClassicIndex = -1;
         public int lastTurboIndex = -1;
         public int lastFailedPuzzleIndex = -1;
+        public string lastFailedPuzzleId;
         public int[] authorProgress = new int[6];
         public int[] themeProgress = new int[3];
         public int[] bookProgress = new int[3];

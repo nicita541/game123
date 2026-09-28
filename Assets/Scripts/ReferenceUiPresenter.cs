@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Erudition
 {
-    // Only updates serialized scene objects. No runtime UI construction.
+    // Updates detail screens and statistics; collection cards come from the gallery.
     public sealed class ReferenceUiPresenter : MonoBehaviour
     {
         public Text statsLevel, statsNext, statsToday, statsBest;
@@ -21,6 +21,7 @@ namespace Erudition
         public Button likeButton;
         public CollectionCardView[] collections;
         public Sprite[] collectionPictures;
+        public CollectionGallery gallery;
         public Text detailTitle, detailProgress, detailBody;
         public ScrollRect detailScroll;
         public Image detailPicture;
@@ -96,16 +97,15 @@ namespace Erudition
 
         public void ShowCollection(int index, GameSave save, PuzzleEntry[] entries)
         {
-            index = Mathf.Clamp(index, 0, collections.Length - 1);
-            var card = collections[index];
-            var count = index < 6 ? save.authorProgress[index] : index < 9 ? save.themeProgress[index - 6] : index < 12 ? save.bookProgress[index - 9] : save.kindProgress[index - 12];
-            detailTitle.text = card.title.text;
-            detailPicture.sprite = collectionPictures[index];
-            detailProgress.text = Mathf.Min(count, card.target) + " / " + card.target + " в коллекции";
-            if (detailTrack != null) detailFill.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, detailTrack.rect.width * Mathf.Clamp01((float)count / card.target));
-            var related = entries.Where(entry => index < 6 ? entry.authorIndex == index : index < 9 ? entry.themeIndex == index - 6 : index < 12 ? entry.bookIndex == index - 9 : (int)entry.kind == index - 12);
+            if (gallery == null || index < 0 || index >= gallery.catalog.cards.Length) return;
+            var definition = gallery.catalog.cards[index];
+            var count = definition.Progress(save, entries);
+            detailTitle.text = definition.title;
+            detailPicture.sprite = definition.picture;
+            detailProgress.text = Mathf.Min(count, definition.Target) + " / " + definition.Target + " в коллекции";
+            if (detailTrack != null) detailFill.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, detailTrack.rect.width * Mathf.Clamp01((float)count / definition.Target));
             var solved = new System.Collections.Generic.HashSet<string>(save.solvedPuzzleIds.Split('|'));
-            var unlocked = related.Where(entry => solved.Contains(entry.id)).GroupBy(entry => PuzzleGenerator.TextKey(entry.text)).Select(group => group.First()).ToArray();
+            var unlocked = entries.Where(entry => solved.Contains(entry.id) && definition.Contains(entry)).GroupBy(entry => PuzzleGenerator.TextKey(entry.text)).Select(group => group.First()).ToArray();
             detailBody.text = unlocked.Length == 0 ? "Здесь появятся разгаданные тексты.\nИграй в Классику и пополняй коллекцию!" : string.Join("\n\n", unlocked.Select(entry => "«" + entry.text + "»\n<size=27>" + entry.source + (string.IsNullOrEmpty(entry.answer) ? "" : " · Ответ: " + entry.answer) + "</size>"));
             if (detailScroll != null)
             {

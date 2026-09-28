@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a4181e712dbe844b67f2df9cbfb3fa, type: 3}
+  m_Name: CollectionCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::Erudition.CollectionCatalog
+  cards:
+  - id: legacy_0
+    title: "\u0410. \u0421. \u041F\u0443\u0448\u043A\u0438\u043D"
+    picture: {fileID: 9007033131651448892, guid: 352a4fd5bcd85404aa9e611dbbcf9cc7, type: 3}
+    group: 0
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 0
+    legacyIndex: 0
+    legacyTarget: 20
+  - id: legacy_1
+    title: "\u041B. \u041D. \u0422\u043E\u043B\u0441\u0442\u043E\u0439"
+    picture: {fileID: -6907777403411581506, guid: 352a4fd5bcd85404aa9e611dbbcf9cc7, type: 3}
+    group: 0
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 0
+    legacyIndex: 1
+    legacyTarget: 30
+  - id: legacy_2
+    title: "\u0424. \u041C. \u0414\u043E\u0441\u0442\u043E\u0435\u0432\u0441\u043A\u0438\u0439"
+    picture: {fileID: 3968046763224376387, guid: 352a4fd5bcd85404aa9e611dbbcf9cc7, type: 3}
+    group: 0
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 0
+    legacyIndex: 2
+    legacyTarget: 18
+  - id: legacy_3
+    title: "\u0410. \u041F. \u0427\u0435\u0445\u043E\u0432"
+    picture: {fileID: 4028803010496088073, guid: 352a4fd5bcd85404aa9e611dbbcf9cc7, type: 3}
+    group: 0
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 0
+    legacyIndex: 3
+    legacyTarget: 25
+  - id: legacy_4
+    title: "\u041D. \u0412. \u0413\u043E\u0433\u043E\u043B\u044C"
+    picture: {fileID: -6234559738053928452, guid: 352a4fd5bcd85404aa9e611dbbcf9cc7, type: 3}
+    group: 0
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 0
+    legacyIndex: 4
+    legacyTarget: 20
+  - id: legacy_5
+    title: "\u0418. \u0421. \u0422\u0443\u0440\u0433\u0435\u043D\u0435\u0432"
+    picture: {fileID: 1506964622191146232, guid: 352a4fd5bcd85404aa9e611dbbcf9cc7, type: 3}
+    group: 0
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 0
+    legacyIndex: 5
+    legacyTarget: 24
+  - id: legacy_6
+    title: "\u041F\u0440\u0438\u0440\u043E\u0434\u0430"
+    picture: {fileID: -3387787167867064973, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
+    group: 1
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 1
+    legacyIndex: 0
+    legacyTarget: 30
+  - id: legacy_7
+    title: "\u041B\u044E\u0431\u043E\u0432\u044C"
+    picture: {fileID: -5994961239908844190, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
+    group: 1
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 1
+    legacyIndex: 1
+    legacyTarget: 15
+  - id: legacy_8
+    title: "\u041C\u0443\u0434\u0440\u043E\u0441\u0442\u044C"
+    picture: {fileID: 4611972877900150593, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
+    group: 1
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 1
+    legacyIndex: 2
+    legacyTarget: 20
+  - id: legacy_9
+    title: "\u041F\u043E\u044D\u0437\u0438\u044F"
+    picture: {fileID: 5968730648519510990, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
+    group: 2
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 2
+    legacyIndex: 0
+    legacyTarget: 25
+  - id: legacy_10
+    title: "\u0420\u043E\u043C\u0430\u043D\u044B"
+    picture: {fileID: -1045984885715348020, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
+    group: 2
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 2
+    legacyIndex: 1
+    legacyTarget: 30
+  - id: legacy_11
+    title: "\u0421\u043A\u0430\u0437\u043A\u0438"
+    picture: {fileID: -7193175555835798861, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
+    group: 2
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 2
+    legacyIndex: 2
+    legacyTarget: 20
+  - id: legacy_12
+    title: "\u0426\u0438\u0442\u0430\u0442\u044B \u0438 \u043C\u044B\u0441\u043B\u0438"
+    picture: {fileID: -655518315096615809, guid: 1e4180681e02d784695d43decbfe4d9c, type: 3}
+    group: 3
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 3
+    legacyIndex: 0
+    legacyTarget: 20
+  - id: legacy_13
+    title: "\u0418\u0441\u0442\u043E\u0440\u0438\u0438"
+    picture: {fileID: -8941735663481320360, guid: 1e4180681e02d784695d43decbfe4d9c, type: 3}
+    group: 3
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 3
+    legacyIndex: 1
+    legacyTarget: 20
+  - id: legacy_14
+    title: "\u041F\u043E\u0441\u043B\u043E\u0432\u0438\u0446\u044B"
+    picture: {fileID: -7491126784752247881, guid: 1e4180681e02d784695d43decbfe4d9c, type: 3}
+    group: 3
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 3
+    legacyIndex: 2
+    legacyTarget: 20
+  - id: legacy_15
+    title: "\u0417\u0430\u0433\u0430\u0434\u043A\u0438"
+    picture: {fileID: -6196868213774415188, guid: 1e4180681e02d784695d43decbfe4d9c, type: 3}
+    group: 3
+    phrases: []
+    includeLegacy: 1
+    legacyGroup: 3
+    legacyIndex: 3
+    legacyTarget: 20
+  - id: e9044d5c0d5648ecb59f317870a4fffb
+    title: "\u041C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0435 \u043E\u0442\u043A\u0440\u044B\u0442\u0438\u044F"
+    picture: {fileID: -3387787167867064973, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
+    group: 1
+    phrases:
+    - id: phrase_cc13c2fe53cf42cabf771ddb85604c48
+      text: "\u041B\u044E\u0431\u043E\u043F\u044B\u0442\u0441\u0442\u0432\u043E \u043F\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u0442
+        \u043F\u0440\u043E\u0433\u0443\u043B\u043A\u0443 \u0432 \u043E\u0442\u043A\u0440\u044B\u0442\u0438\u0435."
+      source: "\u041C\u044B\u0441\u043B\u0438 \u0421\u043E\u0432\u0443\u0448\u043A\u0438"
+      kind: 0
+      minimumErudition: 0
+      answer: 
+    - id: phrase_ef1203fdc281410e8ad9b5c669a79796
+      text: "\u041D\u043E\u0432\u044B\u0439 \u0432\u043E\u043F\u0440\u043E\u0441
+        \u043F\u043E\u043C\u043E\u0433\u0430\u0435\u0442 \u0437\u0430\u043C\u0435\u0442\u0438\u0442\u044C
+        \u0437\u043D\u0430\u043A\u043E\u043C\u044B\u0439 \u043C\u0438\u0440."
+      source: "\u041C\u044B\u0441\u043B\u0438 \u0421\u043E\u0432\u0443\u0448\u043A\u0438"
+      kind: 0
+      minimumErudition: 0
+      answer: 
+    - id: phrase_7ad485d15de947e49bb678a3d37cfebc
+      text: "\u0411\u043E\u043B\u044C\u0448\u043E\u0435 \u043E\u0442\u043A\u0440\u044B\u0442\u0438\u0435
+        \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442\u0441\u044F \u0441 \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u043E\u0433\u043E
+        \u043D\u0430\u0431\u043B\u044E\u0434\u0435\u043D\u0438\u044F."
+      source: "\u041C\u044B\u0441\u043B\u0438 \u0421\u043E\u0432\u0443\u0448\u043A\u0438"
+      kind: 0
+      minimumErudition: 0
+      answer: 
+    includeLegacy: 0
+    legacyGroup: 0
+    legacyIndex: 0
+    legacyTarget: 0

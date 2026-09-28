@@ -82,7 +82,7 @@ namespace Erudition
             };
         }
 
-        public static PuzzleEntry[] Build(PuzzleLibrary library)
+        public static PuzzleEntry[] Build(PuzzleLibrary library, CollectionCatalog catalog = null)
         {
             var entries = new List<PuzzleEntry>(library.entries);
             // Stable order and IDs preserve saved progress across launches.
@@ -91,6 +91,7 @@ namespace Erudition
                     for (var variant = 0; variant < 96; variant++) entries.Add(Generate((PuzzleMode)mode, tier, variant));
             entries.AddRange(StoryCatalog.Build());
             entries.AddRange(VarietyCatalog.Build());
+            if (catalog != null) entries.AddRange(catalog.Build());
             return entries.ToArray();
         }
     }

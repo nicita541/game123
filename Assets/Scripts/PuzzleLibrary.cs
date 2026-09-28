@@ -12,6 +12,7 @@ namespace Erudition
     public sealed class PuzzleEntry
     {
         public string id;
+        public string collectionId;
         public PuzzleMode mode;
         [TextArea(2, 5)] public string text;
         public string source;

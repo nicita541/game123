@@ -9,6 +9,7 @@ namespace Erudition
 {
     public sealed class PuzzleBoard : MonoBehaviour
     {
+        public const int MaxHearts = 3;
         [SerializeField] private CryptogramGame game;
         [SerializeField] private PuzzleMode mode;
         [SerializeField] private int columns;
@@ -82,7 +83,8 @@ namespace Erudition
             attempted.Clear();
             selectedCode = saved.selectedCode;
             selectedSlot = saved.selectedSlot;
-            remainingHearts = saved.remainingHearts > 0 ? saved.remainingHearts : 5;
+            remainingHearts = saved.remainingHearts > 0
+                ? Mathf.Min(saved.remainingHearts, Mathf.Max(1, MaxHearts - saved.mistakesInLevel)) : MaxHearts;
             mistakesInLevel = saved.mistakesInLevel;
             scoring = new PuzzleProgress {
                 scoringRevision = saved.scoringRevision,
@@ -250,7 +252,7 @@ namespace Erudition
             if (!EnsureSelection()) return;
             if (!game.ConsumeHint())
             {
-                feedbackText.text = "Подсказки закончились — их можно купить в магазине";
+                game.OfferHints();
                 return;
             }
             var answer = answers[selectedCode];
@@ -285,6 +287,7 @@ namespace Erudition
             return new PuzzleProgress
             {
                 puzzleIndex = puzzleIndex,
+                puzzleId = entry.id,
                 remainingHearts = remainingHearts,
                 revealedCodes = string.Join(",", revealed.OrderBy(code => code)),
                 filledSlots = string.Join(",", filledSlots.OrderBy(slot => slot)),
@@ -308,7 +311,7 @@ namespace Erudition
 
         public void SetRemainingHeartsForDebug(int count)
         {
-            remainingHearts = Mathf.Clamp(count, 1, 5);
+            remainingHearts = Mathf.Clamp(count, 1, MaxHearts);
             UpdateHearts();
             game.StorePuzzleProgress(this);
         }
@@ -424,7 +427,7 @@ namespace Erudition
         {
             for (var i = 0; i < hearts.Length; i++)
             {
-                hearts[i].SetActive(true);
+                hearts[i].SetActive(i < MaxHearts);
                 var image = hearts[i].GetComponent<Image>();
                 if (image != null) image.color = i < remainingHearts ? Color.white : new Color(.45f,.4f,.5f,.45f);
             }
