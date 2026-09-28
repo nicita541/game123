@@ -345,9 +345,7 @@ namespace Erudition
                 { hintOfferMessage.text = ads.Status + "\nПодсказка выдаётся после полного просмотра."; return; }
                 save.hints++;
                 Persist();
-                var apply = hintOffer.activeSelf && currentScreen == 2 && HasActivePuzzle() && classicBoard.Entry.id == puzzleId;
                 hintOffer.SetActive(false);
-                if (apply) classicBoard.UseHint();
             });
         }
 

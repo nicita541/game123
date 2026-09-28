@@ -484,7 +484,7 @@ RectTransform:
   m_GameObject: {fileID: 1016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.52848, y: 3.52848, z: 3.52848}
+  m_LocalScale: {x: 0.9369149, y: 0.9369149, z: 0.9369149}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1019}
@@ -501,8 +501,8 @@ RectTransform:
   - {fileID: 1997031614}
   m_Father: {fileID: 1004}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1.125, y: 3.021875}
-  m_AnchorMax: {x: 1.125, y: 3.021875}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1080, y: 2340}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -26690,8 +26690,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -325.14835, y: -983.9801}
-  m_SizeDelta: {x: 520.23724, y: 390.17804}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1195.4381, y: 2408.3093}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695810917
 MonoBehaviour:
@@ -26731,10 +26731,10 @@ MonoBehaviour:
   m_Texture: {fileID: 2800000, guid: f83e633e12f0dc14b806fb864919b8a4, type: 3}
   m_UVRect:
     serializedVersion: 2
-    x: -0.04191386
-    y: -0.0038756803
-    width: 0.48170117
-    height: 0.16674276
+    x: -0.05344357
+    y: -0.01459601
+    width: 1.1068871
+    height: 1.029192
 --- !u!222 &695810919
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43295,7 +43295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1700658323
 RectTransform:
   m_ObjectHideFlags: 0
