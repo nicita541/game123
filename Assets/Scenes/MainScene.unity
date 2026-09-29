@@ -542,12 +542,6 @@ RectTransform:
   - {fileID: 2109356056}
   - {fileID: 1144}
   - {fileID: 1122}
-  - {fileID: 1840158474}
-  - {fileID: 1045}
-  - {fileID: 1054}
-  - {fileID: 1084}
-  - {fileID: 2109356056}
-  - {fileID: 1122}
   m_Father: {fileID: 1017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -759,14 +753,6 @@ RectTransform:
   - {fileID: 695810916}
   - {fileID: 1045139791}
   - {fileID: 1745583531}
-  - {fileID: 2292}
-  - {fileID: 2296}
-  - {fileID: 1691753274}
-  - {fileID: 1235838490}
-  - {fileID: 454555669}
-  - {fileID: 2471}
-  - {fileID: 2045566575}
-  - {fileID: 1045139791}
   - {fileID: 2292}
   - {fileID: 2296}
   - {fileID: 1691753274}
@@ -1882,10 +1868,6 @@ RectTransform:
   - {fileID: 1135}
   - {fileID: 1153}
   - {fileID: 1162}
-  - {fileID: 1135}
-  - {fileID: 1144}
-  - {fileID: 1153}
-  - {fileID: 1162}
   m_Father: {fileID: 1019}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2381,7 +2363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1144
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7747,9 +7729,6 @@ RectTransform:
   - {fileID: 2300}
   - {fileID: 2309}
   - {fileID: 2318}
-  - {fileID: 2309}
-  - {fileID: 2318}
-  - {fileID: 1745583531}
   m_Father: {fileID: 1033}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -8473,12 +8452,6 @@ RectTransform:
   - {fileID: 849593988}
   - {fileID: 2335}
   - {fileID: 8800000000000000001}
-  - {fileID: 2339}
-  - {fileID: 2343}
-  - {fileID: 2347}
-  - {fileID: 1619959102}
-  - {fileID: 849593988}
-  - {fileID: 2335}
   - {fileID: 2339}
   - {fileID: 2343}
   - {fileID: 2347}
@@ -9455,7 +9428,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2498}
-  - {fileID: 1820044704}
   m_Father: {fileID: 2471}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -51599,3 +51571,4 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u0426\u0438\u0442\u0430\u0442\u044B \u0438 \u043F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0435\u043D\u0438\u044F"
+
