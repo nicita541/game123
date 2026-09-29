@@ -8,6 +8,22 @@ using UnityEngine.SceneManagement;
 
 namespace Erudition
 {
+    public enum GameScreen
+    {
+        MainMenu,
+        CollectionDetails,
+        Gameplay,
+        Victory,
+        NoFeathers,
+        Statistics,
+        Levels,
+        Achievements,
+        Shop,
+        Settings,
+        Debug,
+        Defeat
+    }
+
     public sealed class CryptogramGame : MonoBehaviour
     {
         private const int MaxFeathers = 5;
@@ -21,8 +37,22 @@ namespace Erudition
         public AdsBridge ads;
         public GameAudio soundPlayer;
         public ReferenceUiPresenter presentation;
-        public GameObject[] screens;
+
+        [Header("Hub screens")]
+        public GameObject mainMenuScreen;
+        public GameObject collectionDetailsScreen;
+        public GameObject victoryScreen;
+        public GameObject noFeathersScreen;
+        public GameObject statisticsScreen;
+        public GameObject levelsScreen;
+        public GameObject achievementsScreen;
+        public GameObject shopScreen;
+        public GameObject settingsScreen;
+        public GameObject debugScreen;
+        public GameObject defeatScreen;
+
         public PuzzleBoard classicBoard;
+        private GameObject gameplayScreen;
 
         public Text mainErudition;
         public Text mainFeathers;
@@ -73,7 +103,7 @@ namespace Erudition
         public GameObject debugOpenButton;
 
         private GameSave save;
-        private int currentScreen;
+        private GameScreen currentScreen;
         private int collectionTab;
         private int achievementTab;
         private int victorySequence;
@@ -137,7 +167,7 @@ namespace Erudition
 #if !UNITY_EDITOR && !DEVELOPMENT_BUILD
             if (debugOpenButton != null) debugOpenButton.SetActive(false);
 #endif
-            ShowScreen(0);
+            ShowScreen(GameScreen.MainMenu);
             ApplyTextScale();
             UpdateAllUi();
         }
@@ -155,7 +185,7 @@ namespace Erudition
         public void RegisterGameplay(GameplaySceneLink link)
         {
             classicBoard = link.classicBoard;
-            screens[2] = link.classicScreen;
+            gameplayScreen = link.classicScreen;
             classicErudition = link.classicErudition;
             classicBoard.SetGame(this);
             foreach (var action in link.actions)
@@ -166,7 +196,7 @@ namespace Erudition
             if (baseFontSizes != null)
                 foreach (var label in link.GetComponentsInChildren<Text>(true))
                     if (!baseFontSizes.ContainsKey(label)) baseFontSizes[label] = label.fontSize;
-            screens[2].SetActive(currentScreen == 2);
+            gameplayScreen.SetActive(currentScreen == GameScreen.Gameplay);
             ApplyTextScale(); UpdateAllUi();
             if (pendingStart)
             {
@@ -182,7 +212,7 @@ namespace Erudition
 
         private void Update()
         {
-            if (!applicationPaused && Application.isFocused && currentScreen == 2 && HasActivePuzzle()
+            if (!applicationPaused && Application.isFocused && currentScreen == GameScreen.Gameplay && HasActivePuzzle()
                 && (hintOffer == null || !hintOffer.activeSelf) && (ads == null || !ads.IsShowing))
             {
                 classicBoard?.TickPlayTime(Time.unscaledDeltaTime);
@@ -227,8 +257,8 @@ namespace Erudition
             soundPlayer?.Click();
             switch (action)
             {
-                case UiActionKind.Home: pendingStart = false; pendingIndex = -1; pendingCollectionIndex = -1; ShowScreen(0); break;
-                case UiActionKind.CollectionDetails: presentation?.ShowCollection(parameter, save, Entries); ShowScreen(1); break;
+                case UiActionKind.Home: pendingStart = false; pendingIndex = -1; pendingCollectionIndex = -1; ShowScreen(GameScreen.MainMenu); break;
+                case UiActionKind.CollectionDetails: presentation?.ShowCollection(parameter, save, Entries); ShowScreen(GameScreen.CollectionDetails); break;
                 case UiActionKind.CollectionLevel: StartCollectionPuzzle(parameter); break;
                 case UiActionKind.StatisticsPeriod: presentation?.SetPeriod(parameter); UpdateAllUi(); break;
                 case UiActionKind.ClearSelection: ActiveBoard()?.ClearSelection(); break;
@@ -251,13 +281,13 @@ namespace Erudition
                 case UiActionKind.Classic:
                 case UiActionKind.Turbo: // Reserved serialized value: old controls now open the only game mode.
                     StartClassicPuzzle(); break;
-                case UiActionKind.Statistics: UpdateStats(); ShowScreen(6); break;
-                case UiActionKind.Levels: ShowCollectionTab(0); ShowScreen(7); break;
-                case UiActionKind.Achievements: ShowAchievementTab(0); ShowScreen(8); break;
-                case UiActionKind.Shop: UpdateAllUi(); ShowScreen(9); break;
-                case UiActionKind.Settings: ShowScreen(10); break;
+                case UiActionKind.Statistics: UpdateStats(); ShowScreen(GameScreen.Statistics); break;
+                case UiActionKind.Levels: ShowCollectionTab(0); ShowScreen(GameScreen.Levels); break;
+                case UiActionKind.Achievements: ShowAchievementTab(0); ShowScreen(GameScreen.Achievements); break;
+                case UiActionKind.Shop: UpdateAllUi(); ShowScreen(GameScreen.Shop); break;
+                case UiActionKind.Settings: ShowScreen(GameScreen.Settings); break;
                 case UiActionKind.Back: GoBack(); break;
-                case UiActionKind.Continue: ShowScreen(0); break;
+                case UiActionKind.Continue: ShowScreen(GameScreen.MainMenu); break;
                 case UiActionKind.Hint: ActiveBoard()?.UseHint(); break;
                 case UiActionKind.BuyHintOffer: BuyHintOffer(); break;
                 case UiActionKind.RewardHint: RewardHint(); break;
@@ -274,10 +304,10 @@ namespace Erudition
                 case UiActionKind.CollectionTab: ShowCollectionTab(parameter); break;
                 case UiActionKind.AchievementTab: ShowAchievementTab(parameter); break;
                 case UiActionKind.ToggleSetting: ToggleSetting(parameter); break;
-                case UiActionKind.Debug: if (DebugAllowed()) ShowScreen(11); break;
+                case UiActionKind.Debug: if (DebugAllowed()) ShowScreen(GameScreen.Debug); break;
                 case UiActionKind.DebugAddErudition: if (DebugAllowed()) { save.erudition += 10; Persist(); } break;
                 case UiActionKind.DebugRemoveFeather: if (DebugAllowed()) { SpendFeather(); Persist(); } break;
-                case UiActionKind.DebugZeroFeathers: if (DebugAllowed()) { save.feathers = 0; StartRecoveryClock(); Persist(); ShowScreen(5); } break;
+                case UiActionKind.DebugZeroFeathers: if (DebugAllowed()) { save.feathers = 0; StartRecoveryClock(); Persist(); ShowScreen(GameScreen.NoFeathers); } break;
                 case UiActionKind.DebugRefillFeathers: if (DebugAllowed()) { save.feathers = 5; save.nextFeatherUtcTicks = 0; Persist(); } break;
                 case UiActionKind.DebugAddHint: if (DebugAllowed()) { save.hints++; Persist(); } break;
                 case UiActionKind.DebugVictory: if (DebugAllowed()) DebugVictory(); break;
@@ -353,7 +383,7 @@ namespace Erudition
 
         public void OfferHints()
         {
-            if (currentScreen != 2 || !HasActivePuzzle() || hintOffer == null) return;
+            if (currentScreen != GameScreen.Gameplay || !HasActivePuzzle() || hintOffer == null) return;
             StoreActiveProgress();
             hintOfferMessage.text = "Купить 5 подсказок за 150 монет\nили посмотреть видео за 1 подсказку.\n\nВаши монеты: " + save.coins;
             hintOffer.SetActive(true);
@@ -441,7 +471,7 @@ namespace Erudition
             victorySequence++;
             save.winsUntilInterstitial = Mathf.Max(0, save.winsUntilInterstitial - 1);
             Persist();
-            ShowScreen(4);
+            ShowScreen(GameScreen.Victory);
             if (Application.isPlaying && save.winsUntilInterstitial == 0)
                 StartCoroutine(ShowLevelEndAd(victorySequence));
         }
@@ -456,7 +486,7 @@ namespace Erudition
             save.activePuzzle = new PuzzleProgress();
             UpdateDefeatMessage();
             Persist();
-            ShowScreen(12);
+            ShowScreen(GameScreen.Defeat);
             // Every defeat requests an ad, independently of the victory cooldown.
             if (ads != null && ads.TryShowInterstitial())
             {
@@ -486,13 +516,13 @@ namespace Erudition
                 && progress.remainingHearts > 0)
             {
                 board.StartPuzzle(Entries[progress.puzzleIndex], progress.puzzleIndex, progress, save.erudition, save.hints);
-                ShowScreen(2);
+                ShowScreen(GameScreen.Gameplay);
                 return;
             }
             if (!HasInfiniteFeathers() && save.feathers <= 0)
             {
                 UpdateEnergyUi();
-                ShowScreen(5);
+                ShowScreen(GameScreen.NoFeathers);
                 return;
             }
             var index = requestedIndex >= 0 ? requestedIndex : ChoosePuzzle(PuzzleMode.Classic, board);
@@ -511,7 +541,7 @@ namespace Erudition
             save.lastClassicIndex = index;
             board.StartPuzzle(Entries[index], index, save.activePuzzle, save.erudition, save.hints);
             Persist();
-            ShowScreen(2);
+            ShowScreen(GameScreen.Gameplay);
         }
 
         private void StartCollectionPuzzle(int collectionIndex)
@@ -563,7 +593,7 @@ namespace Erudition
         private void RetryFailedPuzzle()
         {
             var index = save.lastFailedPuzzleIndex;
-            if (index < 0 || index >= Entries.Length) { ShowScreen(0); return; }
+            if (index < 0 || index >= Entries.Length) { ShowScreen(GameScreen.MainMenu); return; }
             StartClassicPuzzle(index);
         }
 
@@ -572,7 +602,7 @@ namespace Erudition
             // Give the result screen a moment to appear. Never show a late ad
             // after navigation or wait for a network load while the player moves on.
             yield return new WaitForSecondsRealtime(.8f);
-            if (sequence != victorySequence || currentScreen != 4 || save.activePuzzle.puzzleIndex >= 0) yield break;
+            if (sequence != victorySequence || currentScreen != GameScreen.Victory || save.activePuzzle.puzzleIndex >= 0) yield break;
             if (save.lastInterstitialUtcTicks > 0
                 && DateTime.UtcNow.Ticks - save.lastInterstitialUtcTicks < TimeSpan.FromSeconds(90).Ticks) yield break;
             if (ads == null || !ads.TryShowInterstitial()) yield break;
@@ -611,11 +641,11 @@ namespace Erudition
                         save.hints
                     );
 
-                    ShowScreen(2);
+                    ShowScreen(GameScreen.Gameplay);
                 }
                 else
                 {
-                    ShowScreen(0);
+                    ShowScreen(GameScreen.MainMenu);
                 }
             });
         }
@@ -718,28 +748,75 @@ namespace Erudition
 
         private void GoBack()
         {
-            if (currentScreen == 11) ShowScreen(10);
-            else if (currentScreen == 1) ShowScreen(7);
-            else ShowScreen(0);
+            if (currentScreen == GameScreen.Debug) ShowScreen(GameScreen.Settings);
+            else if (currentScreen == GameScreen.CollectionDetails) ShowScreen(GameScreen.Levels);
+            else ShowScreen(GameScreen.MainMenu);
         }
 
         private PuzzleBoard ActiveBoard()
         {
-            return currentScreen == 2 ? classicBoard : null;
+            return currentScreen == GameScreen.Gameplay ? classicBoard : null;
         }
 
-        private void ShowScreen(int index)
+        private GameObject HubScreen(GameScreen screen)
         {
-            if (screens == null || index < 0 || index >= screens.Length) return;
+            switch (screen)
+            {
+                case GameScreen.MainMenu: return mainMenuScreen;
+                case GameScreen.CollectionDetails: return collectionDetailsScreen;
+                case GameScreen.Victory: return victoryScreen;
+                case GameScreen.NoFeathers: return noFeathersScreen;
+                case GameScreen.Statistics: return statisticsScreen;
+                case GameScreen.Levels: return levelsScreen;
+                case GameScreen.Achievements: return achievementsScreen;
+                case GameScreen.Shop: return shopScreen;
+                case GameScreen.Settings: return settingsScreen;
+                case GameScreen.Debug: return debugScreen;
+                case GameScreen.Defeat: return defeatScreen;
+                default: return null;
+            }
+        }
+
+        private IEnumerable<GameObject> HubScreens()
+        {
+            yield return mainMenuScreen;
+            yield return collectionDetailsScreen;
+            yield return victoryScreen;
+            yield return noFeathersScreen;
+            yield return statisticsScreen;
+            yield return levelsScreen;
+            yield return achievementsScreen;
+            yield return shopScreen;
+            yield return settingsScreen;
+            yield return debugScreen;
+            yield return defeatScreen;
+        }
+
+        private void ShowScreen(GameScreen screen)
+        {
             hintOffer?.SetActive(false);
-            if (currentScreen == 2 && index != 2) StoreActiveProgress();
-            currentScreen = index;
+            if (currentScreen == GameScreen.Gameplay && screen != GameScreen.Gameplay)
+                StoreActiveProgress();
+
+            currentScreen = screen;
             presentation?.ClosePopup();
-            for (var i = 0; i < screens.Length; i++) if (screens[i] != null) screens[i].SetActive(i == index);
-            if (index == 7) ShowCollectionTab(collectionTab);
-            if (index == 8) ShowAchievementTab(achievementTab);
-            if (index == 5 && noFeathersNote != null) noFeathersNote.gameObject.SetActive(false);
-            if (index == 12) UpdateDefeatMessage();
+
+            foreach (var hubScreen in HubScreens())
+                if (hubScreen != null) hubScreen.SetActive(false);
+
+            if (gameplayScreen != null)
+                gameplayScreen.SetActive(screen == GameScreen.Gameplay);
+
+            var target = HubScreen(screen);
+            if (target != null)
+                target.SetActive(true);
+            else if (screen != GameScreen.Gameplay)
+                Debug.LogError("Не назначен экран " + screen + " в CryptogramGame.", this);
+
+            if (screen == GameScreen.Levels) ShowCollectionTab(collectionTab);
+            if (screen == GameScreen.Achievements) ShowAchievementTab(achievementTab);
+            if (screen == GameScreen.NoFeathers && noFeathersNote != null) noFeathersNote.gameObject.SetActive(false);
+            if (screen == GameScreen.Defeat) UpdateDefeatMessage();
             UpdateAllUi();
         }
 
@@ -1009,7 +1086,7 @@ namespace Erudition
             victoryEruditionReward.text = "+10 к эрудиции";
             if (victoryRewardDetails != null) victoryRewardDetails.text = "Пример награды за лёгкое задание";
             victoryCollectionReward.text = "+1 в коллекцию";
-            ShowScreen(4);
+            ShowScreen(GameScreen.Victory);
         }
 
         private void DebugDefeat()
@@ -1017,7 +1094,7 @@ namespace Erudition
             var board = EnsureDebugPuzzle();
             if (board != null && board.Entry != null) { FailPuzzle(board); return; }
             UpdateDefeatMessage();
-            ShowScreen(12);
+            ShowScreen(GameScreen.Defeat);
         }
 
         private PuzzleBoard EnsureDebugPuzzle()
@@ -1034,7 +1111,7 @@ namespace Erudition
             save.Normalize();
             ApplyTextScale();
             Persist();
-            ShowScreen(0);
+            ShowScreen(GameScreen.MainMenu);
         }
 
         private void Persist()

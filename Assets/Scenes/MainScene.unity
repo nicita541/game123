@@ -27830,20 +27830,17 @@ MonoBehaviour:
   ads: {fileID: 1735082594}
   soundPlayer: {fileID: 1735082593}
   presentation: {fileID: 1735082597}
-  screens:
-  - {fileID: 1018}
-  - {fileID: 1020}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1026}
-  - {fileID: 1028}
-  - {fileID: 1030}
-  - {fileID: 1032}
-  - {fileID: 1034}
-  - {fileID: 1456828320}
-  - {fileID: 1038}
-  - {fileID: 1040}
-  - {fileID: 1997031613}
+  mainMenuScreen: {fileID: 1018}
+  collectionDetailsScreen: {fileID: 1020}
+  victoryScreen: {fileID: 1026}
+  noFeathersScreen: {fileID: 1028}
+  statisticsScreen: {fileID: 1030}
+  levelsScreen: {fileID: 1032}
+  achievementsScreen: {fileID: 1034}
+  shopScreen: {fileID: 1456828320}
+  settingsScreen: {fileID: 1038}
+  debugScreen: {fileID: 1040}
+  defeatScreen: {fileID: 1997031613}
   classicBoard: {fileID: 0}
   mainErudition: {fileID: 1098}
   mainFeathers: {fileID: 1064}

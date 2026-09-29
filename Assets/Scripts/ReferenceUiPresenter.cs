@@ -38,7 +38,7 @@ namespace Erudition
             if (popup != null) popup.SetActive(false);
         }
 
-        public void Refresh(GameSave save, int screen, string completed)
+        public void Refresh(GameSave save, GameScreen screen, string completed)
         {
             if (statsLevel != null) statsLevel.text = save.erudition.ToString();
             if (statsNext != null) statsNext.text = "До следующего уровня: " + (50 - save.erudition % 50);
@@ -51,7 +51,7 @@ namespace Erudition
                 likeButton.interactable = !liked;
                 likeLabel.text = liked ? "В избранном" : "Мне нравится";
             }
-            if (screen != 6 || bars == null) return;
+            if (screen != GameScreen.Statistics || bars == null) return;
             var today = DateTime.UtcNow.Date;
             int count = period == 2 ? 12 : 7;
             var values = new int[count];
