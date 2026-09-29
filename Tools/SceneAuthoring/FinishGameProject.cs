@@ -359,7 +359,7 @@ public static class FinishGameProject
             ("Button_Reset", "Сброс прогресса"),
             ("Button_ForceDefeat", "Поражение"),
             ("Button_OneHeart", "Оставить 1 сердце"),
-            ("Button_UnlockCollections", "Все коллекции"),
+            ("Button_UnlockCollections", "Все уровни"),
             ("Button_UnlockAchievements", "Все достижения")
         };
         for (var i = 0; i < labels.Length; i++)
@@ -487,7 +487,7 @@ public static class FinishGameProject
         var parameter = 0;
         if (name == "Button_Home" || name == "Button_ReturnMenu") action = UiActionKind.Home;
         else if (name == "Button_Statistics" || name == "Button_StatisticsShortcut") action = UiActionKind.Statistics;
-        else if (name == "Button_Collections") action = UiActionKind.Collections;
+        else if (name == "Button_Levels") action = UiActionKind.Levels;
         else if (name == "Button_Achievements") action = UiActionKind.Achievements;
         else if (name == "Button_Shop" || name == "Button_OpenShop" || name == "Button_AddEnergy") action = UiActionKind.Shop;
         else if (name == "Button_Settings") action = UiActionKind.Settings;
@@ -539,7 +539,7 @@ public static class FinishGameProject
                 : name == "Button_UnlockCollections" ? UiActionKind.DebugUnlockCollections
                 : name == "Button_UnlockAchievements" ? UiActionKind.DebugUnlockAchievements
                 : name == "Button_Statistics" ? UiActionKind.Statistics
-                : name == "Button_Collections" ? UiActionKind.Collections
+                : name == "Button_Levels" ? UiActionKind.Levels
                 : name == "Button_Achievements" ? UiActionKind.Achievements
                 : name == "Button_Shop" ? UiActionKind.Shop
                 : name == "Button_Classic" ? UiActionKind.Classic
