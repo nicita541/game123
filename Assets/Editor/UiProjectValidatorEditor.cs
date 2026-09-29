@@ -97,6 +97,7 @@ public static class UiProjectValidatorEditor
             {
                 ValidateAchievements(objects, report);
                 ValidateSettings(objects, report);
+                ValidateShopProducts(objects, report);
 
                 var game = objects.Select(go => go.GetComponent<CryptogramGame>())
                     .FirstOrDefault(component => component != null);
@@ -190,6 +191,28 @@ public static class UiProjectValidatorEditor
         }
         if (!screen.name.StartsWith("Screen_", StringComparison.Ordinal))
             report.Warn("CryptogramGame." + fieldName + ": объект лучше называть Screen_* (" + screen.name + ").");
+    }
+
+    private static void ValidateShopProducts(GameObject[] objects, Report report)
+    {
+        var products = objects.Select(go => go.GetComponent<ShopProductView>())
+            .Where(product => product != null)
+            .Distinct()
+            .ToArray();
+
+        if (products.Length < 3)
+            report.Warn("Магазин: ожидалось минимум 3 ShopProductView, сейчас " + products.Length + ".");
+
+        foreach (var product in products)
+        {
+            if (product.amount <= 0) report.Error(product.name + ": amount должен быть больше 0.");
+            if (product.price < 0) report.Error(product.name + ": price не может быть отрицательной.");
+            if (product.nameText == null || product.detailText == null || product.priceText == null)
+                report.Error(product.name + ": не назначены текстовые ссылки ShopProductView.");
+        }
+
+        if (products.Length > 0)
+            report.Ok("Магазин: " + products.Length + " товара используют ShopProductView.");
     }
 
     private static void ValidateSettings(GameObject[] objects, Report report)

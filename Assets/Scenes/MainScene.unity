@@ -20519,7 +20519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Erudition.UiAction
   game: {fileID: 1735082595}
-  action: 17
+  action: 46
   parameter: 0
 --- !u!114 &1085344636
 MonoBehaviour:
@@ -23073,6 +23073,7 @@ GameObject:
   - component: {fileID: 1267081100}
   - component: {fileID: 1267081102}
   - component: {fileID: 1267081101}
+  - component: {fileID: 9100000000000000201}
   m_Layer: 5
   m_Name: Section_Hints
   m_TagString: Untagged
@@ -28455,7 +28456,7 @@ PrefabInstance:
       objectReference: {fileID: 1735082595}
     - target: {fileID: 2622322850708379644, guid: 7776a1ed7e8c85c4a9901f804c28f9b1, type: 3}
       propertyPath: action
-      value: 16
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 3015099462596336044, guid: 7776a1ed7e8c85c4a9901f804c28f9b1, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -28564,6 +28565,18 @@ PrefabInstance:
     - target: {fileID: 7872649746024817352, guid: 7776a1ed7e8c85c4a9901f804c28f9b1, type: 3}
       propertyPath: m_Text
       value: "\u0411\u043E\u043B\u044C\u0448\u0430\u044F \u043F\u0430\u0447\u043A\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100000000000000200, guid: 7776a1ed7e8c85c4a9901f804c28f9b1, type: 3}
+      propertyPath: amount
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100000000000000200, guid: 7776a1ed7e8c85c4a9901f804c28f9b1, type: 3}
+      propertyPath: price
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100000000000000200, guid: 7776a1ed7e8c85c4a9901f804c28f9b1, type: 3}
+      propertyPath: titleOverride
+      value: "Большая пачка"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33008,3 +33021,23 @@ SceneRoots:
   - {fileID: 1004}
   - {fileID: 3147}
   - {fileID: 1735082596}
+--- !u!114 &9100000000000000201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267081099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf1bd8cf5b64fe2b39f1be50d48a965, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Erudition.ShopProductView
+  resourceType: 1
+  amount: 5
+  price: 150
+  titleOverride:
+  nameText: {fileID: 684295131}
+  detailText: {fileID: 1188539159}
+  priceText: {fileID: 3501684}
+  icon: {fileID: 61091406}

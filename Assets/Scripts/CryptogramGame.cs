@@ -309,9 +309,10 @@ namespace Erudition
                 case UiActionKind.Check: ActiveBoard()?.Check(); break;
                 case UiActionKind.RewardVictory: break; // Retired action; keep serialized enum indices stable.
                 case UiActionKind.RewardFeather: RewardFeather(); break;
-                case UiActionKind.BuyFiveFeathers: BuyFeathers(5, 100); break;
-                case UiActionKind.BuyFifteenFeathers: BuyFeathers(15, 250); break;
-                case UiActionKind.BuyFiveHints: BuyHints(); break;
+                case UiActionKind.BuyFiveFeathers: BuyShopProduct(ShopResourceType.Feathers, 5, 100); break; // legacy serialized action
+                case UiActionKind.BuyFifteenFeathers: BuyShopProduct(ShopResourceType.Feathers, 15, 250); break; // legacy serialized action
+                case UiActionKind.BuyFiveHints: BuyShopProduct(ShopResourceType.Hints, 5, 150); break; // legacy serialized action
+                case UiActionKind.BuyShopProduct: break; // handled by ShopProductView in UiAction.Press
                 case UiActionKind.PremiumUnavailable: SayShop("Этот товар появится после подключения платежей"); break;
                 case UiActionKind.FeatherInfo: SayShop("Выберите пачку ниже. Лишние перья останутся в запасе."); break;
                 case UiActionKind.CoinInfo: SayShop("Монеты выдаются за решение криптограмм и достижения."); break;
@@ -687,22 +688,31 @@ namespace Erudition
             });
         }
 
-        private void BuyFeathers(int amount, int cost)
+        public void BuyShopProduct(ShopResourceType resourceType, int amount, int price)
         {
-            if (save.coins < cost) { SayShop("Недостаточно монет"); return; }
-            save.coins -= cost;
-            save.feathers += amount;
-            StartRecoveryClock();
-            SayShop("+" + amount + " перьев · Всего: " + save.feathers);
-            Persist();
-        }
+            amount = Mathf.Max(1, amount);
+            price = Mathf.Max(0, price);
+            if (save == null) return;
+            if (save.coins < price) { SayShop("Недостаточно монет"); return; }
 
-        private void BuyHints()
-        {
-            if (save.coins < 150) { SayShop("Недостаточно монет"); return; }
-            save.coins -= 150;
-            save.hints += 5;
-            SayShop("Добавлено 5 подсказок!");
+            save.coins -= price;
+            switch (resourceType)
+            {
+                case ShopResourceType.Feathers:
+                    save.feathers += amount;
+                    StartRecoveryClock();
+                    SayShop("+" + amount + " перьев · Всего: " + save.feathers);
+                    break;
+                case ShopResourceType.Hints:
+                    save.hints += amount;
+                    SayShop("Добавлено " + amount + " подсказок!");
+                    break;
+                default:
+                    Debug.LogWarning("Неизвестный товар магазина: " + resourceType, this);
+                    save.coins += price;
+                    return;
+            }
+
             Persist();
         }
 

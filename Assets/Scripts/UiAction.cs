@@ -11,7 +11,7 @@ namespace Erudition
         DebugRemoveFeather, DebugZeroFeathers, DebugRefillFeathers, DebugAddHint,
         DebugVictory, DebugDefeat, DebugReset, Retry, DebugOneHeart, DebugUnlockCollections, DebugUnlockAchievements,
         FeatherInfo, CoinInfo, StatisticsPeriod, ClearSelection, LikeQuote, AchievementDetails, ClosePopup,
-        BuyHintOffer, RewardHint, CloseHintOffer, CollectionLevel
+        BuyHintOffer, RewardHint, CloseHintOffer, CollectionLevel, BuyShopProduct
     }
 
     public sealed class UiAction : MonoBehaviour
@@ -30,6 +30,16 @@ namespace Erudition
 
         public void Press()
         {
+            if (action == UiActionKind.BuyShopProduct)
+            {
+                var product = GetComponentInParent<ShopProductView>();
+                if (product != null)
+                {
+                    product.Buy(game);
+                    return;
+                }
+            }
+
             if (game != null) game.Execute(action, parameter);
         }
     }
