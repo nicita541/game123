@@ -46,20 +46,29 @@ namespace Erudition
                 : (int)entry.kind == legacyIndex;
         }
 
+        // LegacyTarget is kept only so old serialized assets stay compatible.
+        // Runtime totals always come from the real unique phrases currently present in Entries.
         public int Target => includeLegacy ? Math.Max(1, legacyTarget) : Math.Max(1,
             phrases.Where(p => p != null && CollectionCatalog.ValidText(p.text))
                 .Select(p => PuzzleGenerator.TextKey(p.text)).Distinct().Count());
 
+        public int ActualTarget(PuzzleEntry[] entries)
+        {
+            if (entries == null) return Target;
+            return entries.Where(Contains)
+                .Select(e => PuzzleGenerator.TextKey(e.text))
+                .Distinct()
+                .Count();
+        }
+
         public int Progress(GameSave save, PuzzleEntry[] entries)
         {
+            if (save == null || entries == null) return 0;
             var solved = new HashSet<string>(save.solvedPuzzleIds.Split('|'));
-            var count = entries.Where(e => solved.Contains(e.id) && Contains(e))
-                .Select(e => PuzzleGenerator.TextKey(e.text)).Distinct().Count();
-            if (!includeLegacy) return count;
-            var counters = legacyGroup == CollectionGroup.Authors ? save.authorProgress
-                : legacyGroup == CollectionGroup.Themes ? save.themeProgress
-                : legacyGroup == CollectionGroup.Books ? save.bookProgress : save.kindProgress;
-            return Math.Max(count, legacyIndex >= 0 && legacyIndex < counters.Length ? counters[legacyIndex] : 0);
+            return entries.Where(e => solved.Contains(e.id) && Contains(e))
+                .Select(e => PuzzleGenerator.TextKey(e.text))
+                .Distinct()
+                .Count();
         }
     }
 

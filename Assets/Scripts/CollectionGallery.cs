@@ -24,7 +24,7 @@ namespace Erudition
                 if (subtitle != null) subtitle.text = Subtitle(definition);
                 card.picture.sprite = definition.picture;
                 card.picture.preserveAspect = true;
-                card.target = definition.Target;
+                card.target = definition.ActualTarget(game.Entries);
                 foreach (var action in card.GetComponentsInChildren<UiAction>(true))
                     action.Configure(game, UiActionKind.CollectionLevel, i);
                 card.gameObject.SetActive(true);
@@ -66,7 +66,10 @@ namespace Erudition
         public void Refresh(GameSave save, PuzzleEntry[] entries)
         {
             for (var i = 0; i < Cards.Length; i++)
+            {
+                Cards[i].target = catalog.cards[i].ActualTarget(entries);
                 Cards[i].SetProgress(catalog.cards[i].Progress(save, entries));
+            }
         }
     }
 }

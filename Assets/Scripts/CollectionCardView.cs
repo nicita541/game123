@@ -19,7 +19,8 @@ namespace Erudition
             if (progressFill != null)
             {
                 var size = progressFill.sizeDelta;
-                size.x = (progressTrack == null ? fullProgressWidth : progressTrack.rect.width) * Mathf.Clamp01((float)count / target);
+                var ratio = target > 0 ? Mathf.Clamp01((float)count / target) : 0f;
+                size.x = (progressTrack == null ? fullProgressWidth : progressTrack.rect.width) * ratio;
                 progressFill.sizeDelta = size;
             }
         }

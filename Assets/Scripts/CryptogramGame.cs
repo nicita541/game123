@@ -379,11 +379,18 @@ namespace Erudition
             save.streak++;
             save.bestStreak = Mathf.Max(save.bestStreak, save.streak);
             save.classicSolved++;
-            save.kindProgress[(int)entry.kind]++;
+            var solvedBefore = new HashSet<string>(save.solvedPuzzleIds.Split('|'));
+            var completedTextKey = PuzzleGenerator.TextKey(entry.text);
+            var firstUniqueSolve = !Entries.Any(e => solvedBefore.Contains(e.id)
+                && PuzzleGenerator.TextKey(e.text) == completedTextKey);
+            if (firstUniqueSolve)
+            {
+                save.kindProgress[(int)entry.kind]++;
+                if (entry.authorIndex >= 0 && entry.authorIndex < save.authorProgress.Length) save.authorProgress[entry.authorIndex]++;
+                if (entry.themeIndex >= 0 && entry.themeIndex < save.themeProgress.Length) save.themeProgress[entry.themeIndex]++;
+                if (entry.bookIndex >= 0 && entry.bookIndex < save.bookProgress.Length) save.bookProgress[entry.bookIndex]++;
+            }
             if (board.MistakesInLevel == 0) save.perfectWins++;
-            if (entry.authorIndex >= 0 && entry.authorIndex < save.authorProgress.Length) save.authorProgress[entry.authorIndex]++;
-            if (entry.themeIndex >= 0 && entry.themeIndex < save.themeProgress.Length) save.themeProgress[entry.themeIndex]++;
-            if (entry.bookIndex >= 0 && entry.bookIndex < save.bookProgress.Length) save.bookProgress[entry.bookIndex]++;
             RollDailyWindow();
             save.dailySolved[6]++;
             var day = save.activityHistory.FirstOrDefault(item => item.date == DateTime.UtcNow.Date.Ticks);
@@ -393,7 +400,7 @@ namespace Erudition
             save.eveningStreak = DateTime.Now.Hour >= 18 ? save.eveningStreak + 1 : 0;
             save.bestEveningStreak = Mathf.Max(save.bestEveningStreak, save.eveningStreak);
             lastCompletedPuzzleId = entry.id;
-            if (!save.solvedPuzzleIds.Split('|').Contains(entry.id)) save.solvedPuzzleIds += entry.id + "|";
+            if (!solvedBefore.Contains(entry.id)) save.solvedPuzzleIds += entry.id + "|";
             save.activePuzzle = new PuzzleProgress();
             soundPlayer?.Win();
             victoryQuote.text = "«" + entry.text + "»";

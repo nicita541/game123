@@ -100,10 +100,12 @@ namespace Erudition
             if (gallery == null || index < 0 || index >= gallery.catalog.cards.Length) return;
             var definition = gallery.catalog.cards[index];
             var count = definition.Progress(save, entries);
+            var target = definition.ActualTarget(entries);
             detailTitle.text = definition.title;
             detailPicture.sprite = definition.picture;
-            detailProgress.text = Mathf.Min(count, definition.Target) + " / " + definition.Target + " пройдено";
-            if (detailTrack != null) detailFill.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, detailTrack.rect.width * Mathf.Clamp01((float)count / definition.Target));
+            detailProgress.text = count + " / " + target + " пройдено";
+            if (detailTrack != null) detailFill.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,
+                target > 0 ? detailTrack.rect.width * Mathf.Clamp01((float)count / target) : 0);
             var solved = new System.Collections.Generic.HashSet<string>(save.solvedPuzzleIds.Split('|'));
             var unlocked = entries.Where(entry => solved.Contains(entry.id) && definition.Contains(entry)).GroupBy(entry => PuzzleGenerator.TextKey(entry.text)).Select(group => group.First()).ToArray();
             detailBody.text = unlocked.Length == 0 ? "Здесь появятся разгаданные тексты.\nПроходи уровни и открывай новые истории!" : string.Join("\n\n", unlocked.Select(entry => "«" + entry.text + "»\n<size=27>" + entry.source + (string.IsNullOrEmpty(entry.answer) ? "" : " · Ответ: " + entry.answer) + "</size>"));
