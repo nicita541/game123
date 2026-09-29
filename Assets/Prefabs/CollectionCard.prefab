@@ -599,6 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Erudition.CollectionCardView
   title: {fileID: 4290988696403894758}
+  subtitle: {fileID: 5745039089822033437}
   picture: {fileID: 65232070205283717}
   progressText: {fileID: 4581050583724391037}
   progressFill: {fileID: 795551969381632925}

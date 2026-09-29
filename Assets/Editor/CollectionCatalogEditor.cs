@@ -32,13 +32,14 @@ public sealed class CollectionCatalogEditor : Editor
         if (GUILayout.Button("Пересчитать runtime-кэш"))
             RebuildAndSave(catalog);
 
-        if (GUILayout.Button("Добавить новую карточку"))
+        if (GUILayout.Button("Добавить новую карточку (5 уровней × 10 фраз)"))
         {
             Undo.RecordObject(catalog, "Add collection");
-            catalog.cards = catalog.cards.Concat(new[] { new CollectionDefinition { title = "Новая коллекция" } }).ToArray();
+            catalog.cards = catalog.cards.Concat(new[] { CreateCardTemplate() }).ToArray();
             catalog.EnsureIds();
             catalog.cacheVersion = 0;
             EditorUtility.SetDirty(catalog);
+            serializedObject.Update();
         }
 
         if (GUILayout.Button("Проверить контент"))
@@ -52,6 +53,8 @@ public sealed class CollectionCatalogEditor : Editor
             {
                 if (string.IsNullOrWhiteSpace(card.title) || card.picture == null)
                 { Debug.LogWarning("Укажите название и картинку: " + card.title, catalog); warnings++; }
+                if (string.IsNullOrWhiteSpace(card.subtitle))
+                { Debug.LogWarning("Укажите подзаголовок карточки: " + card.title, catalog); warnings++; }
 
                 for (var tier = 0; tier < PuzzleGenerator.Thresholds.Length; tier++)
                 {
@@ -86,6 +89,29 @@ public sealed class CollectionCatalogEditor : Editor
                 + " фраз, предупреждений: " + warnings + ". Кэш: "
                 + (catalog.CacheReady ? "готов" : "нужно пересчитать"), catalog);
         }
+    }
+
+    private static CollectionDefinition CreateCardTemplate()
+    {
+        var phrases = PuzzleGenerator.Thresholds
+            .SelectMany(threshold => Enumerable.Range(0, 10)
+                .Select(_ => new CollectionPhrase
+                {
+                    text = "",
+                    source = "",
+                    minimumErudition = threshold,
+                    kind = PuzzleKind.Quotes,
+                    answer = ""
+                }))
+            .ToArray();
+
+        return new CollectionDefinition
+        {
+            title = "Новая коллекция",
+            subtitle = "Краткое описание",
+            group = CollectionGroup.Authors,
+            phrases = phrases
+        };
     }
 
     [MenuItem("Tools/Erudition/Пересчитать кэш уровней")]

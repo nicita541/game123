@@ -23,8 +23,21 @@ namespace Erudition
     {
         [HideInInspector] public string id;
         public string title;
+        [Tooltip("Короткая подпись под названием карточки.")] public string subtitle;
         public Sprite picture;
         public CollectionGroup group;
+
+        public string DisplaySubtitle
+        {
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(subtitle)) return subtitle;
+                return group == CollectionGroup.Authors ? "Цитаты и произведения"
+                    : group == CollectionGroup.Themes ? "Тематическая подборка"
+                    : group == CollectionGroup.Books ? "Книги и произведения"
+                    : "Подборка уровней";
+            }
+        }
         public CollectionPhrase[] phrases = Array.Empty<CollectionPhrase>();
 
         // Compatibility with old serialized assets.

@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Erudition
 {
@@ -10,7 +9,10 @@ namespace Erudition
     {
         public CollectionCatalog catalog;
         public CollectionCardView template;
-        public RectTransform[] containers;
+        public RectTransform authorsContainer;
+        public RectTransform themesContainer;
+        public RectTransform booksContainer;
+        public RectTransform kindsContainer;
         public CollectionCardView[] Cards { get; private set; } = new CollectionCardView[0];
 
         private string lastSolvedIds;
@@ -25,11 +27,17 @@ namespace Erudition
             for (var i = 0; i < Cards.Length; i++)
             {
                 var definition = catalog.cards[i];
-                var card = Instantiate(template, containers[(int)definition.group]);
+                var container = ContainerFor(definition.group);
+                if (container == null)
+                {
+                    Debug.LogError("Не назначен контейнер для вкладки " + definition.group + ": " + definition.title, this);
+                    continue;
+                }
+
+                var card = Instantiate(template, container);
                 card.name = "Card_" + definition.id;
-                card.title.text = definition.title;
-                var subtitle = card.transform.Find("Text_Subtitle")?.GetComponent<Text>();
-                if (subtitle != null) subtitle.text = Subtitle(definition);
+                if (card.title != null) card.title.text = definition.title;
+                if (card.subtitle != null) card.subtitle.text = definition.DisplaySubtitle;
                 card.picture.sprite = definition.picture;
                 card.picture.preserveAspect = true;
                 card.target = definition.Target;
@@ -45,31 +53,20 @@ namespace Erudition
             game.kindCards = Group(CollectionGroup.Kinds);
         }
 
-        private static string Subtitle(CollectionDefinition definition)
+        private RectTransform ContainerFor(CollectionGroup group)
         {
-            switch (definition.title)
+            switch (group)
             {
-                case "А. С. Пушкин": return "Стихи, поэмы, письма";
-                case "Л. Н. Толстой": return "Романы, рассказы, мысли";
-                case "Ф. М. Достоевский": return "Романы, повести, мысли";
-                case "А. П. Чехов": return "Рассказы, пьесы, цитаты";
-                case "Н. В. Гоголь": return "Повести, поэмы, проза";
-                case "И. С. Тургенев": return "Проза, рассказы, мысли";
-                case "Природа": return "Животные, растения, мир";
-                case "Любовь": return "Чувства, отношения, письма";
-                case "Мудрость": return "Мысли, афоризмы, цитаты";
-                case "Поэзия": return "Стихи и поэмы";
-                case "Романы": return "Романы и проза";
-                case "Сказки": return "Волшебные истории";
+                case CollectionGroup.Authors: return authorsContainer;
+                case CollectionGroup.Themes: return themesContainer;
+                case CollectionGroup.Books: return booksContainer;
+                case CollectionGroup.Kinds: return kindsContainer;
+                default: return null;
             }
-            return definition.group == CollectionGroup.Authors ? "Цитаты и произведения"
-                : definition.group == CollectionGroup.Themes ? "Тематическая подборка"
-                : definition.group == CollectionGroup.Books ? "Книги и произведения"
-                : "Подборка уровней";
         }
 
         private CollectionCardView[] Group(CollectionGroup group) => Cards
-            .Where((card, index) => catalog.cards[index].group == group).ToArray();
+            .Where((card, index) => card != null && catalog.cards[index].group == group).ToArray();
 
         public void Refresh(GameSave save, PuzzleEntry[] entries)
         {
@@ -79,7 +76,8 @@ namespace Erudition
 
             var solved = new HashSet<string>(solvedIdsText.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries));
             for (var i = 0; i < Cards.Length; i++)
-                Cards[i].SetProgress(catalog.cards[i].Progress(solved, entries));
+                if (Cards[i] != null)
+                    Cards[i].SetProgress(catalog.cards[i].Progress(solved, entries));
             lastSolvedIds = solvedIdsText;
         }
     }

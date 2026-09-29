@@ -27947,11 +27947,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Erudition.CollectionGallery
   catalog: {fileID: 11400000, guid: d1da36b121f04f74a9b7126bc3d826e2, type: 2}
   template: {fileID: 2115850658}
-  containers:
-  - {fileID: 524756350}
-  - {fileID: 1308679199}
-  - {fileID: 1110660176}
-  - {fileID: 290187518}
+  authorsContainer: {fileID: 524756350}
+  themesContainer: {fileID: 1308679199}
+  booksContainer: {fileID: 1110660176}
+  kindsContainer: {fileID: 290187518}
 --- !u!224 &1737844252 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6917977577010407516, guid: 2af224fa8cc3c3141aec1be4d42f09bd, type: 3}
