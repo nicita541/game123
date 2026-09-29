@@ -63,6 +63,8 @@ namespace Erudition.EditorTools
                 scene => FindPrefix(scene, "ShopItem_")),
             new Family("Блок наград", "Assets/Prefabs/RewardCard.prefab", "RewardsPanel",
                 scene => FindExact(scene, "RewardsPanel")),
+            new Family("Экран подробностей", "Assets/Prefabs/CollectionDetails.prefab", "Screen_CollectionDetails",
+                scene => FindExact(scene, "Screen_CollectionDetails")),
             new Family("Экран настроек", "Assets/Prefabs/SettingsScreen.prefab", "Screen_Settings",
                 scene => FindExact(scene, "Screen_Settings"))
         };
@@ -79,6 +81,8 @@ namespace Erudition.EditorTools
                 scene => FindPrefix(scene, "Heart_")),
             new Family("Верхняя панель", "Assets/Prefabs/TopBar.prefab", "TopBar",
                 scene => FindExact(scene, "TopBar")),
+            new Family("Клавиши", "Assets/Prefabs/KeyboardKey.prefab", "Key_Й",
+                scene => FindPrefix(scene, "Key_")),
             new Family("Клетки криптограммы", "Assets/Prefabs/LetterCell.prefab", "Cell_000",
                 FindLetterCells)
         };
