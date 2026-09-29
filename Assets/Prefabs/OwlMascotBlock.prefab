@@ -90,3 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Erudition.UiWarmth
   breathe: 1
   amplitude: 0.006
+  blink: 1
+  blinkMinInterval: 3.2
+  blinkMaxInterval: 6.2
+  blinkDuration: 0.09
+  blinkScaleY: 0.9
