@@ -87,6 +87,8 @@ namespace Erudition
         private int pendingIndex = -1;
         private int pendingCollectionIndex = -1;
         private Vector2[] achievementPositions;
+        private float mainFeathersBaseWidth;
+        private int mainFeathersBaseFontSize;
         public static CryptogramGame Current { get; private set; }
         public PuzzleEntry[] Entries => puzzles ?? (puzzles = PuzzleGenerator.Build(library, gallery == null ? null : gallery.catalog));
         private bool hintRewardPending;
@@ -100,6 +102,11 @@ namespace Erudition
             achievementPositions = achievementCards.Select(card => ((RectTransform)card.transform).anchoredPosition).ToArray();
             baseFontSizes = FindObjectsByType<Text>(FindObjectsInactive.Include, FindObjectsSortMode.None)
                 .ToDictionary(label => label, label => label.fontSize);
+            if (mainFeathers != null)
+            {
+                mainFeathersBaseWidth = mainFeathers.rectTransform.sizeDelta.x;
+                mainFeathersBaseFontSize = mainFeathers.fontSize;
+            }
             save = SaveStore.Load();
             ResolveSavedPuzzles();
             if (!save.kindProgressInitialized)
@@ -751,7 +758,33 @@ namespace Erudition
         {
             var infinite = HasInfiniteFeathers();
             var featherValue = infinite ? "∞ " + InfiniteFeathersRemainingText() : save.feathers.ToString();
-            if (mainFeathers != null) mainFeathers.text = featherValue;
+
+            if (mainFeathers != null)
+            {
+                mainFeathers.text = featherValue;
+                if (infinite)
+                {
+                    // The authored counter is intentionally compact for values like "5".
+                    // Expand it only while the timed unlimited-energy reward is active,
+                    // so both the infinity symbol and countdown remain visible.
+                    var size = mainFeathers.rectTransform.sizeDelta;
+                    size.x = Mathf.Max(mainFeathersBaseWidth, 245f);
+                    mainFeathers.rectTransform.sizeDelta = size;
+                    mainFeathers.fontSize = Mathf.Min(mainFeathersBaseFontSize, 34);
+                    mainFeathers.resizeTextForBestFit = true;
+                    mainFeathers.resizeTextMinSize = 22;
+                    mainFeathers.resizeTextMaxSize = Mathf.Min(mainFeathersBaseFontSize, 34);
+                }
+                else
+                {
+                    var size = mainFeathers.rectTransform.sizeDelta;
+                    size.x = mainFeathersBaseWidth;
+                    mainFeathers.rectTransform.sizeDelta = size;
+                    mainFeathers.fontSize = mainFeathersBaseFontSize;
+                    mainFeathers.resizeTextForBestFit = false;
+                }
+            }
+
             if (shopFeathers != null) shopFeathers.text = featherValue;
             if (shopCoins != null) shopCoins.text = save.coins.ToString();
             if (noFeathersCounter != null) noFeathersCounter.text = featherValue;
@@ -797,7 +830,8 @@ namespace Erudition
         private void UpdateAchievements()
         {
             if (achievementCards == null) return;
-            for (var i = 0; i < achievementCards.Length; i++) achievementCards[i].SetProgress(AchievementProgress(i));
+            for (var i = 0; i < achievementCards.Length; i++)
+                achievementCards[i].SetProgress(AchievementProgress(i), AchievementClaimed(i));
         }
 
         private int AchievementProgress(int index) => index < 2 ? save.solved : index == 2 ? save.erudition / 50
