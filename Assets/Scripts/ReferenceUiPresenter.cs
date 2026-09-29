@@ -134,10 +134,32 @@ namespace Erudition
             var complete = progress >= card.target;
 
             popupTitle.text = title;
-            popupBody.text = description
-                + "\n\nПрогресс: " + Mathf.Min(progress, card.target) + "/" + card.target
-                + "\nНаграда: " + reward
-                + (claimed ? "\n\nНаграда уже получена." : complete ? "\n\nНаграда готова к получению." : "");
+
+            // The original authored body is only 150 px high, which clipped the
+            // reward and status lines. Keep the existing scene object but give
+            // its text enough room to show the full achievement state.
+            if (popupBody != null)
+            {
+                popupBody.rectTransform.sizeDelta = new Vector2(770f, 225f);
+                popupBody.fontSize = 30;
+                popupBody.resizeTextForBestFit = true;
+                popupBody.resizeTextMinSize = 22;
+                popupBody.resizeTextMaxSize = 30;
+                popupBody.horizontalOverflow = HorizontalWrapMode.Wrap;
+                popupBody.verticalOverflow = VerticalWrapMode.Truncate;
+
+                var status = claimed
+                    ? "<color=#3E8A63>✓ Награда получена</color>"
+                    : complete
+                        ? "<color=#257BEA>Награда готова — нажмите «Забрать»</color>"
+                        : "Выполните условие, чтобы забрать награду.";
+
+                popupBody.text = description
+                    + "\nПрогресс: " + Mathf.Min(progress, card.target) + "/" + card.target
+                    + "\n\nНаграда:\n" + reward
+                    + "\n" + status;
+            }
+
             if (popupIcon != null && achievementIcons != null && index < achievementIcons.Length)
                 popupIcon.sprite = achievementIcons[index];
 
