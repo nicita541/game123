@@ -673,8 +673,7 @@ namespace Erudition
             if (noFeathersTimer == null) return;
             if (HasInfiniteFeathers())
             {
-                var infiniteRemaining = TimeSpan.FromTicks(Math.Max(0, save.infiniteFeathersUntilUtcTicks - DateTime.UtcNow.Ticks));
-                noFeathersTimer.text = "∞ " + ((int)infiniteRemaining.TotalMinutes).ToString("00") + ":" + infiniteRemaining.Seconds.ToString("00");
+                noFeathersTimer.text = "∞ " + InfiniteFeathersRemainingText();
                 return;
             }
             if (save.feathers >= MaxFeathers || save.nextFeatherUtcTicks <= 0)
@@ -751,7 +750,7 @@ namespace Erudition
         private void UpdateEnergyUi()
         {
             var infinite = HasInfiniteFeathers();
-            var featherValue = infinite ? "∞" : save.feathers.ToString();
+            var featherValue = infinite ? "∞ " + InfiniteFeathersRemainingText() : save.feathers.ToString();
             if (mainFeathers != null) mainFeathers.text = featherValue;
             if (shopFeathers != null) shopFeathers.text = featherValue;
             if (shopCoins != null) shopCoins.text = save.coins.ToString();
@@ -820,14 +819,14 @@ namespace Erudition
         {
             switch (index)
             {
-                case 0: return "100 монет";
-                case 1: return "250 монет";
-                case 2: return "1 час бесконечных перьев";
-                case 3: return "5 подсказок";
-                case 4: return "10 перьев";
-                case 5: return "300 монет";
-                case 6: return "1 час бесконечных перьев";
-                default: return "Награда";
+                case 0: return "100 монет — можно потратить в магазине на перья и подсказки.";
+                case 1: return "250 монет — можно потратить в магазине на перья и подсказки.";
+                case 2: return "1 час бесконечных перьев — уровни запускаются без расхода перьев. После получения появится таймер действия бонуса.";
+                case 3: return "5 подсказок — добавятся в запас и помогут открыть буквы в сложных криптограммах.";
+                case 4: return "10 перьев — добавятся поверх текущего запаса.";
+                case 5: return "300 монет — можно потратить в магазине на перья и подсказки.";
+                case 6: return "1 час бесконечных перьев — уровни запускаются без расхода перьев. После получения появится таймер действия бонуса.";
+                default: return "Награда за выполнение достижения.";
             }
         }
 
@@ -868,6 +867,16 @@ namespace Erudition
         private bool HasInfiniteFeathers()
         {
             return save != null && save.infiniteFeathersUntilUtcTicks > DateTime.UtcNow.Ticks;
+        }
+
+        private string InfiniteFeathersRemainingText()
+        {
+            if (!HasInfiniteFeathers()) return "00:00";
+            var remaining = TimeSpan.FromTicks(Math.Max(0, save.infiniteFeathersUntilUtcTicks - DateTime.UtcNow.Ticks));
+            var hours = (int)remaining.TotalHours;
+            return hours > 0
+                ? hours + ":" + remaining.Minutes.ToString("00") + ":" + remaining.Seconds.ToString("00")
+                : ((int)remaining.TotalMinutes).ToString("00") + ":" + remaining.Seconds.ToString("00");
         }
 
         private void ShowAchievementTab(int tab)
