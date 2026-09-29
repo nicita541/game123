@@ -187,6 +187,13 @@ namespace Erudition
             if (!focused) StoreActiveProgress();
         }
 
+        // Direct hook for the main-menu Levels button. Keeping this parameterless makes
+        // the scene button independent from serialized enum values and UiAction wiring.
+        public void OpenLevelsFromButton()
+        {
+            Execute(UiActionKind.Levels, 0);
+        }
+
         public void Execute(UiActionKind action, int parameter)
         {
             soundPlayer?.Click();
