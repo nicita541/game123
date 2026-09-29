@@ -11,9 +11,16 @@ namespace Erudition
         public int target = 1;
         public float fullProgressWidth = 610;
 
-        public void SetProgress(int count)
+        public void SetProgress(int count, bool rewardClaimed = false)
         {
-            if (progressText != null) progressText.text = Mathf.Min(count, target) + "/" + target;
+            var complete = count >= target;
+            if (progressText != null)
+            {
+                progressText.resizeTextForBestFit = true;
+                progressText.resizeTextMinSize = 16;
+                progressText.resizeTextMaxSize = Mathf.Max(16, progressText.fontSize);
+                progressText.text = rewardClaimed ? "Получено" : complete ? "Забрать" : Mathf.Min(count, target) + "/" + target;
+            }
             if (progressFill != null)
             {
                 var size = progressFill.sizeDelta;
