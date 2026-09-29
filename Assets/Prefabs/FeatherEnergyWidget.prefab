@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160.4, y: -13.3}
-  m_SizeDelta: {x: 95, y: 129}
+  m_AnchoredPosition: {x: -151, y: 0}
+  m_SizeDelta: {x: 88, y: 116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3217227468014988109
 CanvasRenderer:
@@ -110,7 +110,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 34}
+  m_SizeDelta: {x: 98, y: 26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &920000000000000003
 CanvasRenderer:
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.835, b: 0.416, a: 1}
+  m_Color: {r: 1, g: 0.79, b: 0.23, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -142,11 +142,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 825595508a46b5947af5125740729118, type: 3}
-    m_FontSize: 24
+    m_FontSize: 22
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 18
-    m_MaxSize: 24
+    m_MaxSize: 22
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -191,8 +191,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 137, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchoredPosition: {x: 143, y: 0}
+  m_SizeDelta: {x: 78, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &265170611571332260
 CanvasRenderer:
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1.8
+  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &2942549715182754026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 8218325126801712530}
   - component: {fileID: 6226030640311122218}
   m_Layer: 5
-  m_Name: Icon_Feather (1)
+  m_Name: InfiniteTimerPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,8 +352,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -19.7}
-  m_SizeDelta: {x: 105.6679, y: 31.2581}
+  m_AnchoredPosition: {x: 0, y: -30}
+  m_SizeDelta: {x: 122, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8218325126801712530
 CanvasRenderer:
@@ -385,14 +385,14 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -1347853058, guid: 1bf4a1d9b14b0ee499925c3bde4b5ffd, type: 3}
   m_Type: 1
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 5.58
+  m_PixelsPerUnitMultiplier: 5.2
 --- !u!1 &7653960365080613429
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 4.14
+  m_PixelsPerUnitMultiplier: 4.1
 --- !u!1 &9207549914648802987
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +507,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 95.9789, y: 74.5}
+  m_SizeDelta: {x: 105, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6831656344001424099
 CanvasRenderer:
@@ -539,11 +539,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 825595508a46b5947af5125740729118, type: 3}
-    m_FontSize: 53
+    m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 48
-    m_MaxSize: 53
+    m_MinSize: 40
+    m_MaxSize: 48
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
