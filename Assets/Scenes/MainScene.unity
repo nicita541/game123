@@ -731,7 +731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033}
   m_Layer: 5
-  m_Name: Screen_Collections
+  m_Name: Screen_Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2357,7 +2357,7 @@ GameObject:
   - component: {fileID: 490970668}
   - component: {fileID: 490970669}
   m_Layer: 5
-  m_Name: Button_Collections
+  m_Name: Button_Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2556,7 +2556,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u0438"
+  m_Text: "\u0423\u0440\u043E\u0432\u043D\u0438"
 --- !u!1 &1152
 GameObject:
   m_ObjectHideFlags: 0
@@ -6986,7 +6986,7 @@ GameObject:
   - component: {fileID: 501844650}
   - component: {fileID: 501844651}
   m_Layer: 5
-  m_Name: Button_Collections
+  m_Name: Button_Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7185,7 +7185,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u0438"
+  m_Text: "\u0423\u0440\u043E\u0432\u043D\u0438"
 --- !u!1 &2273
 GameObject:
   m_ObjectHideFlags: 0
@@ -7694,7 +7694,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u0438"
+  m_Text: "\u0423\u0440\u043E\u0432\u043D\u0438"
 --- !u!1 &2295
 GameObject:
   m_ObjectHideFlags: 0
@@ -9408,7 +9408,7 @@ GameObject:
   - component: {fileID: 1737160962}
   - component: {fileID: 1737160963}
   m_Layer: 5
-  m_Name: Button_Collections
+  m_Name: Button_Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9607,7 +9607,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u0438"
+  m_Text: "\u0423\u0440\u043E\u0432\u043D\u0438"
 --- !u!1 &2501
 GameObject:
   m_ObjectHideFlags: 0
@@ -11362,7 +11362,7 @@ GameObject:
   - component: {fileID: 889292039}
   - component: {fileID: 889292040}
   m_Layer: 5
-  m_Name: Button_Collections
+  m_Name: Button_Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11561,7 +11561,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u0438"
+  m_Text: "\u0423\u0440\u043E\u0432\u043D\u0438"
 --- !u!1 &2725
 GameObject:
   m_ObjectHideFlags: 0
@@ -14054,7 +14054,7 @@ GameObject:
   - component: {fileID: 818139044}
   - component: {fileID: 818139045}
   m_Layer: 5
-  m_Name: Button_Collections
+  m_Name: Button_Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39973,7 +39973,7 @@ GameObject:
   - component: {fileID: 1471167668}
   - component: {fileID: 1471167667}
   m_Layer: 5
-  m_Name: Button_Collections
+  m_Name: Button_Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42863,7 +42863,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u0438"
+  m_Text: "\u0423\u0440\u043E\u0432\u043D\u0438"
 --- !u!222 &1658672670
 CanvasRenderer:
   m_ObjectHideFlags: 0
