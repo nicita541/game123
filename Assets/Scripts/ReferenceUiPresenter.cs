@@ -102,11 +102,11 @@ namespace Erudition
             var count = definition.Progress(save, entries);
             detailTitle.text = definition.title;
             detailPicture.sprite = definition.picture;
-            detailProgress.text = Mathf.Min(count, definition.Target) + " / " + definition.Target + " в коллекции";
+            detailProgress.text = Mathf.Min(count, definition.Target) + " / " + definition.Target + " пройдено";
             if (detailTrack != null) detailFill.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, detailTrack.rect.width * Mathf.Clamp01((float)count / definition.Target));
             var solved = new System.Collections.Generic.HashSet<string>(save.solvedPuzzleIds.Split('|'));
             var unlocked = entries.Where(entry => solved.Contains(entry.id) && definition.Contains(entry)).GroupBy(entry => PuzzleGenerator.TextKey(entry.text)).Select(group => group.First()).ToArray();
-            detailBody.text = unlocked.Length == 0 ? "Здесь появятся разгаданные тексты.\nИграй в Классику и пополняй коллекцию!" : string.Join("\n\n", unlocked.Select(entry => "«" + entry.text + "»\n<size=27>" + entry.source + (string.IsNullOrEmpty(entry.answer) ? "" : " · Ответ: " + entry.answer) + "</size>"));
+            detailBody.text = unlocked.Length == 0 ? "Здесь появятся разгаданные тексты.\nПроходи уровни и открывай новые истории!" : string.Join("\n\n", unlocked.Select(entry => "«" + entry.text + "»\n<size=27>" + entry.source + (string.IsNullOrEmpty(entry.answer) ? "" : " · Ответ: " + entry.answer) + "</size>"));
             if (detailScroll != null)
             {
                 LayoutRebuilder.ForceRebuildLayoutImmediate(detailBody.rectTransform);
