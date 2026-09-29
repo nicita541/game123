@@ -22,8 +22,8 @@ namespace Erudition
 
         public void Buy(CryptogramGame game)
         {
-            if (game != null)
-                game.BuyShopProduct(resourceType, amount, price);
+            var owner = game != null ? game : CryptogramGame.Current;
+            owner?.BuyShopProduct(resourceType, amount, price);
         }
 
         public void ApplyPresentation()
