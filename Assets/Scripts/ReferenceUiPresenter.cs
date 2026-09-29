@@ -31,10 +31,15 @@ namespace Erudition
         public Image popupIcon;
         public Sprite[] achievementIcons;
         private int period;
+        public int SelectedAchievementIndex { get; private set; } = -1;
 
         public void SetPeriod(int value) { period = Mathf.Clamp(value, 0, 2); }
         public void SetCoinsReward(int count) { if (coinsReward != null) coinsReward.text = "<size=64>+" + count + "</size>\nмонет"; }
-        public void ClosePopup() { if (popup != null) popup.SetActive(false); }
+        public void ClosePopup()
+        {
+            SelectedAchievementIndex = -1;
+            if (popup != null) popup.SetActive(false);
+        }
 
         public void Refresh(GameSave save, int screen, string completed)
         {
@@ -116,13 +121,35 @@ namespace Erudition
             }
         }
 
-        public void ShowAchievement(int index, AchievementCardView[] cards)
+        public void ShowAchievement(int index, AchievementCardView[] cards, int progress, bool claimed, string reward)
         {
+            if (cards == null || cards.Length == 0 || popup == null) return;
             index = Mathf.Clamp(index, 0, cards.Length - 1);
-            var labels = cards[index].GetComponentsInChildren<Text>(true);
-            popupTitle.text = labels.First(label => label.name == "Text_Title").text;
-            popupBody.text = labels.First(label => label.name == "Text_Description").text + "\n\nПрогресс: " + cards[index].progressText.text;
-            popupIcon.sprite = achievementIcons[index];
+            SelectedAchievementIndex = index;
+
+            var card = cards[index];
+            var labels = card.GetComponentsInChildren<Text>(true);
+            var title = labels.First(label => label.name == "Text_Title").text;
+            var description = labels.First(label => label.name == "Text_Description").text;
+            var complete = progress >= card.target;
+
+            popupTitle.text = title;
+            popupBody.text = description
+                + "\n\nПрогресс: " + Mathf.Min(progress, card.target) + "/" + card.target
+                + "\nНаграда: " + reward
+                + (claimed ? "\n\nНаграда уже получена." : complete ? "\n\nНаграда готова к получению." : "");
+            if (popupIcon != null && achievementIcons != null && index < achievementIcons.Length)
+                popupIcon.sprite = achievementIcons[index];
+
+            var actionButton = popup.GetComponentInChildren<Button>(true);
+            if (actionButton != null)
+            {
+                var actionLabel = actionButton.GetComponentsInChildren<Text>(true)
+                    .FirstOrDefault(label => label.name == "Text_Label")
+                    ?? actionButton.GetComponentInChildren<Text>(true);
+                if (actionLabel != null) actionLabel.text = complete && !claimed ? "Забрать" : "Закрыть";
+            }
+
             popup.SetActive(true);
         }
     }
