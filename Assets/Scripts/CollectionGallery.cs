@@ -20,6 +20,8 @@ namespace Erudition
                 var card = Instantiate(template, containers[(int)definition.group]);
                 card.name = "Card_" + definition.id;
                 card.title.text = definition.title;
+                var subtitle = card.transform.Find("Text_Subtitle")?.GetComponent<Text>();
+                if (subtitle != null) subtitle.text = Subtitle(definition);
                 card.picture.sprite = definition.picture;
                 card.picture.preserveAspect = true;
                 card.target = definition.Target;
@@ -33,6 +35,29 @@ namespace Erudition
             game.themeCards = Group(CollectionGroup.Themes);
             game.bookCards = Group(CollectionGroup.Books);
             game.kindCards = Group(CollectionGroup.Kinds);
+        }
+
+        private static string Subtitle(CollectionDefinition definition)
+        {
+            switch (definition.title)
+            {
+                case "А. С. Пушкин": return "Стихи, поэмы, письма";
+                case "Л. Н. Толстой": return "Романы, рассказы, мысли";
+                case "Ф. М. Достоевский": return "Романы, повести, мысли";
+                case "А. П. Чехов": return "Рассказы, пьесы, цитаты";
+                case "Н. В. Гоголь": return "Повести, поэмы, проза";
+                case "И. С. Тургенев": return "Проза, рассказы, мысли";
+                case "Природа": return "Животные, растения, мир";
+                case "Любовь": return "Чувства, отношения, письма";
+                case "Мудрость": return "Мысли, афоризмы, цитаты";
+                case "Поэзия": return "Стихи и поэмы";
+                case "Романы": return "Романы и проза";
+                case "Сказки": return "Волшебные истории";
+            }
+            return definition.group == CollectionGroup.Authors ? "Цитаты и произведения"
+                : definition.group == CollectionGroup.Themes ? "Тематическая подборка"
+                : definition.group == CollectionGroup.Books ? "Книги и произведения"
+                : "Подборка уровней";
         }
 
         private CollectionCardView[] Group(CollectionGroup group) => Cards
