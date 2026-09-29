@@ -191,7 +191,7 @@ namespace Erudition.EditorTools
 
         private static void SyncScene(string scenePath, Family[] families, SyncReport report)
         {
-            if (!File.Exists(scenePath))
+            if (AssetDatabase.LoadAssetAtPath<SceneAsset>(scenePath) == null)
                 throw new FileNotFoundException("Не найдена сцена", scenePath);
 
             var scene = SceneManager.GetSceneByPath(scenePath);
@@ -340,7 +340,7 @@ namespace Erudition.EditorTools
 
         private static void ValidateScene(string scenePath, Family[] families, ValidationReport report)
         {
-            if (!File.Exists(scenePath))
+            if (AssetDatabase.LoadAssetAtPath<SceneAsset>(scenePath) == null)
             {
                 report.ok = false;
                 report.lines.Add("Нет сцены: " + scenePath);
