@@ -10165,6 +10165,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1519697884930236393, guid: 3ff64a2d258228f44a855240bb8a33f4, type: 3}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: metric
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: special
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardKind
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardAmount
+      value: 250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11977,6 +11993,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 621827292062257394, guid: 3ff64a2d258228f44a855240bb8a33f4, type: 3}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: metric
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: special
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardKind
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardAmount
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13553,6 +13585,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2865870748345947649, guid: f4fa94c4cd83b9b4fb5729ba7f698fd8, type: 3}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: metric
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: special
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardKind
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardAmount
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17880,6 +17928,22 @@ PrefabInstance:
     - target: {fileID: 5166999734497050842, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: metric
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: special
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardKind
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardAmount
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24129,6 +24193,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 7798260202119174485, guid: f4fa94c4cd83b9b4fb5729ba7f698fd8, type: 3}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: metric
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: special
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardKind
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardAmount
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24496,6 +24576,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8366518164909799415, guid: f4fa94c4cd83b9b4fb5729ba7f698fd8, type: 3}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: metric
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: special
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardKind
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardAmount
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28614,6 +28710,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -8411694617196797062, guid: 3ff64a2d258228f44a855240bb8a33f4, type: 3}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: metric
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: special
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardKind
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: rewardAmount
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

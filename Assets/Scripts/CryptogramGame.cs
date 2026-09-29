@@ -843,9 +843,23 @@ namespace Erudition
                 achievementCards[i].SetProgress(AchievementProgress(i), AchievementClaimed(i));
         }
 
-        private int AchievementProgress(int index) => index < 2 ? save.solved : index == 2 ? save.erudition / 50
-            : index == 3 ? save.classicSolved : index == 4 ? save.solvedPuzzleIds.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries).Distinct().Count()
-            : index == 5 ? save.perfectWins : save.bestEveningStreak;
+        private int AchievementProgress(int index)
+        {
+            if (achievementCards == null || index < 0 || index >= achievementCards.Length || achievementCards[index] == null)
+                return 0;
+
+            switch (achievementCards[index].metric)
+            {
+                case AchievementMetric.Solved: return save.solved;
+                case AchievementMetric.EruditionLevels: return save.erudition / 50;
+                case AchievementMetric.ClassicSolved: return save.classicSolved;
+                case AchievementMetric.UniqueSolved:
+                    return save.solvedPuzzleIds.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries).Distinct().Count();
+                case AchievementMetric.PerfectWins: return save.perfectWins;
+                case AchievementMetric.BestEveningStreak: return save.bestEveningStreak;
+                default: return 0;
+            }
+        }
 
         private bool AchievementComplete(int index)
         {
@@ -860,17 +874,9 @@ namespace Erudition
 
         private string AchievementRewardDescription(int index)
         {
-            switch (index)
-            {
-                case 0: return "100 монет — можно потратить в магазине на перья и подсказки.";
-                case 1: return "250 монет — можно потратить в магазине на перья и подсказки.";
-                case 2: return "1 час бесконечных перьев — уровни запускаются без расхода перьев. После получения появится таймер действия бонуса.";
-                case 3: return "5 подсказок — добавятся в запас и помогут открыть буквы в сложных криптограммах.";
-                case 4: return "10 перьев — добавятся поверх текущего запаса.";
-                case 5: return "300 монет — можно потратить в магазине на перья и подсказки.";
-                case 6: return "1 час бесконечных перьев — уровни запускаются без расхода перьев. После получения появится таймер действия бонуса.";
-                default: return "Награда за выполнение достижения.";
-            }
+            return achievementCards != null && index >= 0 && index < achievementCards.Length && achievementCards[index] != null
+                ? achievementCards[index].RewardDescription()
+                : "Награда за выполнение достижения.";
         }
 
         private void ClaimAchievement(int index)
@@ -881,18 +887,22 @@ namespace Erudition
                 return;
             }
 
-            switch (index)
+            var card = achievementCards[index];
+            switch (card.rewardKind)
             {
-                case 0: save.coins += 100; break;
-                case 1: save.coins += 250; break;
-                case 2: AddInfiniteFeathers(TimeSpan.FromHours(1)); break;
-                case 3: save.hints += 5; break;
-                case 4:
-                    save.feathers += 10;
+                case AchievementRewardKind.Coins:
+                    save.coins += card.rewardAmount;
+                    break;
+                case AchievementRewardKind.Hints:
+                    save.hints += card.rewardAmount;
+                    break;
+                case AchievementRewardKind.Feathers:
+                    save.feathers += card.rewardAmount;
                     StartRecoveryClock();
                     break;
-                case 5: save.coins += 300; break;
-                case 6: AddInfiniteFeathers(TimeSpan.FromHours(1)); break;
+                case AchievementRewardKind.InfiniteFeathers:
+                    AddInfiniteFeathers(TimeSpan.FromMinutes(card.rewardAmount));
+                    break;
             }
 
             save.claimedAchievementMask |= 1 << index;
@@ -929,7 +939,9 @@ namespace Erudition
             for (var i = 0; achievementCards != null && i < achievementCards.Length; i++)
             {
                 var count = AchievementProgress(i);
-                var show = achievementTab == 0 || achievementTab == 1 && count < achievementCards[i].target || achievementTab == 2 && i >= 3;
+                var show = achievementTab == 0
+                    || achievementTab == 1 && count < achievementCards[i].target
+                    || achievementTab == 2 && achievementCards[i].special;
                 achievementCards[i].gameObject.SetActive(show);
                 if (show && achievementPositions != null)
                 {

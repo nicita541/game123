@@ -256,6 +256,10 @@ MonoBehaviour:
   titleText: {fileID: 5978903485743164598}
   descriptionText: {fileID: 6609677658008379123}
   icon: {fileID: 8551970830171773447}
+  metric: 0
+  special: 0
+  rewardKind: 0
+  rewardAmount: 100
   progressText: {fileID: 2828646600849004680}
   progressFill: {fileID: 6455732040617303693}
   progressTrack: {fileID: 5793813561203588320}
