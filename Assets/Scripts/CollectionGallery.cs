@@ -26,7 +26,7 @@ namespace Erudition
                 card.picture.preserveAspect = true;
                 card.target = definition.Target;
                 foreach (var action in card.GetComponentsInChildren<UiAction>(true))
-                    action.Configure(game, UiActionKind.CollectionDetails, i);
+                    action.Configure(game, UiActionKind.CollectionLevel, i);
                 card.gameObject.SetActive(true);
                 Cards[i] = card;
             }

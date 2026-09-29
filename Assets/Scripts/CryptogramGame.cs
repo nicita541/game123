@@ -85,6 +85,7 @@ namespace Erudition
         private bool applicationPaused;
         private float nextProgressSave;
         private int pendingIndex = -1;
+        private int pendingCollectionIndex = -1;
         private Vector2[] achievementPositions;
         public static CryptogramGame Current { get; private set; }
         public PuzzleEntry[] Entries => puzzles ?? (puzzles = PuzzleGenerator.Build(library, gallery == null ? null : gallery.catalog));
@@ -149,7 +150,15 @@ namespace Erudition
             screens[2].SetActive(currentScreen == 2);
             ApplyTextScale(); UpdateAllUi();
             if (pendingStart)
-            { var index = pendingIndex; pendingStart = false; StartClassicPuzzle(index); }
+            {
+                var index = pendingIndex;
+                var collectionIndex = pendingCollectionIndex;
+                pendingStart = false;
+                pendingIndex = -1;
+                pendingCollectionIndex = -1;
+                if (collectionIndex >= 0) StartCollectionPuzzle(collectionIndex);
+                else StartClassicPuzzle(index);
+            }
         }
 
         private void Update()
@@ -199,8 +208,9 @@ namespace Erudition
             soundPlayer?.Click();
             switch (action)
             {
-                case UiActionKind.Home: pendingStart = false; ShowScreen(0); break;
+                case UiActionKind.Home: pendingStart = false; pendingIndex = -1; pendingCollectionIndex = -1; ShowScreen(0); break;
                 case UiActionKind.CollectionDetails: presentation?.ShowCollection(parameter, save, Entries); ShowScreen(1); break;
+                case UiActionKind.CollectionLevel: StartCollectionPuzzle(parameter); break;
                 case UiActionKind.StatisticsPeriod: presentation?.SetPeriod(parameter); UpdateAllUi(); break;
                 case UiActionKind.ClearSelection: ActiveBoard()?.ClearSelection(); break;
                 case UiActionKind.AchievementDetails: presentation?.ShowAchievement(parameter, achievementCards); break;
@@ -432,7 +442,7 @@ namespace Erudition
         {
             RestoreEnergy();
             var board = classicBoard;
-            if (board == null) { pendingStart = true; pendingIndex = requestedIndex; return; }
+            if (board == null) { pendingStart = true; pendingIndex = requestedIndex; pendingCollectionIndex = -1; return; }
             var progress = save.activePuzzle;
             // Keep a previously started Turbo puzzle playable in the single
             // remaining board, without charging again or losing filled cells.
@@ -466,6 +476,45 @@ namespace Erudition
             board.StartPuzzle(Entries[index], index, save.activePuzzle, save.erudition, save.hints);
             Persist();
             ShowScreen(2);
+        }
+
+        private void StartCollectionPuzzle(int collectionIndex)
+        {
+            var catalog = gallery == null ? null : gallery.catalog;
+            if (catalog == null || catalog.cards == null || collectionIndex < 0 || collectionIndex >= catalog.cards.Length) return;
+
+            var board = classicBoard;
+            if (board == null)
+            {
+                pendingStart = true;
+                pendingIndex = -1;
+                pendingCollectionIndex = collectionIndex;
+                return;
+            }
+
+            var definition = catalog.cards[collectionIndex];
+            var candidateIndices = Enumerable.Range(0, Entries.Length)
+                .Where(i => definition.Contains(Entries[i]))
+                .ToArray();
+            if (candidateIndices.Length == 0) return;
+
+            var candidates = candidateIndices.Select(i => Entries[i]).ToArray();
+            var selected = PuzzleSelection.Choose(candidates, PuzzleMode.Classic, save.erudition, save.recentTexts,
+                board.CanFit, count => UnityEngine.Random.Range(0, count));
+
+            // A card should always be playable. If its easiest authored phrase is
+            // above the current erudition, use that lowest tier instead of doing nothing.
+            if (selected < 0)
+            {
+                var classicCandidates = candidates.Where(entry => entry.mode == PuzzleMode.Classic).ToArray();
+                if (classicCandidates.Length == 0) return;
+                var minimumErudition = classicCandidates.Min(entry => entry.minimumErudition);
+                selected = PuzzleSelection.Choose(candidates, PuzzleMode.Classic, minimumErudition, save.recentTexts,
+                    board.CanFit, count => UnityEngine.Random.Range(0, count));
+            }
+
+            if (selected < 0 || selected >= candidateIndices.Length) return;
+            StartClassicPuzzle(candidateIndices[selected]);
         }
 
         private int ChoosePuzzle(PuzzleMode mode, PuzzleBoard board)
