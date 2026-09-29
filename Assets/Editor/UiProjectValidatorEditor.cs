@@ -95,6 +95,8 @@ public static class UiProjectValidatorEditor
 
             if (path == MainScenePath)
             {
+                ValidateAchievements(objects, report);
+
                 var gallery = objects.Select(go => go.GetComponent<CollectionGallery>())
                     .FirstOrDefault(component => component != null);
                 if (gallery == null)
@@ -153,6 +155,36 @@ public static class UiProjectValidatorEditor
                     report.Warn(HierarchyPath(background) + ": фон лучше назвать BG_<Screen>_<Role>.");
             }
         }
+    }
+
+    private static void ValidateAchievements(GameObject[] objects, Report report)
+    {
+        var cards = objects.Select(go => go.GetComponent<AchievementCardView>())
+            .Where(card => card != null)
+            .Distinct()
+            .ToArray();
+
+        if (cards.Length == 0)
+        {
+            report.Error("MainScene: не найдены AchievementCardView.");
+            return;
+        }
+        if (cards.Length > 31)
+            report.Error("Достижений больше 31 — claimedAchievementMask больше не помещает все claimBit.");
+
+        var bits = new HashSet<int>();
+        foreach (var card in cards)
+        {
+            if (card.titleText == null) report.Error(card.name + ": не назначен titleText.");
+            if (card.descriptionText == null) report.Error(card.name + ": не назначен descriptionText.");
+            if (card.icon == null) report.Error(card.name + ": не назначена icon.");
+            if (card.target <= 0) report.Warn(card.name + ": target должен быть больше 0.");
+            if (card.rewardAmount <= 0) report.Warn(card.name + ": rewardAmount должен быть больше 0.");
+            if (card.claimBit < 0 || card.claimBit >= 31 || !bits.Add(card.claimBit))
+                report.Error(card.name + ": claimBit должен быть уникальным числом 0–30.");
+        }
+
+        report.Ok("Достижения: " + cards.Length + " карточек, claimBit проверены.");
     }
 
     private static void ValidateCatalog(Report report)

@@ -30,6 +30,7 @@ namespace Erudition
         public bool special;
         public AchievementRewardKind rewardKind;
         [Min(0)] public int rewardAmount = 100;
+        [Range(0, 30)] public int claimBit;
         public Text progressText;
         public RectTransform progressFill;
         public RectTransform progressTrack;

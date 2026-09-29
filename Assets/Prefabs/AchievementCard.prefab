@@ -260,6 +260,7 @@ MonoBehaviour:
   special: 0
   rewardKind: 0
   rewardAmount: 100
+  claimBit: 0
   progressText: {fileID: 2828646600849004680}
   progressFill: {fileID: 6455732040617303693}
   progressTrack: {fileID: 5793813561203588320}

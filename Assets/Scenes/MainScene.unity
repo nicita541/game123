@@ -10181,6 +10181,10 @@ PrefabInstance:
       propertyPath: rewardAmount
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: claimBit
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12009,6 +12013,10 @@ PrefabInstance:
       propertyPath: rewardAmount
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: claimBit
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13600,6 +13608,10 @@ PrefabInstance:
     - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
       propertyPath: rewardAmount
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: claimBit
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17944,6 +17956,10 @@ PrefabInstance:
     - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
       propertyPath: rewardAmount
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: claimBit
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24209,6 +24225,10 @@ PrefabInstance:
       propertyPath: rewardAmount
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: claimBit
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24591,6 +24611,10 @@ PrefabInstance:
     - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
       propertyPath: rewardAmount
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: claimBit
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28725,6 +28749,10 @@ PrefabInstance:
     - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
       propertyPath: rewardAmount
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1739673051075530013, guid: fd9d958f9eb53bc4d82339c10cbaeeb7, type: 3}
+      propertyPath: claimBit
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

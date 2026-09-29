@@ -869,7 +869,10 @@ namespace Erudition
 
         private bool AchievementClaimed(int index)
         {
-            return index >= 0 && index < 31 && (save.claimedAchievementMask & (1 << index)) != 0;
+            if (achievementCards == null || index < 0 || index >= achievementCards.Length || achievementCards[index] == null)
+                return false;
+            var bit = achievementCards[index].claimBit;
+            return bit >= 0 && bit < 31 && (save.claimedAchievementMask & (1 << bit)) != 0;
         }
 
         private string AchievementRewardDescription(int index)
@@ -905,7 +908,7 @@ namespace Erudition
                     break;
             }
 
-            save.claimedAchievementMask |= 1 << index;
+            save.claimedAchievementMask |= 1 << card.claimBit;
             Persist();
             presentation?.ClosePopup();
         }
