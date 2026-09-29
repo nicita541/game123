@@ -4,8 +4,10 @@ setlocal
 title Erudition - Android Release Build
 
 echo ==================================
-echo Building Android Release APK
+echo   BUILDING ANDROID RELEASE APK
 echo ==================================
+
+echo.
 
 call "%~dp0Build-Android.cmd"
 
@@ -15,8 +17,13 @@ if errorlevel 1 (
     exit /b 1
 )
 
+
 echo.
+echo ==================================
 echo Searching APK...
+echo ==================================
+
+set APK=
 
 for /f "delims=" %%i in ('dir /b /s "%~dp0Builds\Android\*.apk" ^| sort /r') do (
     set APK=%%i
@@ -31,38 +38,83 @@ if not defined APK (
     exit /b 1
 )
 
-echo APK:
+echo Found APK:
 echo %APK%
+
+
+set ZIPALIGN=D:\uni\uniti\6000.3.8f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\build-tools\36.0.0\zipalign.exe
+
+set APKSIGNER=D:\uni\uniti\6000.3.8f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\build-tools\36.0.0\apksigner.bat
+
 
 set KEYSTORE=%~dp0erudition-release.keystore
 
+
 if not exist "%KEYSTORE%" (
-    echo ERROR: keystore not found
+    echo ERROR: Keystore not found
     pause
     exit /b 1
 )
 
 
 echo.
-echo Signing APK...
+echo ==================================
+echo ZIPALIGN
+echo ==================================
+
+set ALIGNED=%APK:.apk=-aligned.apk%
+
+"%ZIPALIGN%" -f -p 4 "%APK%" "%ALIGNED%"
+
+if errorlevel 1 (
+    echo ZIPALIGN FAILED
+    pause
+    exit /b 1
+)
 
 
-set APKSIGNER=D:\uni\uniti\6000.3.8f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\build-tools\36.0.0\apksigner.bat
+echo.
+echo ==================================
+echo KEYSTORE PASSWORD
+echo ==================================
 
+set /p STOREPASS=Enter keystore password:
+
+
+echo.
+echo ==================================
+echo SIGNING APK
+echo ==================================
 
 "%APKSIGNER%" sign ^
 --ks "%KEYSTORE%" ^
 --ks-key-alias erudition ^
-"%APK%"
+--ks-pass pass:%STOREPASS% ^
+--key-pass pass:%STOREPASS% ^
+"%ALIGNED%"
+
+
+if errorlevel 1 (
+    echo SIGN FAILED
+    pause
+    exit /b 1
+)
 
 
 echo.
-echo Checking signature...
+echo ==================================
+echo VERIFY SIGNATURE
+echo ==================================
 
-"%APKSIGNER%" verify --verbose --print-certs "%APK%"
+"%APKSIGNER%" verify --verbose --print-certs "%ALIGNED%"
 
 
 echo.
+echo ==================================
 echo RELEASE BUILD COMPLETE
+echo ==================================
+
+echo Final APK:
+echo %ALIGNED%
 
 pause
