@@ -100,7 +100,7 @@ namespace Erudition
             if (gallery == null || index < 0 || index >= gallery.catalog.cards.Length) return;
             var definition = gallery.catalog.cards[index];
             var count = definition.Progress(save, entries);
-            var target = definition.ActualTarget(entries);
+            var target = definition.Target;
             detailTitle.text = definition.title;
             detailPicture.sprite = definition.picture;
             detailProgress.text = count + " / " + target + " пройдено";

@@ -322,6 +322,9 @@ MonoBehaviour:
     legacyGroup: 0
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 0
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_1
     title: "Л. Н. Толстой"
     picture: {fileID: -6907777403411581506, guid: 352a4fd5bcd85404aa9e611dbbcf9cc7, type: 3}
@@ -631,6 +634,9 @@ MonoBehaviour:
     legacyGroup: 0
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 50
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_2
     title: "Ф. М. Достоевский"
     picture: {fileID: 3968046763224376387, guid: 352a4fd5bcd85404aa9e611dbbcf9cc7, type: 3}
@@ -940,6 +946,9 @@ MonoBehaviour:
     legacyGroup: 0
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 100
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_3
     title: "А. П. Чехов"
     picture: {fileID: 4028803010496088073, guid: 352a4fd5bcd85404aa9e611dbbcf9cc7, type: 3}
@@ -1249,6 +1258,9 @@ MonoBehaviour:
     legacyGroup: 0
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 150
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_4
     title: "Н. В. Гоголь"
     picture: {fileID: -6234559738053928452, guid: 352a4fd5bcd85404aa9e611dbbcf9cc7, type: 3}
@@ -1558,6 +1570,9 @@ MonoBehaviour:
     legacyGroup: 0
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 200
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_5
     title: "И. С. Тургенев"
     picture: {fileID: 1506964622191146232, guid: 352a4fd5bcd85404aa9e611dbbcf9cc7, type: 3}
@@ -1867,6 +1882,9 @@ MonoBehaviour:
     legacyGroup: 0
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 250
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_6
     title: "Природа"
     picture: {fileID: -3387787167867064973, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
@@ -2176,6 +2194,9 @@ MonoBehaviour:
     legacyGroup: 1
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 300
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_7
     title: "Любовь"
     picture: {fileID: -5994961239908844190, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
@@ -2485,6 +2506,9 @@ MonoBehaviour:
     legacyGroup: 1
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 350
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_8
     title: "Мудрость"
     picture: {fileID: 4611972877900150593, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
@@ -2794,6 +2818,9 @@ MonoBehaviour:
     legacyGroup: 1
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 400
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_9
     title: "Поэзия"
     picture: {fileID: 5968730648519510990, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
@@ -3103,6 +3130,9 @@ MonoBehaviour:
     legacyGroup: 2
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 450
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_10
     title: "Романы"
     picture: {fileID: -1045984885715348020, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
@@ -3412,6 +3442,9 @@ MonoBehaviour:
     legacyGroup: 2
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 500
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_11
     title: "Сказки"
     picture: {fileID: -7193175555835798861, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
@@ -3721,6 +3754,9 @@ MonoBehaviour:
     legacyGroup: 2
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 550
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_12
     title: "Цитаты и мысли"
     picture: {fileID: -655518315096615809, guid: 1e4180681e02d784695d43decbfe4d9c, type: 3}
@@ -4030,6 +4066,9 @@ MonoBehaviour:
     legacyGroup: 3
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 600
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_13
     title: "Истории"
     picture: {fileID: -8941735663481320360, guid: 1e4180681e02d784695d43decbfe4d9c, type: 3}
@@ -4339,6 +4378,9 @@ MonoBehaviour:
     legacyGroup: 3
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 650
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_14
     title: "Пословицы"
     picture: {fileID: -7491126784752247881, guid: 1e4180681e02d784695d43decbfe4d9c, type: 3}
@@ -4648,6 +4690,9 @@ MonoBehaviour:
     legacyGroup: 3
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 700
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: legacy_15
     title: "Загадки"
     picture: {fileID: -6196868213774415188, guid: 1e4180681e02d784695d43decbfe4d9c, type: 3}
@@ -4957,6 +5002,9 @@ MonoBehaviour:
     legacyGroup: 3
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 750
+    cachedEntryCount: 50
+    cachedTarget: 50
   - id: e9044d5c0d5648ecb59f317870a4fffb
     title: "Маленькие открытия"
     picture: {fileID: -3387787167867064973, guid: bcddea258b0195040bc422c3dd6dd81f, type: 3}
@@ -5266,3 +5314,8 @@ MonoBehaviour:
     legacyGroup: 1
     legacyIndex: 0
     legacyTarget: 0
+    cachedEntryStart: 800
+    cachedEntryCount: 50
+    cachedTarget: 50
+  cacheVersion: 1
+  cachedEntryTotal: 850

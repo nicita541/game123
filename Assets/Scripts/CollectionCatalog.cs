@@ -26,19 +26,24 @@ namespace Erudition
         public Sprite picture;
         public CollectionGroup group;
         public CollectionPhrase[] phrases = Array.Empty<CollectionPhrase>();
-        // Compatibility with the original catalogue and accumulated counters.
+
+        // Compatibility with old serialized assets.
         [HideInInspector] public bool includeLegacy;
         [HideInInspector] public CollectionGroup legacyGroup;
         [HideInInspector] public int legacyIndex;
         [HideInInspector] public int legacyTarget;
 
+        // Precomputed in the Unity Editor. Runtime never recalculates these values.
+        [HideInInspector] public int cachedEntryStart;
+        [HideInInspector] public int cachedEntryCount;
+        [HideInInspector] public int cachedTarget;
+
+        public int Target => Math.Max(0, cachedTarget);
+
         public bool Contains(PuzzleEntry entry)
         {
+            if (entry == null) return false;
             if (entry.collectionId == id) return true;
-            // The level picker deduplicates identical texts. Solving that text
-            // through another collection must still count toward this one.
-            if (phrases.Any(p => p != null && CollectionCatalog.ValidText(p.text)
-                && PuzzleGenerator.TextKey(p.text) == PuzzleGenerator.TextKey(entry.text))) return true;
             if (!includeLegacy) return false;
             return legacyGroup == CollectionGroup.Authors ? entry.authorIndex == legacyIndex
                 : legacyGroup == CollectionGroup.Themes ? entry.themeIndex == legacyIndex
@@ -46,36 +51,42 @@ namespace Erudition
                 : (int)entry.kind == legacyIndex;
         }
 
-        // LegacyTarget is kept only so old serialized assets stay compatible.
-        // Runtime totals always come from the real unique phrases currently present in Entries.
-        public int Target => includeLegacy ? Math.Max(1, legacyTarget) : Math.Max(1,
-            phrases.Where(p => p != null && CollectionCatalog.ValidText(p.text))
-                .Select(p => PuzzleGenerator.TextKey(p.text)).Distinct().Count());
-
-        public int ActualTarget(PuzzleEntry[] entries)
+        public bool TryGetCachedRange(int entriesLength, out int start, out int count)
         {
-            if (entries == null) return Target;
-            return entries.Where(Contains)
-                .Select(e => PuzzleGenerator.TextKey(e.text))
-                .Distinct()
-                .Count();
+            start = cachedEntryStart;
+            count = cachedEntryCount;
+            return start >= 0 && count >= 0 && start <= entriesLength && start + count <= entriesLength;
+        }
+
+        public int Progress(ISet<string> solvedIds, PuzzleEntry[] entries)
+        {
+            if (solvedIds == null || entries == null || !TryGetCachedRange(entries.Length, out var start, out var count))
+                return 0;
+            var solved = 0;
+            var end = start + count;
+            for (var i = start; i < end; i++)
+                if (entries[i] != null && solvedIds.Contains(entries[i].id)) solved++;
+            return Math.Min(solved, Target);
         }
 
         public int Progress(GameSave save, PuzzleEntry[] entries)
         {
-            if (save == null || entries == null) return 0;
-            var solved = new HashSet<string>(save.solvedPuzzleIds.Split('|'));
-            return entries.Where(e => solved.Contains(e.id) && Contains(e))
-                .Select(e => PuzzleGenerator.TextKey(e.text))
-                .Distinct()
-                .Count();
+            if (save == null) return 0;
+            var solved = new HashSet<string>(save.solvedPuzzleIds.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries));
+            return Progress(solved, entries);
         }
     }
 
     [CreateAssetMenu(fileName = "CollectionCatalog", menuName = "Erudition/Collection Catalog")]
     public sealed class CollectionCatalog : ScriptableObject
     {
+        public const int RuntimeCacheVersion = 1;
+
         public CollectionDefinition[] cards = Array.Empty<CollectionDefinition>();
+        [HideInInspector] public int cacheVersion;
+        [HideInInspector] public int cachedEntryTotal;
+
+        public bool CacheReady => cacheVersion == RuntimeCacheVersion && cachedEntryTotal >= 0;
 
         public static bool ValidText(string text) => !string.IsNullOrWhiteSpace(text)
             && text.Any(c => c >= 'А' && c <= 'я' || c == 'Ё' || c == 'ё')
@@ -99,7 +110,6 @@ namespace Erudition
         }
 
 #if UNITY_EDITOR
-        private void OnValidate() { EnsureIds(); }
         public void EnsureIds()
         {
             var ids = new HashSet<string>();
@@ -114,6 +124,24 @@ namespace Erudition
                     { phrase.id = "phrase_" + Guid.NewGuid().ToString("N"); ids.Add(phrase.id); }
                 }
             }
+        }
+
+        public void RebuildRuntimeCache()
+        {
+            EnsureIds();
+            var entryStart = 0;
+            foreach (var card in cards)
+            {
+                var valid = (card.phrases ?? Array.Empty<CollectionPhrase>())
+                    .Where(phrase => phrase != null && ValidText(phrase.text) && !string.IsNullOrEmpty(phrase.id))
+                    .ToArray();
+                card.cachedEntryStart = entryStart;
+                card.cachedEntryCount = valid.Length;
+                card.cachedTarget = valid.Select(phrase => PuzzleGenerator.TextKey(phrase.text)).Distinct().Count();
+                entryStart += valid.Length;
+            }
+            cachedEntryTotal = entryStart;
+            cacheVersion = RuntimeCacheVersion;
         }
 #endif
     }

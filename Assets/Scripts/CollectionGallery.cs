@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,8 +13,14 @@ namespace Erudition
         public RectTransform[] containers;
         public CollectionCardView[] Cards { get; private set; } = new CollectionCardView[0];
 
+        private string lastSolvedIds;
+
         public void Build(CryptogramGame game)
         {
+            if (catalog == null) return;
+            if (!catalog.CacheReady)
+                Debug.LogError("CollectionCatalog cache is stale. In Unity run Tools/Erudition/Пересчитать кэш уровней.", catalog);
+
             Cards = new CollectionCardView[catalog.cards.Length];
             for (var i = 0; i < Cards.Length; i++)
             {
@@ -24,7 +32,7 @@ namespace Erudition
                 if (subtitle != null) subtitle.text = Subtitle(definition);
                 card.picture.sprite = definition.picture;
                 card.picture.preserveAspect = true;
-                card.target = definition.ActualTarget(game.Entries);
+                card.target = definition.Target;
                 foreach (var action in card.GetComponentsInChildren<UiAction>(true))
                     action.Configure(game, UiActionKind.CollectionLevel, i);
                 card.gameObject.SetActive(true);
@@ -65,11 +73,14 @@ namespace Erudition
 
         public void Refresh(GameSave save, PuzzleEntry[] entries)
         {
+            if (save == null || entries == null || Cards == null) return;
+            var solvedIdsText = save.solvedPuzzleIds ?? "";
+            if (solvedIdsText == lastSolvedIds) return;
+
+            var solved = new HashSet<string>(solvedIdsText.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries));
             for (var i = 0; i < Cards.Length; i++)
-            {
-                Cards[i].target = catalog.cards[i].ActualTarget(entries);
-                Cards[i].SetProgress(catalog.cards[i].Progress(save, entries));
-            }
+                Cards[i].SetProgress(catalog.cards[i].Progress(solved, entries));
+            lastSolvedIds = solvedIdsText;
         }
     }
 }

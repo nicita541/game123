@@ -500,9 +500,14 @@ namespace Erudition
             }
 
             var definition = catalog.cards[collectionIndex];
-            var availableIndices = Enumerable.Range(0, Entries.Length)
-                .Where(i => definition.Contains(Entries[i])
-                    && Entries[i].mode == PuzzleMode.Classic
+            if (!definition.TryGetCachedRange(Entries.Length, out var start, out var count))
+            {
+                Debug.LogError("Collection cache range is invalid. Rebuild the level cache in Unity.", catalog);
+                return;
+            }
+
+            var availableIndices = Enumerable.Range(start, count)
+                .Where(i => Entries[i].mode == PuzzleMode.Classic
                     && Entries[i].minimumErudition <= save.erudition)
                 .ToArray();
             if (availableIndices.Length == 0) return;
@@ -510,12 +515,7 @@ namespace Erudition
             // Prefer phrases the player has never completed. Repeats are allowed
             // only when every currently unlocked phrase in this card is already solved.
             var solvedIds = new HashSet<string>(save.solvedPuzzleIds.Split('|'));
-            var solvedTextKeys = new HashSet<string>(Entries
-                .Where(entry => solvedIds.Contains(entry.id))
-                .Select(entry => PuzzleGenerator.TextKey(entry.text)));
-            var freshIndices = availableIndices
-                .Where(i => !solvedTextKeys.Contains(PuzzleGenerator.TextKey(Entries[i].text)))
-                .ToArray();
+            var freshIndices = availableIndices.Where(i => !solvedIds.Contains(Entries[i].id)).ToArray();
             var poolIndices = freshIndices.Length > 0 ? freshIndices : availableIndices;
             var pool = poolIndices.Select(i => Entries[i]).ToArray();
 
