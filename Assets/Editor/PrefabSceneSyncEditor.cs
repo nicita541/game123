@@ -22,15 +22,17 @@ namespace Erudition.EditorTools
             public string label;
             public string prefabPath;
             public string preferredName;
+            public string prefabRootName;
             public Func<Scene, IEnumerable<GameObject>> find;
             public bool required = true;
 
             public Family(string label, string prefabPath, string preferredName,
-                Func<Scene, IEnumerable<GameObject>> find, bool required = true)
+                Func<Scene, IEnumerable<GameObject>> find, bool required = true, string prefabRootName = null)
             {
                 this.label = label;
                 this.prefabPath = prefabPath;
                 this.preferredName = preferredName;
+                this.prefabRootName = prefabRootName;
                 this.find = find;
                 this.required = required;
             }
@@ -64,9 +66,9 @@ namespace Erudition.EditorTools
             new Family("Блок наград", "Assets/Prefabs/RewardCard.prefab", "RewardsPanel",
                 scene => FindExact(scene, "RewardsPanel")),
             new Family("Экран подробностей", "Assets/Prefabs/CollectionDetails.prefab", "Screen_CollectionDetails",
-                scene => FindExact(scene, "Screen_CollectionDetails")),
+                scene => FindExact(scene, "Screen_CollectionDetails"), prefabRootName: "Screen_CollectionDetails"),
             new Family("Экран настроек", "Assets/Prefabs/SettingsScreen.prefab", "Screen_Settings",
-                scene => FindExact(scene, "Screen_Settings"))
+                scene => FindExact(scene, "Screen_Settings"), prefabRootName: "Screen_Settings")
         };
 
         private static readonly Family[] GameplayFamilies =
@@ -267,7 +269,7 @@ namespace Erudition.EditorTools
             if (!saved || prefab == null)
                 throw new InvalidOperationException("Не удалось обновить " + family.prefabPath);
 
-            NormalizePrefabRootName(family.prefabPath);
+            NormalizePrefabRootName(family.prefabPath, family.prefabRootName);
             prefab = AssetDatabase.LoadAssetAtPath<GameObject>(family.prefabPath);
             if (prefab == null)
                 throw new InvalidOperationException("Не удалось загрузить " + family.prefabPath);
@@ -315,7 +317,7 @@ namespace Erudition.EditorTools
             return true;
         }
 
-        private static void NormalizePrefabRootName(string prefabPath)
+        private static void NormalizePrefabRootName(string prefabPath, string rootNameOverride = null)
         {
             var root = PrefabUtility.LoadPrefabContents(prefabPath);
             if (root == null)
@@ -323,7 +325,9 @@ namespace Erudition.EditorTools
 
             try
             {
-                var desiredName = Path.GetFileNameWithoutExtension(prefabPath);
+                var desiredName = string.IsNullOrWhiteSpace(rootNameOverride)
+                    ? Path.GetFileNameWithoutExtension(prefabPath)
+                    : rootNameOverride;
                 if (!string.Equals(root.name, desiredName, StringComparison.Ordinal))
                 {
                     root.name = desiredName;

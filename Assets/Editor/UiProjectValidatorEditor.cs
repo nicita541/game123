@@ -213,7 +213,8 @@ public static class UiProjectValidatorEditor
         if (!catalog.CacheReady)
             report.Warn("CollectionCatalog: runtime-кэш устарел.");
         else
-            report.Ok("CollectionCatalog: " + catalog.cards.Length + " карточек, кэш готов.");
+            report.Ok("CollectionCatalog: " + (catalog.cards ?? Array.Empty<CollectionDefinition>()).Length
+                + " карточек, кэш готов.");
     }
 
     private static IEnumerable<GameObject> AllObjects(Scene scene)
