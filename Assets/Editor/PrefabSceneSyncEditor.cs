@@ -15,7 +15,7 @@ namespace Erudition.EditorTools
     {
         private const string MainScenePath = "Assets/Scenes/MainScene.unity";
         private const string GameplayScenePath = "Assets/Scenes/GameplayScene.unity";
-        private const string AutoSessionKey = "Erudition.PrefabSceneSync.AutoChecked.v1";
+        private const string AutoSessionKey = "Erudition.PrefabSceneSync.AutoChecked.v2";
 
         private sealed class Family
         {
@@ -153,8 +153,6 @@ namespace Erudition.EditorTools
                 return;
             }
 
-            SessionState.SetBool(AutoSessionKey, true);
-
             if (EditorApplication.isPlayingOrWillChangePlaymode || HasDirtyLoadedScene())
                 return;
 
@@ -162,7 +160,10 @@ namespace Erudition.EditorTools
             {
                 var before = ValidateInternal();
                 if (before.ok)
+                {
+                    SessionState.SetBool(AutoSessionKey, true);
                     return;
+                }
 
                 var report = RunSync();
                 var after = ValidateInternal();
@@ -173,6 +174,7 @@ namespace Erudition.EditorTools
                     return;
                 }
 
+                SessionState.SetBool(AutoSessionKey, true);
                 if (report.converted > 0)
                     Debug.Log("[PrefabSceneSync] Сцены переведены на настоящие prefab instances. " +
                               "Подключено объектов: " + report.converted + ".");
@@ -406,10 +408,10 @@ namespace Erudition.EditorTools
             if (go == null || !PrefabUtility.IsPartOfPrefabInstance(go))
                 return false;
 
-            var instanceRoot = PrefabUtility.GetOutermostPrefabInstanceRoot(go);
-            if (instanceRoot != go)
-                return false;
-
+            // Nested prefab instances are valid and expected here. For example,
+            // BottomNavigation can live inside SettingsScreen and Heart_01 inside TopBar.
+            // GetOutermostPrefabInstanceRoot would return the parent prefab and falsely
+            // report these objects as detached, so validate against the nearest prefab asset.
             var path = PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(go);
             return string.Equals(path, prefabPath, StringComparison.Ordinal);
         }
