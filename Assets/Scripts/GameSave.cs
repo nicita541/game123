@@ -35,12 +35,14 @@ namespace Erudition
     [Serializable]
     public sealed class GameSave
     {
-        public int version = 3;
+        public int version = 4;
         public int erudition;
         public int feathers = 5;
         public int reserveFeathers;
         public int hints = 2;
         public int coins;
+        public int claimedAchievementMask;
+        public long infiniteFeathersUntilUtcTicks;
         public List<string> recentTexts = new List<string>();
         public long nextFeatherUtcTicks;
         public int solved;
@@ -84,12 +86,14 @@ namespace Erudition
             // Keep every purchased feather when moving to one uncapped balance.
             feathers = (int)Math.Min(int.MaxValue, (long)Mathf.Max(0, feathers) + Mathf.Max(0, reserveFeathers));
             reserveFeathers = 0;
-            version = 3;
+            version = 4;
             if (feathers >= 5) nextFeatherUtcTicks = 0;
             if (recentTexts == null) recentTexts = new List<string>();
             while (recentTexts.Count > 10) recentTexts.RemoveAt(0);
             hints = Mathf.Max(0, hints);
             coins = Mathf.Max(0, coins);
+            claimedAchievementMask = Mathf.Max(0, claimedAchievementMask);
+            infiniteFeathersUntilUtcTicks = Math.Max(0, infiniteFeathersUntilUtcTicks);
             winsUntilInterstitial = Mathf.Clamp(winsUntilInterstitial, 0, 4);
             if (activityHistory == null) activityHistory = new List<ActivityDay>();
             if (likedPuzzleIds == null) likedPuzzleIds = "";
