@@ -16,9 +16,7 @@ public sealed class CollectionCatalogEditor : Editor
             "После любых изменений контента нажмите «Пересчитать runtime-кэш». " +
             "Во время игры количество фраз и диапазоны карточек больше не вычисляются.", MessageType.Info);
 
-        EditorGUI.BeginChangeCheck();
-        DrawDefaultInspector();
-        if (EditorGUI.EndChangeCheck())
+        if (DrawDefaultInspector())
         {
             catalog.cacheVersion = 0;
             EditorUtility.SetDirty(catalog);
