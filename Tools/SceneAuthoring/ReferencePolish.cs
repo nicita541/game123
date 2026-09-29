@@ -299,9 +299,9 @@ public static class ReferencePolish
     {
         var nav = screen.GetComponentsInChildren<Transform>(true).FirstOrDefault(item => item.name == "BottomNavigation");
         if (nav == null) return;
-        var names = new[] { "Home", "Statistics", "Levels", "Achievements", "Shop" };
-        var titles = new[] { "Главная", "Статистика", "Уровни", "Достижения", "Магазин" };
-        var icons = new[] { "Home", "Statistics", "Book", "Trophy", "Shop" };
+        var names = new[] { "Home", "Statistics", "Achievements", "Shop" };
+        var titles = new[] { "Главная", "Статистика", "Достижения", "Магазин" };
+        var icons = new[] { "Home", "Statistics", "Trophy", "Shop" };
         for (var i = 0; i < names.Length; i++)
         {
             var button = Find(nav, "Button_" + names[i]);
