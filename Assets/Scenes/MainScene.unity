@@ -27821,7 +27821,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813b12125601a2348a5d83afdd01be62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Erudition.CryptogramGame
-  library: {fileID: 11400000, guid: 9fd17812554bb4f47932b3b38caca5ae, type: 2}
   gallery: {fileID: 1735082598}
   hintOffer: {fileID: 1700658322}
   hintOfferMessage: {fileID: 878734381}

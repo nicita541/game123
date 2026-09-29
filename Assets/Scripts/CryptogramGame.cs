@@ -29,7 +29,6 @@ namespace Erudition
         private const int MaxFeathers = 5;
         private const int FeatherRestoreMinutes = 20;
 
-        public PuzzleLibrary library;
         public CollectionGallery gallery;
         public GameObject hintOffer;
         public Text hintOfferMessage;
@@ -112,7 +111,7 @@ namespace Erudition
         private Text infiniteFeatherTimer;
         private GameObject infiniteFeatherTimerPanel;
         public static CryptogramGame Current { get; private set; }
-        public PuzzleEntry[] Entries => puzzles ?? (puzzles = PuzzleGenerator.Build(library, gallery == null ? null : gallery.catalog));
+        public PuzzleEntry[] Entries => puzzles ?? (puzzles = PuzzleGenerator.Build(gallery == null ? null : gallery.catalog));
         private bool hintRewardPending;
 
         public int Hints => save == null ? 0 : save.hints;
@@ -143,13 +142,6 @@ namespace Erudition
             }
             save = SaveStore.Load();
             ResolveSavedPuzzles();
-            if (!save.kindProgressInitialized)
-            {
-                var solvedIds = new HashSet<string>(save.solvedPuzzleIds.Split('|'));
-                foreach (var entry in Entries.Where(entry => solvedIds.Contains(entry.id))) save.kindProgress[(int)entry.kind]++;
-                save.kindProgressInitialized = true;
-                SaveStore.Save(save);
-            }
             if (save.winsUntilInterstitial == 0) save.winsUntilInterstitial = UnityEngine.Random.Range(2, 5);
             RollDailyWindow();
             if (save.activityHistory.Count == 0)
@@ -454,16 +446,6 @@ namespace Erudition
             save.bestStreak = Mathf.Max(save.bestStreak, save.streak);
             save.classicSolved++;
             var solvedBefore = new HashSet<string>(save.solvedPuzzleIds.Split('|'));
-            var completedTextKey = PuzzleGenerator.TextKey(entry.text);
-            var firstUniqueSolve = !Entries.Any(e => solvedBefore.Contains(e.id)
-                && PuzzleGenerator.TextKey(e.text) == completedTextKey);
-            if (firstUniqueSolve)
-            {
-                save.kindProgress[(int)entry.kind]++;
-                if (entry.authorIndex >= 0 && entry.authorIndex < save.authorProgress.Length) save.authorProgress[entry.authorIndex]++;
-                if (entry.themeIndex >= 0 && entry.themeIndex < save.themeProgress.Length) save.themeProgress[entry.themeIndex]++;
-                if (entry.bookIndex >= 0 && entry.bookIndex < save.bookProgress.Length) save.bookProgress[entry.bookIndex]++;
-            }
             if (board.MistakesInLevel == 0) save.perfectWins++;
             RollDailyWindow();
             save.dailySolved[6]++;

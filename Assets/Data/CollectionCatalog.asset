@@ -623,10 +623,6 @@ MonoBehaviour:
       kind: 0
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 0
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 0
     cachedEntryCount: 50
     cachedTarget: 50
@@ -1235,10 +1231,6 @@ MonoBehaviour:
       kind: 0
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 0
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 50
     cachedEntryCount: 50
     cachedTarget: 50
@@ -1848,10 +1840,6 @@ MonoBehaviour:
       kind: 0
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 0
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 100
     cachedEntryCount: 50
     cachedTarget: 50
@@ -2461,10 +2449,6 @@ MonoBehaviour:
       kind: 0
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 0
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 150
     cachedEntryCount: 50
     cachedTarget: 50
@@ -3072,10 +3056,6 @@ MonoBehaviour:
       kind: 0
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 0
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 200
     cachedEntryCount: 50
     cachedTarget: 50
@@ -3684,10 +3664,6 @@ MonoBehaviour:
       kind: 0
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 0
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 250
     cachedEntryCount: 50
     cachedTarget: 50
@@ -4275,10 +4251,6 @@ MonoBehaviour:
       kind: 1
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 1
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 300
     cachedEntryCount: 50
     cachedTarget: 50
@@ -4870,10 +4842,6 @@ MonoBehaviour:
       kind: 0
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 1
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 350
     cachedEntryCount: 50
     cachedTarget: 50
@@ -5463,10 +5431,6 @@ MonoBehaviour:
       kind: 0
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 1
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 400
     cachedEntryCount: 50
     cachedTarget: 50
@@ -6036,10 +6000,6 @@ MonoBehaviour:
       kind: 0
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 2
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 450
     cachedEntryCount: 50
     cachedTarget: 50
@@ -6662,10 +6622,6 @@ MonoBehaviour:
       kind: 1
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 2
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 500
     cachedEntryCount: 50
     cachedTarget: 50
@@ -7283,10 +7239,6 @@ MonoBehaviour:
       kind: 1
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 2
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 550
     cachedEntryCount: 50
     cachedTarget: 50
@@ -7875,10 +7827,6 @@ MonoBehaviour:
       kind: 0
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 3
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 600
     cachedEntryCount: 50
     cachedTarget: 50
@@ -8497,10 +8445,6 @@ MonoBehaviour:
       kind: 1
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 3
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 650
     cachedEntryCount: 50
     cachedTarget: 50
@@ -9072,10 +9016,6 @@ MonoBehaviour:
       kind: 2
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 3
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 700
     cachedEntryCount: 50
     cachedTarget: 50
@@ -9744,10 +9684,6 @@ MonoBehaviour:
       kind: 3
       minimumErudition: 560
       answer: "\u0421\u0432\u0435\u0447\u0430"
-    includeLegacy: 0
-    legacyGroup: 3
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 750
     cachedEntryCount: 50
     cachedTarget: 50
@@ -10372,10 +10308,6 @@ MonoBehaviour:
       kind: 1
       minimumErudition: 560
       answer: 
-    includeLegacy: 0
-    legacyGroup: 1
-    legacyIndex: 0
-    legacyTarget: 0
     cachedEntryStart: 800
     cachedEntryCount: 50
     cachedTarget: 50

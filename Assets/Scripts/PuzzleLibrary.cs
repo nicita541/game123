@@ -19,14 +19,5 @@ namespace Erudition
         public int minimumErudition;
         public PuzzleKind kind;
         public string answer;
-        [Range(-1, 5)] public int authorIndex = -1;
-        [Range(-1, 2)] public int themeIndex;
-        [Range(-1, 2)] public int bookIndex;
-    }
-
-    [CreateAssetMenu(fileName = "PuzzleLibrary", menuName = "Erudition/Puzzle Library")]
-    public sealed class PuzzleLibrary : ScriptableObject
-    {
-        public PuzzleEntry[] entries = Array.Empty<PuzzleEntry>();
     }
 }

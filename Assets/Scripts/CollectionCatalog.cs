@@ -40,12 +40,6 @@ namespace Erudition
         }
         public CollectionPhrase[] phrases = Array.Empty<CollectionPhrase>();
 
-        // Compatibility with old serialized assets.
-        [HideInInspector] public bool includeLegacy;
-        [HideInInspector] public CollectionGroup legacyGroup;
-        [HideInInspector] public int legacyIndex;
-        [HideInInspector] public int legacyTarget;
-
         // Precomputed in the Unity Editor. Runtime never recalculates these values.
         [HideInInspector] public int cachedEntryStart;
         [HideInInspector] public int cachedEntryCount;
@@ -55,13 +49,7 @@ namespace Erudition
 
         public bool Contains(PuzzleEntry entry)
         {
-            if (entry == null) return false;
-            if (entry.collectionId == id) return true;
-            if (!includeLegacy) return false;
-            return legacyGroup == CollectionGroup.Authors ? entry.authorIndex == legacyIndex
-                : legacyGroup == CollectionGroup.Themes ? entry.themeIndex == legacyIndex
-                : legacyGroup == CollectionGroup.Books ? entry.bookIndex == legacyIndex
-                : (int)entry.kind == legacyIndex;
+            return entry != null && entry.collectionId == id;
         }
 
         public bool TryGetCachedRange(int entriesLength, out int start, out int count)
@@ -114,10 +102,7 @@ namespace Erudition
                     yield return new PuzzleEntry {
                         id = phrase.id, collectionId = card.id, text = phrase.text.Trim(),
                         source = string.IsNullOrWhiteSpace(phrase.source) ? card.title : phrase.source,
-                        minimumErudition = phrase.minimumErudition, kind = phrase.kind, answer = phrase.answer,
-                        authorIndex = card.includeLegacy && card.legacyGroup == CollectionGroup.Authors ? card.legacyIndex : -1,
-                        themeIndex = card.includeLegacy && card.legacyGroup == CollectionGroup.Themes ? card.legacyIndex : -1,
-                        bookIndex = card.includeLegacy && card.legacyGroup == CollectionGroup.Books ? card.legacyIndex : -1
+                        minimumErudition = phrase.minimumErudition, kind = phrase.kind, answer = phrase.answer
                     };
                 }
         }

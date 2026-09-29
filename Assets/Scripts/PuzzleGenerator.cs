@@ -21,12 +21,10 @@ namespace Erudition
             return Math.Min(letters - 1, amount);
         }
 
-        // The live game now has one authored database: CollectionCatalog.
-        // Legacy generators and PuzzleLibrary phrases are intentionally excluded.
-        public static PuzzleEntry[] Build(PuzzleLibrary library, CollectionCatalog catalog = null)
+        // The live game has one authored database: CollectionCatalog.
+        public static PuzzleEntry[] Build(CollectionCatalog catalog)
         {
-            if (catalog != null) return catalog.Build().ToArray();
-            return library?.entries ?? Array.Empty<PuzzleEntry>();
+            return catalog == null ? Array.Empty<PuzzleEntry>() : catalog.Build().ToArray();
         }
     }
 }
