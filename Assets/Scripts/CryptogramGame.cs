@@ -714,7 +714,7 @@ namespace Erudition
             for (var i = 0; collectionTabs != null && i < collectionTabs.Length; i++)
             {
                 var image = collectionTabs[i].GetComponent<Image>();
-                if (image != null) image.color = i == collectionTab ? new Color(0.16f, 0.49f, 0.95f) : new Color(0.95f, 0.96f, 0.99f);
+                if (image != null) image.color = i == collectionTab ? new Color(0.16f, 0.49f, 0.95f) : new Color32(101, 101, 101, 5);
                 var text = collectionTabs[i].GetComponentInChildren<Text>();
                 if (text != null) text.color = i == collectionTab ? Color.white : new Color(0.2f, 0.19f, 0.38f);
             }
