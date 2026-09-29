@@ -459,32 +459,126 @@ namespace Erudition
         {
             if (columns <= 0 || cells == null || cells.Length == 0) return null;
             var rows = cells.Length / columns;
-            var items = new List<LayoutItem>();
-            var row = 0;
-            var column = 0;
-            foreach (var word in phrase.ToUpperInvariant().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
+            var words = phrase.ToUpperInvariant()
+                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            if (words.Length == 0 || words.Any(word => word.Length > columns)) return null;
+
+            // Keep one-letter Russian words/prepositions together with the word
+            // that follows them. This prevents lonely "И", "А", "В", "К", etc.
+            // from hanging at the far edge of one row while the related word
+            // starts on the next row.
+            var units = new List<string>();
+            for (var i = 0; i < words.Length; i++)
             {
-                if (word.Length > columns) return null;
-                if (column > 0 && column + 1 + word.Length > columns) { row++; column = 0; }
-                else if (column > 0) { items.Add(new LayoutItem { slot = row * columns + column, character = ' ' }); column++; }
-                if (row >= rows) return null;
-                foreach (var character in word)
+                if (IsSingleLetterWord(words[i]) && i + 1 < words.Length)
                 {
-                    if (column >= columns) return null;
-                    items.Add(new LayoutItem { slot = row * columns + column, character = character });
-                    column++;
+                    var combined = words[i];
+                    var end = i;
+                    while (end + 1 < words.Length && IsSingleLetterWord(words[end]))
+                    {
+                        var candidate = combined + " " + words[end + 1];
+                        if (candidate.Length > columns) break;
+                        combined = candidate;
+                        end++;
+                    }
+
+                    if (end > i)
+                    {
+                        units.Add(combined);
+                        i = end;
+                        continue;
+                    }
+                }
+
+                units.Add(words[i]);
+            }
+
+            // First determine the minimum number of rows required by these
+            // glued units. Then choose better line breaks with dynamic
+            // programming so the rows are visually balanced instead of using
+            // the old purely greedy wrapping.
+            var lineCount = 1;
+            var used = 0;
+            foreach (var unit in units)
+            {
+                if (used > 0 && used + 1 + unit.Length > columns)
+                {
+                    lineCount++;
+                    used = unit.Length;
+                }
+                else
+                {
+                    used += (used > 0 ? 1 : 0) + unit.Length;
                 }
             }
-            var rowOffset = content == null ? Mathf.Max(0, (rows - row - 1) / 2) : 0;
-            var centered = new List<LayoutItem>();
-            foreach (var line in items.GroupBy(item => item.slot / columns))
+            if (lineCount > rows) return null;
+
+            const int infinity = int.MaxValue / 4;
+            var cost = new int[units.Count + 1, lineCount + 1];
+            var next = new int[units.Count + 1, lineCount + 1];
+            for (var i = 0; i <= units.Count; i++)
+                for (var remaining = 0; remaining <= lineCount; remaining++)
+                {
+                    cost[i, remaining] = infinity;
+                    next[i, remaining] = -1;
+                }
+            cost[units.Count, 0] = 0;
+
+            for (var remaining = 1; remaining <= lineCount; remaining++)
             {
-                var used = line.Max(item => item.slot % columns) + 1;
-                var horizontalOffset = (columns - used) / 2;
-                foreach (var item in line)
-                    centered.Add(new LayoutItem { slot = item.slot + rowOffset * columns + horizontalOffset, character = item.character });
+                for (var start = units.Count - 1; start >= 0; start--)
+                {
+                    var lineLength = 0;
+                    for (var end = start; end < units.Count; end++)
+                    {
+                        lineLength += (end > start ? 1 : 0) + units[end].Length;
+                        if (lineLength > columns) break;
+                        if (cost[end + 1, remaining - 1] >= infinity) continue;
+
+                        var slack = columns - lineLength;
+                        var candidateCost = slack * slack + cost[end + 1, remaining - 1];
+                        if (candidateCost >= cost[start, remaining]) continue;
+                        cost[start, remaining] = candidateCost;
+                        next[start, remaining] = end + 1;
+                    }
+                }
             }
-            return centered;
+
+            if (next[0, lineCount] < 0) return null;
+
+            var lines = new List<string>(lineCount);
+            var unitIndex = 0;
+            var linesLeft = lineCount;
+            while (linesLeft > 0)
+            {
+                var end = next[unitIndex, linesLeft];
+                if (end <= unitIndex) return null;
+                lines.Add(string.Join(" ", units.Skip(unitIndex).Take(end - unitIndex)));
+                unitIndex = end;
+                linesLeft--;
+            }
+
+            var rowOffset = content == null ? Mathf.Max(0, (rows - lines.Count) / 2) : 0;
+            var result = new List<LayoutItem>();
+            for (var row = 0; row < lines.Count; row++)
+            {
+                var line = lines[row];
+                var horizontalOffset = (columns - line.Length) / 2;
+                for (var column = 0; column < line.Length; column++)
+                {
+                    result.Add(new LayoutItem
+                    {
+                        slot = (row + rowOffset) * columns + horizontalOffset + column,
+                        character = line[column]
+                    });
+                }
+            }
+            return result;
+        }
+
+        private static bool IsSingleLetterWord(string word)
+        {
+            return word.Count(char.IsLetter) == 1;
         }
     }
 }
