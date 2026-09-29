@@ -4,7 +4,7 @@ namespace Erudition
 {
     public enum UiActionKind
     {
-        Home, CollectionDetails, Classic, Turbo, Statistics, Collections, Achievements, Shop,
+        Home, CollectionDetails, Classic, Turbo, Statistics, Levels, Achievements, Shop,
         Settings, Back, Continue, Hint, Check, RewardVictory, RewardFeather,
         BuyFiveFeathers, BuyFifteenFeathers, BuyFiveHints, PremiumUnavailable,
         CollectionTab, AchievementTab, ToggleSetting, Debug, DebugAddErudition,
