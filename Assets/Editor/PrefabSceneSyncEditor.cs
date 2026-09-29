@@ -69,14 +69,16 @@ namespace Erudition.EditorTools
 
         private static readonly Family[] GameplayFamilies =
         {
-            new Family("Верхняя панель", "Assets/Prefabs/TopBar.prefab", "TopBar",
-                scene => FindExact(scene, "TopBar")),
+            // First connect reusable children. TopBar is processed afterwards so its
+            // prefab contains these objects as nested prefab instances instead of copies.
             new Family("Плашка эрудиции", "Assets/Prefabs/EruditionBadge.prefab", "EruditionBadge",
                 scene => FindExact(scene, "EruditionBadge")),
             new Family("Кнопка подсказки", "Assets/Prefabs/HintButton.prefab", "Button_Hint",
                 scene => FindExact(scene, "Button_Hint")),
             new Family("Сердца", "Assets/Prefabs/HeartIndicator.prefab", "Heart_01",
                 scene => FindPrefix(scene, "Heart_")),
+            new Family("Верхняя панель", "Assets/Prefabs/TopBar.prefab", "TopBar",
+                scene => FindExact(scene, "TopBar")),
             new Family("Клетки криптограммы", "Assets/Prefabs/LetterCell.prefab", "Cell_000",
                 FindLetterCells)
         };
