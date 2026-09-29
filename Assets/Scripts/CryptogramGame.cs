@@ -771,14 +771,26 @@ namespace Erudition
 
             if (mainFeathers != null)
             {
-                // Never print the countdown next to the energy value: the timer is the
-                // authored radial ring around the + button.
-                mainFeathers.text = featherValue;
                 var size = mainFeathers.rectTransform.sizeDelta;
                 size.x = mainFeathersBaseWidth;
                 mainFeathers.rectTransform.sizeDelta = size;
-                mainFeathers.fontSize = mainFeathersBaseFontSize;
                 mainFeathers.resizeTextForBestFit = false;
+
+                if (infinite)
+                {
+                    // Keep the normal counter composition: infinity is the main value,
+                    // while the precise countdown is a small integrated caption below it.
+                    // This avoids the large floating timer that overlapped the header.
+                    mainFeathers.fontSize = Mathf.Min(mainFeathersBaseFontSize, 50);
+                    mainFeathers.lineSpacing = 0.65f;
+                    mainFeathers.text = "∞\n<size=24><color=#FFD56A>" + InfiniteFeathersRemainingText() + "</color></size>";
+                }
+                else
+                {
+                    mainFeathers.fontSize = mainFeathersBaseFontSize;
+                    mainFeathers.lineSpacing = 1f;
+                    mainFeathers.text = featherValue;
+                }
             }
 
             if (infiniteFeatherRing != null)
