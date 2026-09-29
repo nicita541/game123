@@ -204,7 +204,7 @@ namespace Erudition
             if (index < 0 || index >= cells.Length || !cells[index].gameObject.activeSelf || !cells[index].IsHiddenLetter) return;
             selectedCode = cells[index].Code;
             selectedSlot = index;
-            foreach (var cell in cells) if (cell.gameObject.activeSelf) cell.SetSelected(cell.Code == selectedCode, cell == cells[index]);
+            foreach (var cell in cells) if (cell.gameObject.activeSelf) cell.SetSelected(cell == cells[index], cell == cells[index]);
             feedbackText.text = "";
             EnsureVisible(index);
             game?.StorePuzzleProgress(this);
