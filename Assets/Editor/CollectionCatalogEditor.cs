@@ -32,6 +32,19 @@ public sealed class CollectionCatalogEditor : Editor
                 { Debug.LogWarning("Укажите название и картинку: " + card.title, catalog); warnings++; }
                 if (!card.includeLegacy && card.phrases.Length == 0)
                 { Debug.LogWarning("Нет фраз: " + card.title, catalog); warnings++; }
+                for (var tier = 0; tier < PuzzleGenerator.Thresholds.Length; tier++)
+                {
+                    var threshold = PuzzleGenerator.Thresholds[tier];
+                    var tierCount = card.phrases.Count(phrase => phrase != null
+                        && CollectionCatalog.ValidText(phrase.text)
+                        && phrase.minimumErudition == threshold);
+                    if (tierCount != 10)
+                    {
+                        Debug.LogWarning(card.title + ": для уровня " + PuzzleGenerator.DifficultyName(threshold)
+                            + " нужно 10 фраз, сейчас " + tierCount, catalog);
+                        warnings++;
+                    }
+                }
                 foreach (var phrase in card.phrases)
                 {
                     if (!CollectionCatalog.ValidText(phrase.text))

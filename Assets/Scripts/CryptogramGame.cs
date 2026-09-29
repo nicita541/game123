@@ -500,28 +500,29 @@ namespace Erudition
             }
 
             var definition = catalog.cards[collectionIndex];
-            var candidateIndices = Enumerable.Range(0, Entries.Length)
-                .Where(i => definition.Contains(Entries[i]))
+            var availableIndices = Enumerable.Range(0, Entries.Length)
+                .Where(i => definition.Contains(Entries[i])
+                    && Entries[i].mode == PuzzleMode.Classic
+                    && Entries[i].minimumErudition <= save.erudition)
                 .ToArray();
-            if (candidateIndices.Length == 0) return;
+            if (availableIndices.Length == 0) return;
 
-            var candidates = candidateIndices.Select(i => Entries[i]).ToArray();
-            var selected = PuzzleSelection.Choose(candidates, PuzzleMode.Classic, save.erudition, save.recentTexts,
+            // Prefer phrases the player has never completed. Repeats are allowed
+            // only when every currently unlocked phrase in this card is already solved.
+            var solvedIds = new HashSet<string>(save.solvedPuzzleIds.Split('|'));
+            var solvedTextKeys = new HashSet<string>(Entries
+                .Where(entry => solvedIds.Contains(entry.id))
+                .Select(entry => PuzzleGenerator.TextKey(entry.text)));
+            var freshIndices = availableIndices
+                .Where(i => !solvedTextKeys.Contains(PuzzleGenerator.TextKey(Entries[i].text)))
+                .ToArray();
+            var poolIndices = freshIndices.Length > 0 ? freshIndices : availableIndices;
+            var pool = poolIndices.Select(i => Entries[i]).ToArray();
+
+            var selected = PuzzleSelection.Choose(pool, PuzzleMode.Classic, save.erudition, save.recentTexts,
                 board.CanFit, count => UnityEngine.Random.Range(0, count));
-
-            // A card should always be playable. If its easiest authored phrase is
-            // above the current erudition, use that lowest tier instead of doing nothing.
-            if (selected < 0)
-            {
-                var classicCandidates = candidates.Where(entry => entry.mode == PuzzleMode.Classic).ToArray();
-                if (classicCandidates.Length == 0) return;
-                var minimumErudition = classicCandidates.Min(entry => entry.minimumErudition);
-                selected = PuzzleSelection.Choose(candidates, PuzzleMode.Classic, minimumErudition, save.recentTexts,
-                    board.CanFit, count => UnityEngine.Random.Range(0, count));
-            }
-
-            if (selected < 0 || selected >= candidateIndices.Length) return;
-            StartClassicPuzzle(candidateIndices[selected]);
+            if (selected < 0 || selected >= poolIndices.Length) return;
+            StartClassicPuzzle(poolIndices[selected]);
         }
 
         private int ChoosePuzzle(PuzzleMode mode, PuzzleBoard board)
