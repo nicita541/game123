@@ -81,16 +81,8 @@ namespace Erudition
         public Text statsAccuracy;
         public Text statsStreak;
         public Text statsBest;
-        public RectTransform statsProgressFill;
-        public RectTransform[] activityBars;
-        public Text[] activityDayLabels;
-
         public GameObject[] collectionGroups;
         public Button[] collectionTabs;
-        public CollectionCardView[] authorCards;
-        public CollectionCardView[] themeCards;
-        public CollectionCardView[] bookCards;
-        public CollectionCardView[] kindCards;
         public Button[] achievementTabs;
         public AchievementCardView[] achievementCards;
         public Text[] settingValues;
@@ -932,18 +924,11 @@ namespace Erudition
             if (statsAccuracy != null) statsAccuracy.text = (save.guesses == 0 ? 100 : Mathf.RoundToInt(100f * (save.guesses - save.mistakes) / save.guesses)) + "%";
             if (statsStreak != null) statsStreak.text = save.streak.ToString();
             if (statsBest != null) statsBest.text = save.bestStreak.ToString();
-            var days = new[] { "ВС", "ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ" };
-            for (var i = 0; activityDayLabels != null && i < activityDayLabels.Length; i++)
-                activityDayLabels[i].text = days[(int)DateTime.UtcNow.Date.AddDays(i - 6).DayOfWeek];
         }
 
         private void UpdateCollections()
         {
-            if (gallery != null) { gallery.Refresh(save, Entries); return; }
-            for (var i = 0; kindCards != null && i < Math.Min(kindCards.Length, save.kindProgress.Length); i++) kindCards[i].SetProgress(save.kindProgress[i]);
-            for (var i = 0; authorCards != null && i < Math.Min(authorCards.Length, save.authorProgress.Length); i++) authorCards[i].SetProgress(save.authorProgress[i]);
-            for (var i = 0; themeCards != null && i < Math.Min(themeCards.Length, save.themeProgress.Length); i++) themeCards[i].SetProgress(save.themeProgress[i]);
-            for (var i = 0; bookCards != null && i < Math.Min(bookCards.Length, save.bookProgress.Length); i++) bookCards[i].SetProgress(save.bookProgress[i]);
+            gallery?.Refresh(save, Entries);
         }
 
         private void ShowCollectionTab(int tab)

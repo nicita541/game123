@@ -97,6 +97,29 @@ public static class UiProjectValidatorEditor
             {
                 ValidateAchievements(objects, report);
 
+                var game = objects.Select(go => go.GetComponent<CryptogramGame>())
+                    .FirstOrDefault(component => component != null);
+                if (game == null)
+                {
+                    report.Error("MainScene: не найден CryptogramGame.");
+                }
+                else
+                {
+                    ValidateHubScreen(game.mainMenuScreen, "mainMenuScreen", report);
+                    ValidateHubScreen(game.collectionDetailsScreen, "collectionDetailsScreen", report);
+                    ValidateHubScreen(game.victoryScreen, "victoryScreen", report);
+                    ValidateHubScreen(game.noFeathersScreen, "noFeathersScreen", report);
+                    ValidateHubScreen(game.statisticsScreen, "statisticsScreen", report);
+                    ValidateHubScreen(game.levelsScreen, "levelsScreen", report);
+                    ValidateHubScreen(game.achievementsScreen, "achievementsScreen", report);
+                    ValidateHubScreen(game.shopScreen, "shopScreen", report);
+                    ValidateHubScreen(game.settingsScreen, "settingsScreen", report);
+                    ValidateHubScreen(game.debugScreen, "debugScreen", report);
+                    ValidateHubScreen(game.defeatScreen, "defeatScreen", report);
+                    if (game.classicBoard != null)
+                        report.Warn("MainScene: classicBoard должен приходить из GameplayScene, а не быть сериализован в Hub.");
+                }
+
                 var gallery = objects.Select(go => go.GetComponent<CollectionGallery>())
                     .FirstOrDefault(component => component != null);
                 if (gallery == null)
@@ -155,6 +178,17 @@ public static class UiProjectValidatorEditor
                     report.Warn(HierarchyPath(background) + ": фон лучше назвать BG_<Screen>_<Role>.");
             }
         }
+    }
+
+    private static void ValidateHubScreen(GameObject screen, string fieldName, Report report)
+    {
+        if (screen == null)
+        {
+            report.Error("CryptogramGame: не назначен " + fieldName + ".");
+            return;
+        }
+        if (!screen.name.StartsWith("Screen_", StringComparison.Ordinal))
+            report.Warn("CryptogramGame." + fieldName + ": объект лучше называть Screen_* (" + screen.name + ").");
     }
 
     private static void ValidateAchievements(GameObject[] objects, Report report)

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace Erudition
@@ -47,10 +46,6 @@ namespace Erudition
                 Cards[i] = card;
             }
             template.gameObject.SetActive(false);
-            game.authorCards = Group(CollectionGroup.Authors);
-            game.themeCards = Group(CollectionGroup.Themes);
-            game.bookCards = Group(CollectionGroup.Books);
-            game.kindCards = Group(CollectionGroup.Kinds);
         }
 
         private RectTransform ContainerFor(CollectionGroup group)
@@ -64,9 +59,6 @@ namespace Erudition
                 default: return null;
             }
         }
-
-        private CollectionCardView[] Group(CollectionGroup group) => Cards
-            .Where((card, index) => card != null && catalog.cards[index].group == group).ToArray();
 
         public void Refresh(GameSave save, PuzzleEntry[] entries)
         {

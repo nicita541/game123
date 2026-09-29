@@ -27866,9 +27866,6 @@ MonoBehaviour:
   statsAccuracy: {fileID: 2177}
   statsStreak: {fileID: 2189}
   statsBest: {fileID: 2201}
-  statsProgressFill: {fileID: 2151}
-  activityBars: []
-  activityDayLabels: []
   collectionGroups:
   - {fileID: 1691753273}
   - {fileID: 1235838489}
@@ -27879,10 +27876,6 @@ MonoBehaviour:
   - {fileID: 2312}
   - {fileID: 2321}
   - {fileID: 8810000000000000004}
-  authorCards: []
-  themeCards: []
-  bookCards: []
-  kindCards: []
   achievementTabs:
   - {fileID: 2531}
   - {fileID: 2540}
