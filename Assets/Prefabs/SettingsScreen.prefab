@@ -160,6 +160,7 @@ GameObject:
   - component: {fileID: 2033095581718717163}
   - component: {fileID: 512047784677835176}
   - component: {fileID: 7863834113001112003}
+  - component: {fileID: 9100000000000000102}
   m_Layer: 5
   m_Name: SettingRow_2
   m_TagString: Untagged
@@ -837,6 +838,7 @@ GameObject:
   - component: {fileID: 6983348490754365988}
   - component: {fileID: 5833210733052318641}
   - component: {fileID: 2729277024040322524}
+  - component: {fileID: 9100000000000000100}
   m_Layer: 5
   m_Name: SettingRow_0
   m_TagString: Untagged
@@ -2518,6 +2520,7 @@ GameObject:
   - component: {fileID: 3354497087309071921}
   - component: {fileID: 1415046086834530824}
   - component: {fileID: 8129316188311548005}
+  - component: {fileID: 9100000000000000101}
   m_Layer: 5
   m_Name: SettingRow_1
   m_TagString: Untagged
@@ -2762,6 +2765,7 @@ GameObject:
   - component: {fileID: 8668479983001380646}
   - component: {fileID: 7828051130018914594}
   - component: {fileID: 3858007065518587388}
+  - component: {fileID: 9100000000000000103}
   m_Layer: 5
   m_Name: SettingRow_3
   m_TagString: Untagged
@@ -4086,3 +4090,75 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9100000000000000100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551067755363555249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef4274dde874fa9ba8efaf62a49b09b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Erudition.SettingRowView
+  kind: 0
+  stateText: {fileID: 4612153312445529962}
+  track: {fileID: 3415929252359316134}
+  thumb: {fileID: 643723586840520749}
+  onPosition: {fileID: 804894595524396206}
+  offPosition: {fileID: 1293585017625915996}
+--- !u!114 &9100000000000000101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6500413406852753017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef4274dde874fa9ba8efaf62a49b09b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Erudition.SettingRowView
+  kind: 1
+  stateText: {fileID: 4518647042343032136}
+  track: {fileID: 7308745468791357324}
+  thumb: {fileID: 5206399395313662139}
+  onPosition: {fileID: 4476350071583088376}
+  offPosition: {fileID: 465699723746695046}
+--- !u!114 &9100000000000000102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598203192378125095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef4274dde874fa9ba8efaf62a49b09b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Erudition.SettingRowView
+  kind: 2
+  stateText: {fileID: 3784133781663729889}
+  track: {fileID: 9095758540286078392}
+  thumb: {fileID: 5689994400543288086}
+  onPosition: {fileID: 6917977577010407516}
+  offPosition: {fileID: 4914405137520245245}
+--- !u!114 &9100000000000000103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7115683258570686135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef4274dde874fa9ba8efaf62a49b09b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Erudition.SettingRowView
+  kind: 3
+  stateText: {fileID: 5631300077618287464}
+  track: {fileID: 5226081905445893310}
+  thumb: {fileID: 8217965217109371263}
+  onPosition: {fileID: 6267079628694424322}
+  offPosition: {fileID: 5069391832743815633}

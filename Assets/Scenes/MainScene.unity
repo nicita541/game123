@@ -27888,31 +27888,6 @@ MonoBehaviour:
   - {fileID: 2048502513}
   - {fileID: 368786609}
   - {fileID: 459409783}
-  settingValues:
-  - {fileID: 1308284940}
-  - {fileID: 217611197}
-  - {fileID: 1871058901}
-  - {fileID: 1219897916}
-  settingTracks:
-  - {fileID: 255884534}
-  - {fileID: 671626404}
-  - {fileID: 1976496402}
-  - {fileID: 270117253}
-  settingThumbs:
-  - {fileID: 363407017}
-  - {fileID: 96789694}
-  - {fileID: 1386332977}
-  - {fileID: 1761328570}
-  settingOnStops:
-  - {fileID: 164861164}
-  - {fileID: 589972668}
-  - {fileID: 1737844252}
-  - {fileID: 951611963}
-  settingOffStops:
-  - {fileID: 1169852410}
-  - {fileID: 1484313645}
-  - {fileID: 855282055}
-  - {fileID: 578004010}
   shopMessage: {fileID: 140628021}
   debugValues: {fileID: 3145}
   debugOpenButton: {fileID: 3031}

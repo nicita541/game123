@@ -85,11 +85,6 @@ namespace Erudition
         public Button[] collectionTabs;
         public Button[] achievementTabs;
         public AchievementCardView[] achievementCards;
-        public Text[] settingValues;
-        public Image[] settingTracks;
-        public RectTransform[] settingThumbs;
-        public RectTransform[] settingOnStops;
-        public RectTransform[] settingOffStops;
         public Text shopMessage;
         public Text debugValues;
         public GameObject debugOpenButton;
@@ -109,6 +104,7 @@ namespace Erudition
         private int pendingIndex = -1;
         private int pendingCollectionIndex = -1;
         private Coroutine gameplayLoadRoutine;
+        private SettingRowView[] settingRows = Array.Empty<SettingRowView>();
         private Vector2[] achievementPositions;
         private float mainFeathersBaseWidth;
         private int mainFeathersBaseFontSize;
@@ -125,6 +121,9 @@ namespace Erudition
         {
             Current = this;
             if (gallery != null) gallery.Build(this);
+            if (settingsScreen != null)
+                settingRows = settingsScreen.GetComponentsInChildren<SettingRowView>(true)
+                    .OrderBy(row => (int)row.kind).ToArray();
             achievementPositions = achievementCards.Select(card => ((RectTransform)card.transform).anchoredPosition).ToArray();
             baseFontSizes = FindObjectsByType<Text>(FindObjectsInactive.Include, FindObjectsSortMode.None)
                 .ToDictionary(label => label, label => label.fontSize);
@@ -1070,34 +1069,43 @@ namespace Erudition
             }
         }
 
-        private void ToggleSetting(int index)
+        private void ToggleSetting(int value)
         {
-            switch (index)
+            var kind = (SettingKind)value;
+            switch (kind)
             {
-                case 0: save.music = !save.music; break;
-                case 1: save.sound = !save.sound; break;
-                case 2: save.vibration = !save.vibration; break;
-                case 3: save.largeText = !save.largeText; ApplyTextScale(); break;
+                case SettingKind.Music: save.music = !save.music; break;
+                case SettingKind.Sound: save.sound = !save.sound; break;
+                case SettingKind.Vibration: save.vibration = !save.vibration; break;
+                case SettingKind.LargeText:
+                    save.largeText = !save.largeText;
+                    ApplyTextScale();
+                    break;
+                default:
+                    Debug.LogWarning("Неизвестная настройка: " + value, this);
+                    return;
             }
             Persist();
+        }
+
+        private bool SettingEnabled(SettingKind kind)
+        {
+            switch (kind)
+            {
+                case SettingKind.Music: return save.music;
+                case SettingKind.Sound: return save.sound;
+                case SettingKind.Vibration: return save.vibration;
+                case SettingKind.LargeText: return save.largeText;
+                default: return false;
+            }
         }
 
         private void UpdateSettings()
         {
             soundPlayer?.ApplySettings(save.music, save.sound);
-            var values = new[] { save.music, save.sound, save.vibration, save.largeText };
-            for (var i = 0; settingValues != null && i < Math.Min(settingValues.Length, values.Length); i++)
-            {
-                var modern = settingTracks != null && i < settingTracks.Length && settingTracks[i] != null;
-                settingValues[i].text = modern ? (values[i] ? "Включено" : "Выключено") : (values[i] ? "●  ВКЛ" : "ВЫКЛ  ●");
-                settingValues[i].color = modern ? (values[i] ? new Color(.2f,.46f,.34f) : new Color(.47f,.43f,.5f)) : values[i] ? Color.white : new Color(.27f, .25f, .4f);
-                var image = modern ? settingTracks[i] : settingValues[i].transform.parent.GetComponent<Image>();
-                if (image != null) image.color = values[i] ? new Color(.30f,.64f,.47f) : new Color(.74f,.71f,.77f);
-                var stops = values[i] ? settingOnStops : settingOffStops;
-                if (settingThumbs != null && i < settingThumbs.Length && settingThumbs[i] != null
-                    && stops != null && i < stops.Length && stops[i] != null)
-                    settingThumbs[i].anchoredPosition = stops[i].anchoredPosition;
-            }
+            foreach (var row in settingRows)
+                if (row != null)
+                    row.Render(SettingEnabled(row.kind));
         }
 
         private void ApplyTextScale()

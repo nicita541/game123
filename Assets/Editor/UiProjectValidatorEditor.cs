@@ -96,6 +96,7 @@ public static class UiProjectValidatorEditor
             if (path == MainScenePath)
             {
                 ValidateAchievements(objects, report);
+                ValidateSettings(objects, report);
 
                 var game = objects.Select(go => go.GetComponent<CryptogramGame>())
                     .FirstOrDefault(component => component != null);
@@ -189,6 +190,31 @@ public static class UiProjectValidatorEditor
         }
         if (!screen.name.StartsWith("Screen_", StringComparison.Ordinal))
             report.Warn("CryptogramGame." + fieldName + ": объект лучше называть Screen_* (" + screen.name + ").");
+    }
+
+    private static void ValidateSettings(GameObject[] objects, Report report)
+    {
+        var rows = objects.Select(go => go.GetComponent<SettingRowView>())
+            .Where(row => row != null)
+            .Distinct()
+            .ToArray();
+
+        if (rows.Length != 4)
+            report.Warn("Настройки: ожидалось 4 SettingRowView, сейчас " + rows.Length + ".");
+
+        var kinds = new HashSet<SettingKind>();
+        foreach (var row in rows)
+        {
+            if (!kinds.Add(row.kind)) report.Error(row.name + ": повторяется SettingKind " + row.kind + ".");
+            if (row.stateText == null) report.Error(row.name + ": не назначен stateText.");
+            if (row.track == null) report.Error(row.name + ": не назначен track.");
+            if (row.thumb == null) report.Error(row.name + ": не назначен thumb.");
+            if (row.onPosition == null || row.offPosition == null)
+                report.Error(row.name + ": не назначены позиции переключателя.");
+        }
+
+        if (rows.Length > 0)
+            report.Ok("Настройки: " + rows.Length + " строк собраны в SettingRowView.");
     }
 
     private static void ValidateAchievements(GameObject[] objects, Report report)
