@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u0438"
+  m_Text: "\u0423\u0440\u043E\u0432\u043D\u0438"
 --- !u!1 &954447556121255788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,7 +1206,7 @@ GameObject:
   - component: {fileID: 4446087023619250136}
   - component: {fileID: 5283570119947593699}
   m_Layer: 5
-  m_Name: Button_Collections
+  m_Name: Button_Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
