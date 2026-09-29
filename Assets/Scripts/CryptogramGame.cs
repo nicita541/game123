@@ -213,8 +213,18 @@ namespace Erudition
                 case UiActionKind.CollectionLevel: StartCollectionPuzzle(parameter); break;
                 case UiActionKind.StatisticsPeriod: presentation?.SetPeriod(parameter); UpdateAllUi(); break;
                 case UiActionKind.ClearSelection: ActiveBoard()?.ClearSelection(); break;
-                case UiActionKind.AchievementDetails: presentation?.ShowAchievement(parameter, achievementCards); break;
-                case UiActionKind.ClosePopup: presentation?.ClosePopup(); break;
+                case UiActionKind.AchievementDetails:
+                    presentation?.ShowAchievement(parameter, achievementCards, AchievementProgress(parameter),
+                        AchievementClaimed(parameter), AchievementRewardDescription(parameter));
+                    break;
+                case UiActionKind.ClosePopup:
+                {
+                    var achievementIndex = presentation == null ? -1 : presentation.SelectedAchievementIndex;
+                    if (achievementIndex >= 0 && AchievementComplete(achievementIndex) && !AchievementClaimed(achievementIndex))
+                        ClaimAchievement(achievementIndex);
+                    else presentation?.ClosePopup();
+                    break;
+                }
                 case UiActionKind.LikeQuote:
                     if (!string.IsNullOrEmpty(lastCompletedPuzzleId) && !save.likedPuzzleIds.Split('|').Contains(lastCompletedPuzzleId))
                     { save.likedPuzzleIds += lastCompletedPuzzleId + "|"; Persist(); }
@@ -241,7 +251,7 @@ namespace Erudition
                 case UiActionKind.BuyFiveHints: BuyHints(); break;
                 case UiActionKind.PremiumUnavailable: SayShop("Этот товар появится после подключения платежей"); break;
                 case UiActionKind.FeatherInfo: SayShop("Выберите пачку ниже. Лишние перья останутся в запасе."); break;
-                case UiActionKind.CoinInfo: SayShop("Монеты выдаются за решение криптограмм."); break;
+                case UiActionKind.CoinInfo: SayShop("Монеты выдаются за решение криптограмм и достижения."); break;
                 case UiActionKind.CollectionTab: ShowCollectionTab(parameter); break;
                 case UiActionKind.AchievementTab: ShowAchievementTab(parameter); break;
                 case UiActionKind.ToggleSetting: ToggleSetting(parameter); break;
@@ -460,7 +470,7 @@ namespace Erudition
                 ShowScreen(2);
                 return;
             }
-            if (save.feathers <= 0)
+            if (!HasInfiniteFeathers() && save.feathers <= 0)
             {
                 UpdateEnergyUi();
                 ShowScreen(5);
@@ -617,6 +627,7 @@ namespace Erudition
 
         private bool SpendFeather()
         {
+            if (HasInfiniteFeathers()) return true;
             if (save.feathers <= 0) return false;
             save.feathers--;
             StartRecoveryClock();
@@ -660,6 +671,12 @@ namespace Erudition
         private void UpdateTimer()
         {
             if (noFeathersTimer == null) return;
+            if (HasInfiniteFeathers())
+            {
+                var infiniteRemaining = TimeSpan.FromTicks(Math.Max(0, save.infiniteFeathersUntilUtcTicks - DateTime.UtcNow.Ticks));
+                noFeathersTimer.text = "∞ " + ((int)infiniteRemaining.TotalMinutes).ToString("00") + ":" + infiniteRemaining.Seconds.ToString("00");
+                return;
+            }
             if (save.feathers >= MaxFeathers || save.nextFeatherUtcTicks <= 0)
             {
                 noFeathersTimer.text = "Готово";
@@ -733,13 +750,14 @@ namespace Erudition
 
         private void UpdateEnergyUi()
         {
-            var featherValue = save.feathers.ToString();
+            var infinite = HasInfiniteFeathers();
+            var featherValue = infinite ? "∞" : save.feathers.ToString();
             if (mainFeathers != null) mainFeathers.text = featherValue;
             if (shopFeathers != null) shopFeathers.text = featherValue;
             if (shopCoins != null) shopCoins.text = save.coins.ToString();
             if (noFeathersCounter != null) noFeathersCounter.text = featherValue;
             if (noFeathersCounterRestored != null) noFeathersCounterRestored.text = featherValue;
-            if (noFeathersAdButton != null) noFeathersAdButton.interactable = ads != null && ads.IsAvailable && save.feathers < MaxFeathers;
+            if (noFeathersAdButton != null) noFeathersAdButton.interactable = !infinite && ads != null && ads.IsAvailable && save.feathers < MaxFeathers;
             UpdateTimer();
         }
 
@@ -786,6 +804,71 @@ namespace Erudition
         private int AchievementProgress(int index) => index < 2 ? save.solved : index == 2 ? save.erudition / 50
             : index == 3 ? save.classicSolved : index == 4 ? save.solvedPuzzleIds.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries).Distinct().Count()
             : index == 5 ? save.perfectWins : save.bestEveningStreak;
+
+        private bool AchievementComplete(int index)
+        {
+            return achievementCards != null && index >= 0 && index < achievementCards.Length
+                && AchievementProgress(index) >= achievementCards[index].target;
+        }
+
+        private bool AchievementClaimed(int index)
+        {
+            return index >= 0 && index < 31 && (save.claimedAchievementMask & (1 << index)) != 0;
+        }
+
+        private string AchievementRewardDescription(int index)
+        {
+            switch (index)
+            {
+                case 0: return "100 монет";
+                case 1: return "250 монет";
+                case 2: return "1 час бесконечных перьев";
+                case 3: return "5 подсказок";
+                case 4: return "10 перьев";
+                case 5: return "300 монет";
+                case 6: return "1 час бесконечных перьев";
+                default: return "Награда";
+            }
+        }
+
+        private void ClaimAchievement(int index)
+        {
+            if (!AchievementComplete(index) || AchievementClaimed(index))
+            {
+                presentation?.ClosePopup();
+                return;
+            }
+
+            switch (index)
+            {
+                case 0: save.coins += 100; break;
+                case 1: save.coins += 250; break;
+                case 2: AddInfiniteFeathers(TimeSpan.FromHours(1)); break;
+                case 3: save.hints += 5; break;
+                case 4:
+                    save.feathers += 10;
+                    StartRecoveryClock();
+                    break;
+                case 5: save.coins += 300; break;
+                case 6: AddInfiniteFeathers(TimeSpan.FromHours(1)); break;
+            }
+
+            save.claimedAchievementMask |= 1 << index;
+            Persist();
+            presentation?.ClosePopup();
+        }
+
+        private void AddInfiniteFeathers(TimeSpan duration)
+        {
+            var now = DateTime.UtcNow.Ticks;
+            var start = Math.Max(now, save.infiniteFeathersUntilUtcTicks);
+            save.infiniteFeathersUntilUtcTicks = start + duration.Ticks;
+        }
+
+        private bool HasInfiniteFeathers()
+        {
+            return save != null && save.infiniteFeathersUntilUtcTicks > DateTime.UtcNow.Ticks;
+        }
 
         private void ShowAchievementTab(int tab)
         {
