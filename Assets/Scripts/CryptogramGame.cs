@@ -89,8 +89,8 @@ namespace Erudition
         private Vector2[] achievementPositions;
         private float mainFeathersBaseWidth;
         private int mainFeathersBaseFontSize;
-        private Image infiniteFeatherRing;
-        private Image infiniteFeatherGlow;
+        private Vector2 mainFeathersBasePosition;
+        private Text infiniteFeatherTimer;
         public static CryptogramGame Current { get; private set; }
         public PuzzleEntry[] Entries => puzzles ?? (puzzles = PuzzleGenerator.Build(library, gallery == null ? null : gallery.catalog));
         private bool hintRewardPending;
@@ -108,13 +108,12 @@ namespace Erudition
             {
                 mainFeathersBaseWidth = mainFeathers.rectTransform.sizeDelta.x;
                 mainFeathersBaseFontSize = mainFeathers.fontSize;
+                mainFeathersBasePosition = mainFeathers.rectTransform.anchoredPosition;
                 var energyRoot = mainFeathers.transform.parent;
                 if (energyRoot != null)
                 {
-                    var ring = energyRoot.Find("InfiniteTimerRing");
-                    var glow = energyRoot.Find("InfiniteGlow");
-                    if (ring != null) infiniteFeatherRing = ring.GetComponent<Image>();
-                    if (glow != null) infiniteFeatherGlow = glow.GetComponent<Image>();
+                    var timer = energyRoot.Find("Text_InfiniteTimer");
+                    if (timer != null) infiniteFeatherTimer = timer.GetComponent<Text>();
                 }
             }
             save = SaveStore.Load();
@@ -775,34 +774,19 @@ namespace Erudition
                 size.x = mainFeathersBaseWidth;
                 mainFeathers.rectTransform.sizeDelta = size;
                 mainFeathers.resizeTextForBestFit = false;
-
-                if (infinite)
-                {
-                    // Keep the normal counter composition: infinity is the main value,
-                    // while the precise countdown is a small integrated caption below it.
-                    // This avoids the large floating timer that overlapped the header.
-                    mainFeathers.fontSize = Mathf.Min(mainFeathersBaseFontSize, 50);
-                    mainFeathers.lineSpacing = 0.65f;
-                    mainFeathers.text = "∞\n<size=24><color=#FFD56A>" + InfiniteFeathersRemainingText() + "</color></size>";
-                }
-                else
-                {
-                    mainFeathers.fontSize = mainFeathersBaseFontSize;
-                    mainFeathers.lineSpacing = 1f;
-                    mainFeathers.text = featherValue;
-                }
+                mainFeathers.lineSpacing = 1f;
+                mainFeathers.fontSize = infinite ? Mathf.Min(mainFeathersBaseFontSize, 50) : mainFeathersBaseFontSize;
+                mainFeathers.rectTransform.anchoredPosition = infinite
+                    ? mainFeathersBasePosition + new Vector2(0f, 12f)
+                    : mainFeathersBasePosition;
+                mainFeathers.text = featherValue;
             }
 
-            if (infiniteFeatherRing != null)
+            if (infiniteFeatherTimer != null)
             {
-                infiniteFeatherRing.gameObject.SetActive(infinite);
-                if (infinite)
-                {
-                    var remainingTicks = Math.Max(0, save.infiniteFeathersUntilUtcTicks - DateTime.UtcNow.Ticks);
-                    infiniteFeatherRing.fillAmount = Mathf.Clamp01((float)(remainingTicks / (double)TimeSpan.FromHours(1).Ticks));
-                }
+                infiniteFeatherTimer.gameObject.SetActive(infinite);
+                if (infinite) infiniteFeatherTimer.text = InfiniteFeathersRemainingText();
             }
-            if (infiniteFeatherGlow != null) infiniteFeatherGlow.gameObject.SetActive(infinite);
 
             if (shopFeathers != null) shopFeathers.text = featherValue;
             if (shopCoins != null) shopCoins.text = save.coins.ToString();
