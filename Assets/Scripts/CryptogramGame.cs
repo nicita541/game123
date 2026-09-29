@@ -116,6 +116,7 @@ namespace Erudition
         private float nextProgressSave;
         private int pendingIndex = -1;
         private int pendingCollectionIndex = -1;
+        private Coroutine gameplayLoadRoutine;
         private Vector2[] achievementPositions;
         private float mainFeathersBaseWidth;
         private int mainFeathersBaseFontSize;
@@ -172,15 +173,37 @@ namespace Erudition
             UpdateAllUi();
         }
 
-        private IEnumerator Start()
+        private void OnDestroy() { if (Current == this) Current = null; }
+
+        private void RequestGameplayScene()
         {
-            if (!SceneManager.GetSceneByName("GameplayScene").isLoaded)
-                yield return SceneManager.LoadSceneAsync("GameplayScene", LoadSceneMode.Additive);
-            var link = FindFirstObjectByType<GameplaySceneLink>();
-            if (link != null) RegisterGameplay(link);
+            if (classicBoard != null || gameplayLoadRoutine != null) return;
+            gameplayLoadRoutine = StartCoroutine(LoadGameplayScene());
         }
 
-        private void OnDestroy() { if (Current == this) Current = null; }
+        private IEnumerator LoadGameplayScene()
+        {
+            var scene = SceneManager.GetSceneByName("GameplayScene");
+            if (!scene.isLoaded)
+                yield return SceneManager.LoadSceneAsync("GameplayScene", LoadSceneMode.Additive);
+
+            // GameplaySceneLink normally registers itself in Start. This fallback
+            // makes loading deterministic even if script execution order changes.
+            if (classicBoard == null)
+            {
+                var link = FindFirstObjectByType<GameplaySceneLink>();
+                if (link != null) RegisterGameplay(link);
+            }
+
+            gameplayLoadRoutine = null;
+            if (classicBoard == null)
+            {
+                pendingStart = false;
+                pendingIndex = -1;
+                pendingCollectionIndex = -1;
+                Debug.LogError("GameplayScene загружена, но GameplaySceneLink не найден.", this);
+            }
+        }
 
         public void RegisterGameplay(GameplaySceneLink link)
         {
@@ -507,22 +530,37 @@ namespace Erudition
         private void StartClassicPuzzle(int requestedIndex = -1)
         {
             RestoreEnergy();
-            var board = classicBoard;
-            if (board == null) { pendingStart = true; pendingIndex = requestedIndex; pendingCollectionIndex = -1; return; }
             var progress = save.activePuzzle;
-            // Keep a previously started Turbo puzzle playable in the single
-            // remaining board, without charging again or losing filled cells.
-            if (requestedIndex < 0 && progress.puzzleIndex >= 0 && progress.puzzleIndex < Entries.Length
-                && progress.remainingHearts > 0)
-            {
-                board.StartPuzzle(Entries[progress.puzzleIndex], progress.puzzleIndex, progress, save.erudition, save.hints);
-                ShowScreen(GameScreen.Gameplay);
-                return;
-            }
-            if (!HasInfiniteFeathers() && save.feathers <= 0)
+            var resumeExisting = requestedIndex < 0
+                && progress.puzzleIndex >= 0
+                && progress.puzzleIndex < Entries.Length
+                && progress.remainingHearts > 0;
+
+            // A new attempt needs energy, but resuming an already paid attempt does not.
+            // Check this before loading GameplayScene so the NoFeathers screen stays lightweight.
+            if (!resumeExisting && !HasInfiniteFeathers() && save.feathers <= 0)
             {
                 UpdateEnergyUi();
                 ShowScreen(GameScreen.NoFeathers);
+                return;
+            }
+
+            var board = classicBoard;
+            if (board == null)
+            {
+                pendingStart = true;
+                pendingIndex = requestedIndex;
+                pendingCollectionIndex = -1;
+                RequestGameplayScene();
+                return;
+            }
+
+            // Keep a previously started Turbo puzzle playable in the single
+            // remaining board, without charging again or losing filled cells.
+            if (resumeExisting)
+            {
+                board.StartPuzzle(Entries[progress.puzzleIndex], progress.puzzleIndex, progress, save.erudition, save.hints);
+                ShowScreen(GameScreen.Gameplay);
                 return;
             }
             var index = requestedIndex >= 0 ? requestedIndex : ChoosePuzzle(PuzzleMode.Classic, board);
@@ -549,12 +587,20 @@ namespace Erudition
             var catalog = gallery == null ? null : gallery.catalog;
             if (catalog == null || catalog.cards == null || collectionIndex < 0 || collectionIndex >= catalog.cards.Length) return;
 
+            if (!HasInfiniteFeathers() && save.feathers <= 0)
+            {
+                UpdateEnergyUi();
+                ShowScreen(GameScreen.NoFeathers);
+                return;
+            }
+
             var board = classicBoard;
             if (board == null)
             {
                 pendingStart = true;
                 pendingIndex = -1;
                 pendingCollectionIndex = collectionIndex;
+                RequestGameplayScene();
                 return;
             }
 
