@@ -5,6 +5,9 @@ namespace Erudition
 {
     public sealed class AchievementCardView : MonoBehaviour
     {
+        public Text titleText;
+        public Text descriptionText;
+        public Image icon;
         public Text progressText;
         public RectTransform progressFill;
         public RectTransform progressTrack;

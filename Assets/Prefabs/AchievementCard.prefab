@@ -253,6 +253,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5f233b37cdb3344989ae23738bdf20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Erudition.AchievementCardView
+  titleText: {fileID: 5978903485743164598}
+  descriptionText: {fileID: 6609677658008379123}
+  icon: {fileID: 8551970830171773447}
   progressText: {fileID: 2828646600849004680}
   progressFill: {fileID: 6455732040617303693}
   progressTrack: {fileID: 5793813561203588320}

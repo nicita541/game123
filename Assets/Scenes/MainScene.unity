@@ -27912,8 +27912,6 @@ MonoBehaviour:
   coinsReward: {fileID: 810688615}
   likeLabel: {fileID: 0}
   likeButton: {fileID: 0}
-  collections: []
-  collectionPictures: []
   gallery: {fileID: 1735082598}
   detailTitle: {fileID: 183907792}
   detailProgress: {fileID: 35033279}
@@ -27925,14 +27923,6 @@ MonoBehaviour:
   popupTitle: {fileID: 403285826}
   popupBody: {fileID: 1258058064}
   popupIcon: {fileID: 1920489639}
-  achievementIcons:
-  - {fileID: 5499845169743373932, guid: f4fa94c4cd83b9b4fb5729ba7f698fd8, type: 3}
-  - {fileID: -1519697884930236393, guid: 3ff64a2d258228f44a855240bb8a33f4, type: 3}
-  - {fileID: 621827292062257394, guid: 3ff64a2d258228f44a855240bb8a33f4, type: 3}
-  - {fileID: 8366518164909799415, guid: f4fa94c4cd83b9b4fb5729ba7f698fd8, type: 3}
-  - {fileID: -8411694617196797062, guid: 3ff64a2d258228f44a855240bb8a33f4, type: 3}
-  - {fileID: 2865870748345947649, guid: f4fa94c4cd83b9b4fb5729ba7f698fd8, type: 3}
-  - {fileID: 7798260202119174485, guid: f4fa94c4cd83b9b4fb5729ba7f698fd8, type: 3}
 --- !u!114 &1735082598
 MonoBehaviour:
   m_ObjectHideFlags: 0

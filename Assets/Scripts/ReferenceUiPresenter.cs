@@ -19,8 +19,6 @@ namespace Erudition
         public Button[] periods;
         public Text coinsReward, likeLabel;
         public Button likeButton;
-        public CollectionCardView[] collections;
-        public Sprite[] collectionPictures;
         public CollectionGallery gallery;
         public Text detailTitle, detailProgress, detailBody;
         public ScrollRect detailScroll;
@@ -29,7 +27,6 @@ namespace Erudition
         public GameObject popup;
         public Text popupTitle, popupBody;
         public Image popupIcon;
-        public Sprite[] achievementIcons;
         private int period;
         public int SelectedAchievementIndex { get; private set; } = -1;
 
@@ -128,9 +125,8 @@ namespace Erudition
             SelectedAchievementIndex = index;
 
             var card = cards[index];
-            var labels = card.GetComponentsInChildren<Text>(true);
-            var title = labels.First(label => label.name == "Text_Title").text;
-            var description = labels.First(label => label.name == "Text_Description").text;
+            var title = card.titleText != null ? card.titleText.text : "";
+            var description = card.descriptionText != null ? card.descriptionText.text : "";
             var complete = progress >= card.target;
 
             popupTitle.text = title;
@@ -160,8 +156,8 @@ namespace Erudition
                     + "\n" + status;
             }
 
-            if (popupIcon != null && achievementIcons != null && index < achievementIcons.Length)
-                popupIcon.sprite = achievementIcons[index];
+            if (popupIcon != null && card.icon != null)
+                popupIcon.sprite = card.icon.sprite;
 
             var actionButton = popup.GetComponentInChildren<Button>(true);
             if (actionButton != null)
