@@ -206,7 +206,7 @@ namespace Erudition
                 case UiActionKind.Turbo: // Reserved serialized value: old controls now open the only game mode.
                     StartClassicPuzzle(); break;
                 case UiActionKind.Statistics: UpdateStats(); ShowScreen(6); break;
-                case UiActionKind.Collections: ShowCollectionTab(0); ShowScreen(7); break;
+                case UiActionKind.Levels: ShowCollectionTab(0); ShowScreen(7); break;
                 case UiActionKind.Achievements: ShowAchievementTab(0); ShowScreen(8); break;
                 case UiActionKind.Shop: UpdateAllUi(); ShowScreen(9); break;
                 case UiActionKind.Settings: ShowScreen(10); break;
