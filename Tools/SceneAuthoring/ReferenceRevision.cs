@@ -81,9 +81,9 @@ public static class ReferenceRevision
         ui=game.gameObject.AddComponent<ReferenceUiPresenter>(); game.presentation=ui;
         foreach(var text in UnityEngine.Object.FindObjectsByType<Text>(FindObjectsInactive.Include,FindObjectsSortMode.None))
         { text.font=text.fontStyle==FontStyle.Bold?heavy:body; text.fontStyle=FontStyle.Normal; text.supportRichText=true; }
-        Main(); Boards(); Victory(); NoFeathers(); Statistics(); Collections(); Achievements(); Shop(); Details(); Navigation(); Popup();
+        Main(); Boards(); Victory(); NoFeathers(); Statistics(); Levels(); Achievements(); Shop(); Details(); Navigation(); Popup();
         foreach(var action in S(11).GetComponentsInChildren<UiAction>(true))
-            if(action.name.Contains("Mode")) { action.Configure(game,UiActionKind.Collections); action.GetComponentInChildren<Text>().text="Коллекции"; }
+            if(action.name.Contains("Mode")) { action.Configure(game,UiActionKind.Levels); action.GetComponentInChildren<Text>().text="Уровни"; }
         Header(10,"Настройки",985,820,76,false);
         game.classicStartLabel.text="Классика";
         game.turboStartLabel.text="Турбо";
@@ -232,9 +232,9 @@ public static class ReferenceRevision
         game.activityBars=Array.Empty<RectTransform>(); game.activityDayLabels=Array.Empty<Text>();
     }
 
-    static void Collections()
+    static void Levels()
     {
-        var s=S(7); Header(7,"Коллекции",915,840,77); R(F(s,"TitleParchment"),110,915,820,220); R(F(s,"Text_Title"),105,930,730,125); R(F(s,"Header_Crown"),100,1065,115,95);
+        var s=S(7); Header(7,"Уровни",915,840,77); R(F(s,"TitleParchment"),110,915,820,220); R(F(s,"Text_Title"),105,930,730,125); R(F(s,"Header_Crown"),100,1065,115,95);
         Pic(s,"OwlMascot_Collections",Asset("Assets/Art/owl_mascot.png"),-380,905,300,305); Pic(s,"Decor_Books",Decor("Books"),-270,752,480,130); Pic(s,"Decor_Hourglass",Decor("Hourglass"),389,817,210,265);
         var tabs=F(s,"Tabs"); R(tabs,0,625,990,120); Style(tabs.GetComponent<Image>(),new Color(1,1,1,.97f),.3f);
         for(var i=0;i<game.collectionTabs.Length;i++) { var b=game.collectionTabs[i]; R(b.transform,(i-1)*323,0,320,98); Style(b.GetComponent<Image>(),Color.white,.3f); b.GetComponentInChildren<Text>().font=heavy; b.GetComponentInChildren<Text>().fontSize=40; }
@@ -336,14 +336,14 @@ public static class ReferenceRevision
 
     static void Details()
     {
-        var s=S(1); foreach(Transform child in s.Cast<Transform>().ToArray()) UnityEngine.Object.DestroyImmediate(child.gameObject); s.name="Screen_CollectionDetails";
+        var s=S(1); foreach(Transform child in s.Cast<Transform>().ToArray()) UnityEngine.Object.DestroyImmediate(child.gameObject); s.name="Screen_LevelDetails";
         var parchment=Pic(s,"TitleParchment",Surface("TitleRibbon"),0,978,900,205); ui.detailTitle=Label(s,"Text_Title","А. С. Пушкин",0,984,800,115,65,true);
         Button(s,"Button_Back","‹",UiActionKind.Back,0,-441,1090,92,92);
         var panel=Card(s,"CollectionDetailCard",0,-5,960,1610);
         ui.detailPicture=Pic(panel.transform,"CollectionPortrait",ui.collectionPictures[0],0,505,690,440);
-        ui.detailProgress=Label(panel.transform,"Text_Progress","0 / 20 в коллекции",0,207,810,80,42,true);
+        ui.detailProgress=Label(panel.transform,"Text_Progress","0 / 20 пройдено",0,207,810,80,42,true);
         Card(panel.transform,"Progress_Back",0,130,740,31,new Color(.83f,.85f,.94f)); ui.detailFill=Card(panel.transform,"Progress_Fill",-370,130,0,31,new Color(.14f,.52f,1)).rectTransform; ui.detailFill.pivot=new Vector2(0,.5f);
-        ui.detailBody=Label(panel.transform,"Text_UnlockedQuotes","Решайте криптограммы, чтобы собирать коллекцию.",0,-256,800,625,36); ui.detailBody.alignment=TextAnchor.UpperCenter;
+        ui.detailBody=Label(panel.transform,"Text_UnlockedQuotes","Проходите уровни, чтобы открывать разгаданные тексты.",0,-256,800,625,36); ui.detailBody.alignment=TextAnchor.UpperCenter;
         Button(s,"Button_Classic","Играть в Классику",UiActionKind.Classic,0,0,-969,840,135,Surface("GreenButton"));
     }
     static void Navigation()
