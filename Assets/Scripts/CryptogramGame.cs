@@ -91,6 +91,7 @@ namespace Erudition
         private int mainFeathersBaseFontSize;
         private Vector2 mainFeathersBasePosition;
         private Text infiniteFeatherTimer;
+        private GameObject infiniteFeatherTimerPanel;
         public static CryptogramGame Current { get; private set; }
         public PuzzleEntry[] Entries => puzzles ?? (puzzles = PuzzleGenerator.Build(library, gallery == null ? null : gallery.catalog));
         private bool hintRewardPending;
@@ -112,8 +113,10 @@ namespace Erudition
                 var energyRoot = mainFeathers.transform.parent;
                 if (energyRoot != null)
                 {
-                    var timer = energyRoot.Find("Text_InfiniteTimer");
-                    if (timer != null) infiniteFeatherTimer = timer.GetComponent<Text>();
+                    infiniteFeatherTimer = energyRoot.GetComponentsInChildren<Text>(true)
+                        .FirstOrDefault(label => label.name == "Text_InfiniteTimer");
+                    if (infiniteFeatherTimer != null)
+                        infiniteFeatherTimerPanel = infiniteFeatherTimer.transform.parent.gameObject;
                 }
             }
             save = SaveStore.Load();
@@ -784,7 +787,10 @@ namespace Erudition
 
             if (infiniteFeatherTimer != null)
             {
-                infiniteFeatherTimer.gameObject.SetActive(infinite);
+                if (infiniteFeatherTimerPanel != null)
+                    infiniteFeatherTimerPanel.SetActive(infinite);
+                else
+                    infiniteFeatherTimer.gameObject.SetActive(infinite);
                 if (infinite) infiniteFeatherTimer.text = InfiniteFeathersRemainingText();
             }
 
