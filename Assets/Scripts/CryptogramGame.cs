@@ -89,6 +89,8 @@ namespace Erudition
         private Vector2[] achievementPositions;
         private float mainFeathersBaseWidth;
         private int mainFeathersBaseFontSize;
+        private Image infiniteFeatherRing;
+        private Image infiniteFeatherGlow;
         public static CryptogramGame Current { get; private set; }
         public PuzzleEntry[] Entries => puzzles ?? (puzzles = PuzzleGenerator.Build(library, gallery == null ? null : gallery.catalog));
         private bool hintRewardPending;
@@ -106,6 +108,14 @@ namespace Erudition
             {
                 mainFeathersBaseWidth = mainFeathers.rectTransform.sizeDelta.x;
                 mainFeathersBaseFontSize = mainFeathers.fontSize;
+                var energyRoot = mainFeathers.transform.parent;
+                if (energyRoot != null)
+                {
+                    var ring = energyRoot.Find("InfiniteTimerRing");
+                    var glow = energyRoot.Find("InfiniteGlow");
+                    if (ring != null) infiniteFeatherRing = ring.GetComponent<Image>();
+                    if (glow != null) infiniteFeatherGlow = glow.GetComponent<Image>();
+                }
             }
             save = SaveStore.Load();
             ResolveSavedPuzzles();
@@ -680,7 +690,7 @@ namespace Erudition
             if (noFeathersTimer == null) return;
             if (HasInfiniteFeathers())
             {
-                noFeathersTimer.text = "∞ " + InfiniteFeathersRemainingText();
+                noFeathersTimer.text = "∞";
                 return;
             }
             if (save.feathers >= MaxFeathers || save.nextFeatherUtcTicks <= 0)
@@ -757,33 +767,30 @@ namespace Erudition
         private void UpdateEnergyUi()
         {
             var infinite = HasInfiniteFeathers();
-            var featherValue = infinite ? "∞ " + InfiniteFeathersRemainingText() : save.feathers.ToString();
+            var featherValue = infinite ? "∞" : save.feathers.ToString();
 
             if (mainFeathers != null)
             {
+                // Never print the countdown next to the energy value: the timer is the
+                // authored radial ring around the + button.
                 mainFeathers.text = featherValue;
+                var size = mainFeathers.rectTransform.sizeDelta;
+                size.x = mainFeathersBaseWidth;
+                mainFeathers.rectTransform.sizeDelta = size;
+                mainFeathers.fontSize = mainFeathersBaseFontSize;
+                mainFeathers.resizeTextForBestFit = false;
+            }
+
+            if (infiniteFeatherRing != null)
+            {
+                infiniteFeatherRing.gameObject.SetActive(infinite);
                 if (infinite)
                 {
-                    // The authored counter is intentionally compact for values like "5".
-                    // Expand it only while the timed unlimited-energy reward is active,
-                    // so both the infinity symbol and countdown remain visible.
-                    var size = mainFeathers.rectTransform.sizeDelta;
-                    size.x = Mathf.Max(mainFeathersBaseWidth, 245f);
-                    mainFeathers.rectTransform.sizeDelta = size;
-                    mainFeathers.fontSize = Mathf.Min(mainFeathersBaseFontSize, 34);
-                    mainFeathers.resizeTextForBestFit = true;
-                    mainFeathers.resizeTextMinSize = 22;
-                    mainFeathers.resizeTextMaxSize = Mathf.Min(mainFeathersBaseFontSize, 34);
-                }
-                else
-                {
-                    var size = mainFeathers.rectTransform.sizeDelta;
-                    size.x = mainFeathersBaseWidth;
-                    mainFeathers.rectTransform.sizeDelta = size;
-                    mainFeathers.fontSize = mainFeathersBaseFontSize;
-                    mainFeathers.resizeTextForBestFit = false;
+                    var remainingTicks = Math.Max(0, save.infiniteFeathersUntilUtcTicks - DateTime.UtcNow.Ticks);
+                    infiniteFeatherRing.fillAmount = Mathf.Clamp01((float)(remainingTicks / (double)TimeSpan.FromHours(1).Ticks));
                 }
             }
+            if (infiniteFeatherGlow != null) infiniteFeatherGlow.gameObject.SetActive(infinite);
 
             if (shopFeathers != null) shopFeathers.text = featherValue;
             if (shopCoins != null) shopCoins.text = save.coins.ToString();
